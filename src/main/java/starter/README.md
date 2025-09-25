@@ -23,7 +23,7 @@ You can test it locally using the following steps:
    ![img.png](img.png)
 7. Or using the Run.xml for global testing using tags: click the edit config > update the tags in Program Arguments > Save > run
    ![img_3.png](img_3.png)
-
+ 
 **Automation Code Assessment Instructions**
 
 **Objective**
