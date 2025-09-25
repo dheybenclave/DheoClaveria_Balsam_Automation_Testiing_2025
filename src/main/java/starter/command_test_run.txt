@@ -1,0 +1,2 @@
+mvn clean verify -D"cucumber.filter.tags=@TC_1" //Run specific scripts tags
+mvn clean verify -D"cucumber.filter.tags=@TC_1" -Denvironment=chrome //Run specific scripts tags -env = chrome,edge,firefox
