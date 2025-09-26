@@ -19,7 +19,7 @@ You can test it locally using the following steps:
               * mvn clean verify -D"cucumber.filter.tags=@TC_1" -Denvironment=chrome //Run specific scripts tags -env = chrome,edge,firefox
 
 6. Or Using IntellJ :
-   Go to src/test/resources/features/grid/gridtesting.feature and you will the green triangle(start) button and click for specific run
+   Go to src/test/resources/features/Balsam/ValidateAndVerifyCartPage.feature and you will the green triangle(start) button and click for specific run
    ![img.png](https://github.com/dheybenclave/DheoClaveria_Balsam_Automation_Testiing_2025/blob/main/src/main/java/starter/img.png)
 7. Or using the Run.xml for global testing using tags: click the edit config > update the tags in Program Arguments > Save > run
     ![img3.png](https://github.com/dheybenclave/DheoClaveria_Balsam_Automation_Testiing_2025/blob/main/src/main/java/starter/img_3.png)
