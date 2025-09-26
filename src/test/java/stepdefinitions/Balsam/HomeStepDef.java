@@ -30,7 +30,7 @@ public class HomeStepDef {
     @Page
     CommonPage commonPage;
 
-    @Given("{} navigate to {} using {}")
+    @Given("{} Navigate to {} using {}")
     public void navigateToPage(String actor, String page, String role) {
         // Navigate to the specified page using the given role
         commonStepDef.testStep(format("NavigateToPage : Page '%s' | Role '%s'", page, role));
@@ -41,11 +41,12 @@ public class HomeStepDef {
         commonStepDef.waitForPageInSecond(1000);
     }
 
-    @When("I search the {}")
+    @When("I Search the {}")
     public void searchProducts(String searchValue) {
         // Search for the specified product
-        commonStepDef.testStep("tester_search_the");
+        commonStepDef.testStep("Search Products in Page");
         commonStepDef.enterText(homePage.TXT_SEARCH(), searchValue, 2000);
+        commonStepDef.waitForPageInSecond(2000);
         commonStepDef.verifyTextInPage("Search result for:");
         commonStepDef.waitForPageInSecond(2000);
     }
@@ -53,7 +54,7 @@ public class HomeStepDef {
     @When("I Select the item {} from the search result")
     public void selectProductItemsFromSearchResults(String cartItemIndex) {
         // Select the specified item from the search results
-        commonStepDef.testStep("i_select_the_item_from_the_search_result");
+        commonStepDef.testStep("select Product Items From Search Results");
         commonStepDef.clickElement(homePage.LBL_CART_ITEM(cartItemIndex));
         commonStepDef.waitForPageInSecond(2000);
     }

@@ -1,9 +1,6 @@
 package stepdefinitions;
 
 import io.cucumber.datatable.DataTable;
-import io.cucumber.java.en.And;
-import io.cucumber.java.en.Given;
-import io.cucumber.java.en.When;
 import net.serenitybdd.core.pages.PageComponent;
 import net.serenitybdd.core.pages.WebElementFacade;
 import net.serenitybdd.model.environment.EnvironmentSpecificConfiguration;
@@ -16,7 +13,6 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import pages.CommonPage;
 
-import java.security.Key;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Set;

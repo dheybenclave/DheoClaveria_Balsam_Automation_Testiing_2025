@@ -2,11 +2,11 @@ Feature: Validate and Verify Cart Balsam Page
 
   @UISmoke @Balsam @DheoClaveria @TC_1
   Scenario Outline: Validate and Verify the Add and Remove Cart Item Page
-    Given DheoTester navigate to <Page> using <Role>
-    When I search the <SearchItem>
+    Given DheoTester Navigate to <Page> using <Role>
+    When I Search the <SearchItem>
     And I Select the item <ItemResultIndex> from the search result
-    And I Customize and Add to Cart the item following:
-      #this are the default value for the Selected Item
+    And I Customize and Add to Cart the item using the following:
+      #These are the default values assigned to the selected item
       | Height | Shape       | Lights                 | Setup    |
       | 12     | Sparse Tree | LED Clear Fairy Lights | Standard |
     Then I Validate And Verify the added item from Dialog

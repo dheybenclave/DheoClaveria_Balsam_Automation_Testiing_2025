@@ -25,14 +25,12 @@ public class ProductStepDef {
     CartPage cartPage;
 
     public List<String> actualProductDetails;
-    public List<List<String>> expectedProductDetails;
     String height, shape, lights, setup;
 
-    @And("I Customize and Add to Cart the item following:")
+    @And("I Customize and Add to Cart the item using the following:")
     public void CustomizeAddToProduct(DataTable dataTable) {
 
         List<Map<String, String>> dataTableList = dataTable.asMaps(String.class, String.class);
-        expectedProductDetails = dataTable.asLists();
 
         commonStepDef.testStep("Customize and Add to Cart");
 
@@ -68,11 +66,8 @@ public class ProductStepDef {
         commonStepDef.testStep("Validate and Verify Added Product Details");
         for (String currActualList : actualProductDetails) {
 
-            commonStepDef.testStep(String.format("currExpectedList %s | currActualList %s", expectedProductDetails.get(1), actualProductDetails.toString()));
-            expectedProductDetails.get(1).contains(currActualList);
-
             String _currActualList = currActualList.replaceAll("\\s*®|\\s*Trees", "");
-            commonStepDef.verifyVisibilityofElement(
+            commonStepDef.verifyVisibilityofElement( //it will verify the actual details from Product Details Section is equal to the dialog
                     productPage.LBL_ADD_TO_CART_DIALOG(_currActualList.replaceAll("[^a-zA-Z0-9+ $,]", "")));
         }
 
