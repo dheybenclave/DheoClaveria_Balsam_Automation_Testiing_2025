@@ -7,8 +7,8 @@ Feature: Validate and Verify Cart Balsam Page
     And I Select the item <ItemResultIndex> from the search result
     And I Customize and Add to Cart the item using the following:
       #These are the default values assigned to the selected item
-      | Height | Shape       | Lights                 | Setup    |
-      | 12     | Sparse Tree | LED Clear Fairy Lights | Standard |
+      | Height | Shape       | Lights                   | Setup    |
+      | 9      | Sparse Tree | LED Color + Clear Lights | Standard |
     Then I Validate And Verify the added item from Dialog
     When I Click the View Cart Button
     Then I Validate And Verify the added item from Cart Page
@@ -17,14 +17,14 @@ Feature: Validate and Verify Cart Balsam Page
     Then I Validate and Verify that the added item is removed from the Cart Page
 
     Examples:
-      | Page       | Role           | SearchItem     | ItemResultIndex | CartAddedCount |
-      | balsamhill | ProDinnerAdmin | Christmas Tree | 3               | 1              |
-      | balsamhill | ProDinnerAdmin | Christmas Tree | 1               | 1              |
+      | Page       | Role          | SearchItem     | ItemResultIndex | CartAddedCount |
+      | balsamhill | Test_Engineer | Christmas Tree | 3               | 1              |
+      | balsamhill | Test_Engineer | Christmas Tree | 1               | 1              |
       #Page variable is located in src/test/resources/serenity.conf line :107
 
   @FileTesting @Balsam @DheoClaveria @TC_2
   Scenario Outline: Validate and Verify the External File
-    Then I Test the Excel Reader for using <fileName> fileName
+    Then I Test the Excel Reader for using <FileName> fileName in <SheetName> sheetName using <Role> role
     Examples:
-      | fileName        |
-      | userCredentials |
+      | FileName        | Role          | SheetName |
+      | userCredentials | Test_Engineer | UserList  |

@@ -33,64 +33,113 @@ parameters:
   default: false
   
 trigger:
-- master
+  branches:
+    include:
+      - main
+      - master
 
-pool:
-  vmImage: ubuntu-latest
+jobs:
+- job: BuildAndTest
+  displayName: Build, Test and Publish Serenity Report
+  container: maven:3.10-jdk-21
+  services:
+    selenium:
+      image: selenium/standalone-chrome:latest
+      ports:
+        - 4444:4444
+      options: --shm-size=2g
+  pool:
+    vmImage: ubuntu-latest
 
-steps:
-- task: Maven@3
-  inputs:
-    mavenPomFile: 'pom.xml'
-    mavenOptions: '-Xmx3072m'
-    javaHomeOption: 'JDKVersion'
-    # options: 'clean install'
-    jdkVersionOption: '1.11'
-    jdkArchitectureOption: 'x64'
-    # publishJUnitResults: true
-    testResultsFiles: '**/surefire-reports/TEST-*.xml'
-    goals: 'package'
-    
-- task: Maven@4
-  displayName: Execute tests
-  inputs:
-              mavenPomFile: 'pom.xml'
-              goals: 'test'
-              options: 'clean verify  -D"cucumber.filter.tags"="${{ parameters.tag }}" -Denvironment="${{ parameters.browser }}" -D"headless.mode"="${{ parameters.headless }} -Daccess=$(DOOR_ACCESS)'
-             # options: 'clean verify -D"cucumber.filter.tags"="${{ parameters.tag }}" -Denvironment="${{ parameters.browser }}"'
-              publishJUnitResults: true
-              testResultsFiles: '**/SERENITY-JUNIT-*.xml'
-              # testRunTitle: 'Prod UI Tests'
-              ${{ if and(eq(variables['Agent.OS'], 'Linux'), not(contains(parameters.pool, 'vmss'))) }}:
-                javaHomeOption: 'Path'
-                jdkVersionOption: 1.11
-                jdkDirectory: '/usr/lib/jvm/java-11-openjdk-11.0.16.1.1-1.el8_6.x86_64'
-                mavenVersionOption: 'Path'
-                mavenDirectory: '/opt/maven'
-              ${{ if and(eq(variables['Agent.OS'], 'Linux'), contains(parameters.pool, 'vmss')) }}:
-                javaHomeOption: 'Path'
-                jdkVersionOption: 1.11
-                jdkDirectory: '/usr/lib/jvm/java-11-openjdk-amd64'
-                mavenVersionOption: 'Path'
-                mavenDirectory: '/usr/share/maven'
-              ${{ if eq(variables['Agent.OS'], 'Windows_NT') }}:
-                javaHomeOption: 'Path'
-                jdkDirectory: $(java_home)
-                mavenVersionOption: 'Default'
-- task: PublishTestResults@2
-  inputs:
-    testResultsFormat: 'JUnit'
-    testResultsFiles: '**/target/failsafe-reports/*.xml'
-    
-- task: PublishCodeCoverageResults@2
-  inputs:
-    summaryFileLocation: 'target/site/serenity/serenity-summary.html' 
-    
-- task: PublishPipelineArtifact@1
-  condition: succeededOrFailed() 
-  inputs:
-    targetPath: '$(Pipeline.Workspace)'
-    publishLocation: 'pipeline'
-    fileSharePath: ${{ parameters.result }}
+  steps:
+  - checkout: self
+    displayName: Checkout repo
 
-    
+  - task: Cache@2
+    displayName: Cache Maven local repository
+    inputs:
+      key: 'maven | "$(Agent.OS)" | **/pom.xml'
+      path: ~/.m2/repository
+
+  - script: |
+      echo "Waiting for Selenium on http://localhost:4444 ..."
+      for i in $(seq 1 30); do
+        if curl -sS http://localhost:4444/status | grep -q '"ready":true'; then
+          echo "Selenium ready"
+          break
+        fi
+        echo "waiting ($i)..."
+        sleep 2
+      done
+    displayName: Wait for Selenium service
+
+  - script: |
+      mvn -B -Dwebdriver.driver=remote -Dwebdriver.remote.url=http://localhost:4444 \
+        -Dwebdriver.remote.sessionCapabilities='{"browserName":"chrome","goog:chromeOptions":{"args":["--no-sandbox","--headless=new","--disable-gpu","--window-size=1920,1080"]}}' \
+        -DskipTests=false clean verify
+    displayName: Run Maven tests (Serenity + Cucumber)
+
+  - task: PublishTestResults@2
+    displayName: Publish JUnit/Failsafe results
+    inputs:
+      testResultsFiles: |
+        **/target/surefire-reports/*.xml
+        **/target/failsafe-reports/*.xml
+      testResultsFormat: JUnit
+      failTaskOnFailedTests: false
+
+  - task: PublishPipelineArtifact@1
+    displayName: Upload Serenity HTML report
+    inputs:
+      targetPath: 'target/site/serenity'
+      artifact: 'serenity-report'
+
+  - task: PublishBuildArtifacts@1
+    displayName: Publish build artifacts (jars)
+    inputs:
+      pathToPublish: 'target/*.jar'
+      artifactName: 'artifacts'
+      publishLocation: 'Container'
+
+## Containerization and optional container deploy
+# Build and push image to ACR (requires `azureSubscription` and `acrName` to be set)
+- ${{ if eq(variables.deploy, 'true') }}:
+  - task: AzureCLI@2
+    displayName: 'Build and push Docker image to ACR'
+    inputs:
+      azureSubscription: '$(azureSubscription)'
+      scriptType: 'bash'
+      scriptLocation: 'inlineScript'
+      inlineScript: |
+        set -euo pipefail
+        echo "Logging in to ACR: $(acrName)"
+        az acr login --name $(acrName)
+        FULL_IMAGE=$(acrName).azurecr.io/$(imageName):$(imageTag)
+        echo "Building image $FULL_IMAGE"
+        docker build -t $FULL_IMAGE .
+        echo "Pushing image $FULL_IMAGE"
+        docker push $FULL_IMAGE
+
+  # Deploy to Web App for Containers (if selected)
+  - ${{ if eq(variables.deployTarget, 'webapp') }}:
+    - task: AzureWebAppContainer@1
+      displayName: 'Deploy image to Azure Web App for Containers'
+      inputs:
+        azureSubscription: '$(azureSubscription)'
+        appName: '$(appName)'
+        imageName: '$(acrName).azurecr.io/$(imageName):$(imageTag)'
+
+  # Deploy to Azure Container Apps (if selected). Requires `resourceGroup` and container app `appName` to exist.
+  - ${{ if eq(variables.deployTarget, 'containerapp') }}:
+    - task: AzureCLI@2
+      displayName: 'Update Azure Container App image'
+      inputs:
+        azureSubscription: '$(azureSubscription)'
+        scriptType: 'bash'
+        scriptLocation: 'inlineScript'
+        inlineScript: |
+          set -euo pipefail
+          FULL_IMAGE=$(acrName).azurecr.io/$(imageName):$(imageTag)
+          echo "Updating Container App $(appName) in resource group $(resourceGroup) to image $FULL_IMAGE"
+          az containerapp update --name $(appName) --resource-group $(resourceGroup) --image $FULL_IMAGE
+

@@ -19,7 +19,6 @@ import org.apache.poi.ss.util.NumberToTextConverter;
 public class ExcelReader {
 
 
-
     public List<Map<String, String>> getData(String excelFilePath, String sheetName)
             throws InvalidFormatException, IOException {
         Sheet sheet = getSheetByName(excelFilePath, sheetName);
@@ -74,30 +73,20 @@ public class ExcelReader {
 
 
     public int getHeaderRowNumber(Sheet sheet) {
-        Row row;
-        int totalRow = sheet.getLastRowNum();
-        for (int currentRow = 0; currentRow <= totalRow + 1; currentRow++) {
-            row = getRow(sheet, currentRow);
+        int lastRowIndex = sheet.getLastRowNum();
+
+        for (int currentRowIndex = 0; currentRowIndex <= lastRowIndex; currentRowIndex++) {
+            Row row = sheet.getRow(currentRowIndex);
             if (row != null) {
-                int totalColumn = row.getLastCellNum();
-                for (int currentColumn = 0; currentColumn < totalColumn; currentColumn++) {
-                    Cell cell;
-                    cell = row.getCell(currentColumn, Row.MissingCellPolicy.CREATE_NULL_AS_BLANK);
-                    if (cell.getCellType() == CellType.STRING) {
-                        return row.getRowNum();
-
-                    } else if (cell.getCellType() == CellType.NUMERIC) {
-                        return row.getRowNum();
-
-                    } else if (cell.getCellType() == CellType.BOOLEAN) {
-                        return row.getRowNum();
-                    } else if (cell.getCellType() == CellType.ERROR) {
+                for (Cell cell : row) {
+                    CellType cellType = cell.getCellType();
+                    if (cellType != CellType.BLANK && cellType != CellType._NONE) {
                         return row.getRowNum();
                     }
                 }
             }
         }
-        return (-1);
+        return -1;
     }
 
     public Row getRow(Sheet sheet, int rowNumber) {
@@ -150,27 +139,28 @@ public class ExcelReader {
                             .getStringCellValue();
                     columnMapdata.put(columnHeaderName, Boolean.toString(cell.getBooleanCellValue()));
                 }
-            } else if (cell.getCellType() == CellType.ERROR) {
-                if (sheet.getRow(sheet.getFirstRowNum())
-                        .getCell(cell.getColumnIndex(), Row.MissingCellPolicy.CREATE_NULL_AS_BLANK)
-                        .getCellType() != CellType.BLANK) {
-                    String columnHeaderName = sheet.getRow(sheet.getFirstRowNum()).getCell(cell.getColumnIndex())
-                            .getStringCellValue();
-                    columnMapdata.put(columnHeaderName, Byte.toString(cell.getErrorCellValue()));
-                }
+            } else if (cell.getCellType() == CellType.ERROR && sheet.getRow(sheet.getFirstRowNum())
+                    .getCell(cell.getColumnIndex(), Row.MissingCellPolicy.CREATE_NULL_AS_BLANK)
+                    .getCellType() != CellType.BLANK) {
+                String columnHeaderName = sheet.getRow(sheet.getFirstRowNum()).getCell(cell.getColumnIndex())
+                        .getStringCellValue();
+                columnMapdata.put(columnHeaderName, Byte.toString(cell.getErrorCellValue()));
             }
+
         }
         return columnMapdata;
     }
 
     /**
      * Returns a map with 'username' and 'password' for a given role from the specified Excel file and sheet.
+     *
      * @param excelFilePath Path to the Excel file
-     * @param sheetName Name of the sheet
-     * @param roleValue Value of the role to search for
+     * @param sheetName     Name of the sheet
+     * @param roleValue     Value of the role to search for
      * @return Map with keys 'username' and 'password', or null if not found
      */
-    public Map<String, String> getUsernameAndPasswordByRole(String excelFilePath, String sheetName, String roleValue) throws InvalidFormatException, IOException {
+    public Map<String, String> getUsernameAndPasswordByRole(String excelFilePath, String sheetName, String
+            roleValue) throws InvalidFormatException, IOException {
         List<Map<String, String>> data = getData(excelFilePath, sheetName);
         for (Map<String, String> row : data) {
             if (row.containsKey("role") && row.get("role").equalsIgnoreCase(roleValue)) {

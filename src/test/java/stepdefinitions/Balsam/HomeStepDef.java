@@ -1,6 +1,5 @@
 package stepdefinitions.Balsam;
 
-import io.cucumber.java.PendingException;
 import io.cucumber.java.en.*;
 import net.serenitybdd.annotations.Steps;
 import org.fluentlenium.core.annotation.Page;
@@ -33,6 +32,22 @@ public class HomeStepDef {
     @Given("{} Navigate to {} using {}")
     public void navigateToPage(String actor, String page, String role) {
         // Navigate to the specified page using the given role
+        //Write a program that takes an input array and prints the frequency of the elements in an array.
+        //I/P -> a[12] = {1, 2, 3, 1, 2, 3, 4, 5, 6, 6, 7, 7};
+        // O/P -> {1=2, 2=2, 3=2, 4=1, 5=1, 6=2, 7=2}
+
+        int[] a = {1, 2, 3, 1, 2, 3, 4, 5, 6, 6, 7, 7};
+        Map<Integer, Integer> frequencyMap = new java.util.HashMap<>();
+
+        for (int element : a) {
+            int counter = frequencyMap.getOrDefault(element, 0);
+            frequencyMap.put(element, counter + 1);
+        }
+
+        for (Map.Entry<Integer, Integer> entry : frequencyMap.entrySet()) {
+            System.out.println(entry.getKey() + "=" + entry.getValue());
+        }
+        
         commonStepDef.testStep(format("NavigateToPage : Page '%s' | Role '%s'", page, role));
         commonStepDef.navigatePage(page);
         commonStepDef.zoomInOutPage(80);
@@ -59,27 +74,22 @@ public class HomeStepDef {
         commonStepDef.waitForPageInSecond(2000);
     }
 
-    @Then("I Test the Excel Reader for using {} fileName")
-    public void testExternalFile(String fileName) {
+    @Then("I Test the Excel Reader for using {} fileName in {} sheetName using {} role")
+    public void testExternalFile(String fileName, String sheetName, String role) {
 
         ExcelReader reader = new ExcelReader();
         try {
-            String exeFileName = fileName;
-            String exeSheetName = "UserList";
-            String role = "Test_Engineer";
 
-            String filePath = System.getProperty("user.dir") + "/src/test/resources/testData/" + exeFileName + ".xlsx";
-            Map<String, String> credentials = reader.getUsernameAndPasswordByRole(filePath, exeSheetName, role);
+            String filePath = System.getProperty("user.dir") + "/src/test/resources/testData/" + fileName + ".xlsx";
+            Map<String, String> credentials = reader.getUsernameAndPasswordByRole(filePath, sheetName, role);
             String _username = credentials.get("username");
             String _password = credentials.get("password");
 
-            commonStepDef.testStep(String.format("Get Username and Password using Role in '%s' - file  | %s - workSheet | %s - role", exeFileName, exeSheetName, role));
+            commonStepDef.testStep(String.format("Get Username and Password using Role in '%s' - file  | %s - workSheet | %s - role", fileName, sheetName, role));
             commonStepDef.testStep(String.format("Get Username : '%s'", _username));
-            commonStepDef.testStep(String.format("Get Password : ", _password));
+            commonStepDef.testStep(String.format("Get Password : '%s'", _password));
 
-        } catch (InvalidFormatException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
+        } catch (InvalidFormatException | IOException e) {
             e.printStackTrace();
         }
 

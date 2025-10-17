@@ -1,0 +1,851 @@
+2025-10-14 16:48:53.295 [ForkJoinPool-2-worker-1] INFO  n.thucydides.core.steps.StepEventBus - Loading JUnit Platform configuration parameters from classpath resource [junit-platform.properties].
+2025-10-14 16:48:53.319 [ForkJoinPool-2-worker-1] INFO   - [96m
+
+-------------------------------------------------------------------------------------
+     _______. _______ .______       _______ .__   __.  __  .___________.____    ____ 
+    /       ||   ____||   _  \     |   ____||  \ |  | |  | |           |\   \  /   / 
+   |   (----`|  |__   |  |_)  |    |  |__   |   \|  | |  | `---|  |----` \   \/   /  
+    \   \    |   __|  |      /     |   __|  |  . `  | |  |     |  |       \_    _/   
+.----)   |   |  |____ |  |\  \----.|  |____ |  |\   | |  |     |  |         |  |     
+|_______/    |_______|| _| `._____||_______||__| \__| |__|     |__|         |__|    
+                                                                                     
+ News and tutorials at https://serenity-bdd.info                                     
+ Documentation at https://serenity-bdd.github.io                                     
+ Test Automation Training and Coaching: https://www.serenity-dojo.com                
+ Commercial Support: https://www.serenity-dojo.com/serenity-bdd-enterprise-support   
+ Join the Serenity Community on Gitter: https://gitter.im/serenity-bdd/serenity-core 
+-------------------------------------------------------------------------------------
+[0m
+2025-10-14 16:48:53.323 [ForkJoinPool-2-worker-1] INFO   - Test Suite Started: Validate and Verify Cart Balsam Page
+2025-10-14 16:50:04.425 [ForkJoinPool-2-worker-1] INFO   - 
+  _____   ___   ___   _____     ___   _____     _     ___   _____   ___   ___  
+ |_   _| | __| / __| |_   _|   / __| |_   _|   /_\   | _ \ |_   _| | __| |   \ 
+   | |   | _|  \__ \   | |     \__ \   | |    / _ \  |   /   | |   | _|  | |) |
+   |_|   |___| |___/   |_|     |___/   |_|   /_/ \_\ |_|_\   |_|   |___| |___/ 
+
+Validate and Verify the Add and Remove Cart Item Page(validate-and-verify-cart-balsam-page;validate-and-verify-the-add-and-remove-cart-item-page)
+--------------------------------------------------------------------------------
+2025-10-14 16:50:04.429 [ForkJoinPool-2-worker-1] INFO   - [92m|-- 1: Validate and Verify the Add and Remove Cart Item Page ({Page=balsamhill, Role=ProDinnerAdmin, SearchItem=Christmas Tree, ItemResultIndex=3, CartAddedCount=1})[0m
+2025-10-14 16:50:04.430 [ForkJoinPool-2-worker-1] INFO   - [92m|---- Given DheoTester Navigate to balsamhill using ProDinnerAdmin[0m
+2025-10-14 16:50:04.432 [ForkJoinPool-2-worker-1] INFO   - [92m|---- When I Search the Christmas Tree[0m
+2025-10-14 16:50:04.433 [ForkJoinPool-2-worker-1] INFO   - [92m|---- And I Select the item 3 from the search result[0m
+2025-10-14 16:50:04.433 [ForkJoinPool-2-worker-1] INFO   - [92m|---- And I Customize and Add to Cart the item using the following:
+| Height | Shape | Lights | Setup |
+| 10 | Sparse Tree | LED Color + Clear Lights | Standard |[0m
+2025-10-14 16:50:04.434 [ForkJoinPool-2-worker-1] INFO   - [92m|---- Then I Validate And Verify the added item from Dialog[0m
+2025-10-14 16:50:04.434 [ForkJoinPool-2-worker-1] INFO   - [92m|---- When I Click the View Cart Button[0m
+2025-10-14 16:50:04.435 [ForkJoinPool-2-worker-1] INFO   - [92m|---- Then I Validate And Verify the added item from Cart Page[0m
+2025-10-14 16:50:04.435 [ForkJoinPool-2-worker-1] INFO   - [92m|---- And I Validate the Cart Icon should have 1 value[0m
+2025-10-14 16:50:04.435 [ForkJoinPool-2-worker-1] INFO   - [92m|---- When I Click the Remove Button[0m
+2025-10-14 16:50:04.436 [ForkJoinPool-2-worker-1] INFO   - [92m|---- Then I Validate and Verify that the added item is removed from the Cart Page[0m
+2025-10-14 16:50:04.438 [ForkJoinPool-2-worker-1] INFO   - [92m
+  _____   ___   ___   _____     ___     _     ___   ___   ___   ___  
+ |_   _| | __| / __| |_   _|   | _ \   /_\   / __| / __| | __| |   \ 
+   | |   | _|  \__ \   | |     |  _/  / _ \  \__ \ \__ \ | _|  | |) |
+   |_|   |___| |___/   |_|     |_|   /_/ \_\ |___/ |___/ |___| |___/ 
+
+Validate and Verify the Add and Remove Cart Item Page
+----------------------------------------------------------------------[0m
+2025-10-14 16:50:04.447 [ForkJoinPool-2-worker-1] INFO   - [92m|-- 2: Validate and Verify the Add and Remove Cart Item Page ({Page=balsamhill, Role=ProDinnerAdmin, SearchItem=Christmas Tree, ItemResultIndex=1, CartAddedCount=1})[0m
+2025-10-14 16:50:04.447 [ForkJoinPool-2-worker-1] INFO   - [92m|---- Given DheoTester Navigate to balsamhill using ProDinnerAdmin[0m
+2025-10-14 16:50:04.448 [ForkJoinPool-2-worker-1] INFO   - [92m|---- When I Search the Christmas Tree[0m
+2025-10-14 16:50:04.449 [ForkJoinPool-2-worker-1] INFO   - [92m|---- And I Select the item 1 from the search result[0m
+2025-10-14 16:50:04.449 [ForkJoinPool-2-worker-1] INFO   - [92m|---- And I Customize and Add to Cart the item using the following:
+| Height | Shape | Lights | Setup |
+| 10 | Sparse Tree | LED Color + Clear Lights | Standard |[0m
+2025-10-14 16:50:04.450 [ForkJoinPool-2-worker-1] INFO   - [92m|---- Then I Validate And Verify the added item from Dialog[0m
+2025-10-14 16:50:04.450 [ForkJoinPool-2-worker-1] INFO   - [92m|---- When I Click the View Cart Button[0m
+2025-10-14 16:50:04.451 [ForkJoinPool-2-worker-1] INFO   - [92m|---- Then I Validate And Verify the added item from Cart Page[0m
+2025-10-14 16:50:04.451 [ForkJoinPool-2-worker-1] INFO   - [92m|---- And I Validate the Cart Icon should have 1 value[0m
+2025-10-14 16:50:04.452 [ForkJoinPool-2-worker-1] INFO   - [92m|---- When I Click the Remove Button[0m
+2025-10-14 16:50:04.453 [ForkJoinPool-2-worker-1] INFO   - [92m|------ Click element: By.xpath: //div[contains(@class,'product-detail-list')]//button[contains(@class,'cartProductDetailItem_delete')][0m
+2025-10-14 16:50:04.460 [ForkJoinPool-2-worker-1] INFO   - [92m|-------- Then I Validate and Verify that the added item is removed from the Cart Page[0m
+2025-10-14 16:50:04.461 [ForkJoinPool-2-worker-1] INFO   - [33m      -> STEP IGNORED[0m
+2025-10-14 16:51:01.598 [main] INFO  n.thucydides.core.steps.StepEventBus - Loading JUnit Platform configuration parameters from classpath resource [junit-platform.properties].
+2025-10-14 16:51:01.705 [main] INFO  n.s.c.w.d.ChromeDriverProvider - Starting Chrome driver instance with capabilities:
+2025-10-14 16:51:01.707 [main] INFO  n.s.c.w.d.ChromeDriverProvider - Capabilities {acceptInsecureCerts: false, browserName: chrome, goog:chromeOptions: {args: [--remote-allow-origins=*], extensions: []}}
+2025-10-14 16:54:21.035 [main] INFO  n.thucydides.core.steps.StepEventBus - Loading JUnit Platform configuration parameters from classpath resource [junit-platform.properties].
+2025-10-14 16:54:21.077 [main] INFO  stepdefinitions.CommonStepDef - testStep$accessor$EF0H9tpy : NavigateToPage : Page 'balsamhill' | Role 'ProDinnerAdmin'
+2025-10-14 16:54:21.082 [main] INFO  stepdefinitions.CommonStepDef - testStep$accessor$EF0H9tpy : Navigate Page to balsamhill
+2025-10-14 16:54:21.146 [main] INFO  n.s.c.w.d.ChromeDriverProvider - Starting Chrome driver instance with capabilities:
+2025-10-14 16:54:21.148 [main] INFO  n.s.c.w.d.ChromeDriverProvider - Capabilities {acceptInsecureCerts: false, browserName: chrome, goog:chromeOptions: {args: [--remote-allow-origins=*], extensions: []}}
+2025-10-14 16:54:23.982 [main] INFO  stepdefinitions.CommonStepDef - testStep$accessor$EF0H9tpy : Wait For Page In Second(s) 2000
+2025-10-14 16:54:26.009 [main] INFO  stepdefinitions.CommonStepDef - testStep$accessor$EF0H9tpy : Click for Element if Exist 'By.xpath: //*[@id='bannerCloseButton' or @aria-label='Close drawer']'
+2025-10-14 16:54:26.053 [main] INFO  stepdefinitions.CommonStepDef - testStep$accessor$EF0H9tpy : Verify the Visibility of the element By.xpath: //*[@id='bannerCloseButton' or @aria-label='Close drawer'] in the page
+2025-10-14 16:54:26.060 [main] INFO  stepdefinitions.CommonStepDef - testStep$accessor$EF0H9tpy : the element By.xpath: //*[@id='bannerCloseButton' or @aria-label='Close drawer'] is true
+2025-10-14 16:54:28.209 [main] INFO  stepdefinitions.CommonStepDef - testStep$accessor$EF0H9tpy : Wait For Page In Second(s) 1000
+2025-10-14 16:54:29.214 [main] INFO  stepdefinitions.CommonStepDef - testStep$accessor$EF0H9tpy : Search Products in Page
+2025-10-14 16:54:29.217 [main] INFO  stepdefinitions.CommonStepDef - testStep$accessor$EF0H9tpy : Enter Text 'By.xpath: //header[contains(@class,'fixed-marquee-header')]//input[@id='constructor-search-input']' with Value Christmas Tree
+2025-10-14 16:54:29.218 [main] INFO  stepdefinitions.CommonStepDef - testStep$accessor$EF0H9tpy : Verify the Visibility of the element By.xpath: //header[contains(@class,'fixed-marquee-header')]//input[@id='constructor-search-input'] in the page
+2025-10-14 16:54:29.238 [main] INFO  stepdefinitions.CommonStepDef - testStep$accessor$EF0H9tpy : the element By.xpath: //header[contains(@class,'fixed-marquee-header')]//input[@id='constructor-search-input'] is true
+2025-10-14 16:54:31.394 [main] INFO  stepdefinitions.CommonStepDef - testStep$accessor$EF0H9tpy : Wait For Page In Second(s) 2000
+2025-10-14 16:54:33.400 [main] INFO  stepdefinitions.CommonStepDef - testStep$accessor$EF0H9tpy : verify the text in the page :[Ljava.lang.String;@7eaa2bc6
+2025-10-14 16:54:33.401 [main] INFO  stepdefinitions.CommonStepDef - testStep$accessor$EF0H9tpy : Verify the Visibility of the element By.xpath: //*[contains(text(),'Search result for:') and not(@type='application/json')] in the page
+2025-10-14 16:54:33.428 [main] INFO  stepdefinitions.CommonStepDef - testStep$accessor$EF0H9tpy : the element By.xpath: //*[contains(text(),'Search result for:') and not(@type='application/json')] is true
+2025-10-14 16:54:33.441 [main] INFO  stepdefinitions.CommonStepDef - testStep$accessor$EF0H9tpy : Wait For Page In Second(s) 2000
+2025-10-14 16:54:35.455 [main] INFO  stepdefinitions.CommonStepDef - testStep$accessor$EF0H9tpy : select Product Items From Search Results
+2025-10-14 16:54:35.457 [main] INFO  stepdefinitions.CommonStepDef - testStep$accessor$EF0H9tpy : Click for Element 'By.xpath: (//div[@data-testid='results-grid']//div[contains(@class,'listingContainer_product-listing-item-wrapper')])[3]'
+2025-10-14 16:54:35.457 [main] INFO  stepdefinitions.CommonStepDef - testStep$accessor$EF0H9tpy : Verify the Visibility of the element By.xpath: (//div[@data-testid='results-grid']//div[contains(@class,'listingContainer_product-listing-item-wrapper')])[3] in the page
+2025-10-14 16:54:35.475 [main] INFO  stepdefinitions.CommonStepDef - testStep$accessor$EF0H9tpy : the element By.xpath: (//div[@data-testid='results-grid']//div[contains(@class,'listingContainer_product-listing-item-wrapper')])[3] is true
+2025-10-14 16:54:37.600 [main] INFO  stepdefinitions.CommonStepDef - testStep$accessor$EF0H9tpy : Wait For Page In Second(s) 2000
+2025-10-14 16:54:39.739 [main] INFO  stepdefinitions.CommonStepDef - testStep$accessor$EF0H9tpy : Customize and Add to Cart
+2025-10-14 16:54:39.740 [main] INFO  stepdefinitions.CommonStepDef - testStep$accessor$EF0H9tpy : Click for Element if Exist 'By.xpath: //*[@id='bannerCloseButton' or @aria-label='Close drawer']'
+2025-10-14 16:54:41.792 [main] INFO  stepdefinitions.CommonStepDef - testStep$accessor$EF0H9tpy : Click for Element if Exist 'By.xpath: //div[contains(@class,'productDetailContainer_matrix')]//div[contains(@class,'renderSelectBoxFilterItem_product-filter-item')]/following::span[text()='10']/ancestor::span[last()]'
+2025-10-14 16:54:41.898 [main] INFO  stepdefinitions.CommonStepDef - testStep$accessor$EF0H9tpy : Verify the Visibility of the element By.xpath: //div[contains(@class,'productDetailContainer_matrix')]//div[contains(@class,'renderSelectBoxFilterItem_product-filter-item')]/following::span[text()='10']/ancestor::span[last()] in the page
+2025-10-14 16:54:41.903 [main] INFO  stepdefinitions.CommonStepDef - testStep$accessor$EF0H9tpy : the element By.xpath: //div[contains(@class,'productDetailContainer_matrix')]//div[contains(@class,'renderSelectBoxFilterItem_product-filter-item')]/following::span[text()='10']/ancestor::span[last()] is true
+2025-10-14 16:54:44.077 [main] INFO  stepdefinitions.CommonStepDef - testStep$accessor$EF0H9tpy : Click for Element if Exist 'By.xpath: //div[contains(@class,'productDetailContainer_matrix')]//div[contains(@class,'renderSelectBoxFilterItem_product-filter-item')]/following::span[text()='Sparse Tree']/ancestor::span[last()]'
+2025-10-14 16:54:46.139 [main] INFO  stepdefinitions.CommonStepDef - testStep$accessor$EF0H9tpy : Click for Element if Exist 'By.xpath: //div[contains(@class,'productDetailContainer_matrix')]//div[contains(@class,'renderSelectBoxFilterItem_product-filter-item')]/following::span[text()='LED Color + Clear Lights']/ancestor::span[last()]'
+2025-10-14 16:54:48.187 [main] INFO  stepdefinitions.CommonStepDef - testStep$accessor$EF0H9tpy : Click for Element if Exist 'By.xpath: //div[contains(@class,'productDetailContainer_matrix')]//div[contains(@class,'product-detail-buybox')]//span[@class='product-price']'
+2025-10-14 16:54:48.220 [main] INFO  stepdefinitions.CommonStepDef - testStep$accessor$EF0H9tpy : Verify the Visibility of the element By.xpath: //div[contains(@class,'productDetailContainer_matrix')]//div[contains(@class,'product-detail-buybox')]//span[@class='product-price'] in the page
+2025-10-14 16:54:48.225 [main] INFO  stepdefinitions.CommonStepDef - testStep$accessor$EF0H9tpy : the element By.xpath: //div[contains(@class,'productDetailContainer_matrix')]//div[contains(@class,'product-detail-buybox')]//span[@class='product-price'] is true
+2025-10-14 16:54:50.312 [main] INFO  stepdefinitions.CommonStepDef - testStep$accessor$EF0H9tpy : Click for Element if Exist 'By.xpath: //div[contains(@class,'productDetailContainer_matrix')]//div[contains(@class,'renderSelectBoxFilterItem_product-filter-item')]/following::span[text()='Standard']/ancestor::span[last()]'
+2025-10-14 16:54:52.543 [main] INFO  stepdefinitions.CommonStepDef - testStep$accessor$EF0H9tpy : Get Text Attribute of Element : 'By.xpath: //div[contains(@class,'productDetailContainer_matrix')]//div[contains(@class,'productDetailNameRating_product')]/h1' | Value : 'Alpine Balsam Fir® Trees'
+2025-10-14 16:54:52.544 [main] INFO  stepdefinitions.CommonStepDef - testStep$accessor$EF0H9tpy : Verify the visibility of 1 elements
+2025-10-14 16:54:52.544 [main] INFO  stepdefinitions.CommonStepDef - testStep$accessor$EF0H9tpy : Verify the Visibility of the element By.xpath: //div[contains(@class,'productDetailContainer_matrix')]//div[contains(@class,'productDetailNameRating_product')]/h1 in the page
+2025-10-14 16:54:52.554 [main] INFO  stepdefinitions.CommonStepDef - testStep$accessor$EF0H9tpy : the element By.xpath: //div[contains(@class,'productDetailContainer_matrix')]//div[contains(@class,'productDetailNameRating_product')]/h1 is true
+2025-10-14 16:54:52.649 [main] INFO  stepdefinitions.CommonStepDef - testStep$accessor$EF0H9tpy : Get Text Attribute of Element : 'By.xpath: //div[contains(@class,'productDetailContainer_matrix')]//div[@id='product_filter_height']/following-sibling::div[contains(@class,'productDetailFilter_selected-value')]' | Value : '10′'
+2025-10-14 16:54:52.651 [main] INFO  stepdefinitions.CommonStepDef - testStep$accessor$EF0H9tpy : Verify the visibility of 1 elements
+2025-10-14 16:54:52.651 [main] INFO  stepdefinitions.CommonStepDef - testStep$accessor$EF0H9tpy : Verify the Visibility of the element By.xpath: //div[contains(@class,'productDetailContainer_matrix')]//div[@id='product_filter_height']/following-sibling::div[contains(@class,'productDetailFilter_selected-value')] in the page
+2025-10-14 16:54:52.663 [main] INFO  stepdefinitions.CommonStepDef - testStep$accessor$EF0H9tpy : the element By.xpath: //div[contains(@class,'productDetailContainer_matrix')]//div[@id='product_filter_height']/following-sibling::div[contains(@class,'productDetailFilter_selected-value')] is true
+2025-10-14 16:54:52.761 [main] INFO  stepdefinitions.CommonStepDef - testStep$accessor$EF0H9tpy : Get Text Attribute of Element : 'By.xpath: //div[contains(@class,'productDetailContainer_matrix')]//div[@id='product_filter_shape']/following-sibling::div[contains(@class,'productDetailFilter_selected-value')]' | Value : 'Sparse Tree'
+2025-10-14 16:54:52.762 [main] INFO  stepdefinitions.CommonStepDef - testStep$accessor$EF0H9tpy : Verify the visibility of 1 elements
+2025-10-14 16:54:52.763 [main] INFO  stepdefinitions.CommonStepDef - testStep$accessor$EF0H9tpy : Verify the Visibility of the element By.xpath: //div[contains(@class,'productDetailContainer_matrix')]//div[@id='product_filter_shape']/following-sibling::div[contains(@class,'productDetailFilter_selected-value')] in the page
+2025-10-14 16:54:52.774 [main] INFO  stepdefinitions.CommonStepDef - testStep$accessor$EF0H9tpy : the element By.xpath: //div[contains(@class,'productDetailContainer_matrix')]//div[@id='product_filter_shape']/following-sibling::div[contains(@class,'productDetailFilter_selected-value')] is true
+2025-10-14 16:54:52.854 [main] INFO  stepdefinitions.CommonStepDef - testStep$accessor$EF0H9tpy : Get Text Attribute of Element : 'By.xpath: //div[contains(@class,'productDetailContainer_matrix')]//div[@id='product_filter_lights']/following-sibling::div[contains(@class,'productDetailFilter_selected-value')]' | Value : 'LED Clear Fairy Lights'
+2025-10-14 16:54:52.855 [main] INFO  stepdefinitions.CommonStepDef - testStep$accessor$EF0H9tpy : Verify the visibility of 1 elements
+2025-10-14 16:54:52.855 [main] INFO  stepdefinitions.CommonStepDef - testStep$accessor$EF0H9tpy : Verify the Visibility of the element By.xpath: //div[contains(@class,'productDetailContainer_matrix')]//div[@id='product_filter_lights']/following-sibling::div[contains(@class,'productDetailFilter_selected-value')] in the page
+2025-10-14 16:54:52.865 [main] INFO  stepdefinitions.CommonStepDef - testStep$accessor$EF0H9tpy : the element By.xpath: //div[contains(@class,'productDetailContainer_matrix')]//div[@id='product_filter_lights']/following-sibling::div[contains(@class,'productDetailFilter_selected-value')] is true
+2025-10-14 16:54:55.016 [main] INFO  stepdefinitions.CommonStepDef - testStep$accessor$EF0H9tpy : Get Text Attribute of Element : 'By.xpath: //div[contains(@class,'productDetailContainer_matrix')]//div[contains(@class,'product-detail-buybox')]//span[@class='product-price']' | Value : '$1,399'
+2025-10-14 16:54:55.017 [main] INFO  stepdefinitions.CommonStepDef - testStep$accessor$EF0H9tpy : Verify the visibility of 1 elements
+2025-10-14 16:54:55.017 [main] INFO  stepdefinitions.CommonStepDef - testStep$accessor$EF0H9tpy : Verify the Visibility of the element By.xpath: //div[contains(@class,'productDetailContainer_matrix')]//div[contains(@class,'product-detail-buybox')]//span[@class='product-price'] in the page
+2025-10-14 16:54:55.025 [main] INFO  stepdefinitions.CommonStepDef - testStep$accessor$EF0H9tpy : the element By.xpath: //div[contains(@class,'productDetailContainer_matrix')]//div[contains(@class,'product-detail-buybox')]//span[@class='product-price'] is true
+2025-10-14 16:54:55.052 [main] INFO  stepdefinitions.CommonStepDef - testStep$accessor$EF0H9tpy : Click for Element 'By.xpath: //div[contains(@class,'productDetailContainer_matrix')]//button[@type='button' and text()='Add to Cart']'
+2025-10-14 16:54:55.052 [main] INFO  stepdefinitions.CommonStepDef - testStep$accessor$EF0H9tpy : Verify the Visibility of the element By.xpath: //div[contains(@class,'productDetailContainer_matrix')]//button[@type='button' and text()='Add to Cart'] in the page
+2025-10-14 16:54:55.076 [main] INFO  stepdefinitions.CommonStepDef - testStep$accessor$EF0H9tpy : the element By.xpath: //div[contains(@class,'productDetailContainer_matrix')]//button[@type='button' and text()='Add to Cart'] is true
+2025-10-14 16:54:57.315 [main] INFO  stepdefinitions.CommonStepDef - testStep$accessor$EF0H9tpy : Wait For Page In Second(s) 1500
+2025-10-14 16:54:58.831 [main] INFO  stepdefinitions.CommonStepDef - testStep$accessor$EF0H9tpy : Validate and Verify Added Product Details
+2025-10-14 16:54:58.834 [main] INFO  stepdefinitions.CommonStepDef - testStep$accessor$EF0H9tpy : Click for Element if Exist 'No Thanks'
+2025-10-14 16:54:58.839 [main] INFO  stepdefinitions.CommonStepDef - testStep$accessor$EF0H9tpy : Click for Element if Exist 'By.xpath: //*[contains(text(),'No Thanks') and not(@type='application/json')]'
+2025-10-14 16:55:00.047 [main] INFO  stepdefinitions.CommonStepDef - testStep$accessor$EF0H9tpy : Verify the Visibility of the element By.xpath: //*[contains(text(),'No Thanks') and not(@type='application/json')] in the page
+2025-10-14 16:55:00.054 [main] INFO  stepdefinitions.CommonStepDef - testStep$accessor$EF0H9tpy : the element By.xpath: //*[contains(text(),'No Thanks') and not(@type='application/json')] is true
+2025-10-14 16:55:02.154 [main] INFO  stepdefinitions.CommonStepDef - testStep$accessor$EF0H9tpy : Verify the Visibility of the element By.xpath: //div[contains(@class,'add-to-cart-modal')]//div[contains(@class,'modal-content')]//*[contains(text(),'Alpine Balsam Fir')] in the page
+2025-10-14 16:55:02.255 [main] INFO  stepdefinitions.CommonStepDef - testStep$accessor$EF0H9tpy : the element By.xpath: //div[contains(@class,'add-to-cart-modal')]//div[contains(@class,'modal-content')]//*[contains(text(),'Alpine Balsam Fir')] is true
+2025-10-14 16:55:02.274 [main] INFO  stepdefinitions.CommonStepDef - testStep$accessor$EF0H9tpy : Verify the Visibility of the element By.xpath: //div[contains(@class,'add-to-cart-modal')]//div[contains(@class,'modal-content')]//*[contains(text(),'10')] in the page
+2025-10-14 16:55:02.295 [main] INFO  stepdefinitions.CommonStepDef - testStep$accessor$EF0H9tpy : the element By.xpath: //div[contains(@class,'add-to-cart-modal')]//div[contains(@class,'modal-content')]//*[contains(text(),'10')] is true
+2025-10-14 16:55:02.311 [main] INFO  stepdefinitions.CommonStepDef - testStep$accessor$EF0H9tpy : Verify the Visibility of the element By.xpath: //div[contains(@class,'add-to-cart-modal')]//div[contains(@class,'modal-content')]//*[contains(text(),'Sparse Tree')] in the page
+2025-10-14 16:55:02.335 [main] INFO  stepdefinitions.CommonStepDef - testStep$accessor$EF0H9tpy : the element By.xpath: //div[contains(@class,'add-to-cart-modal')]//div[contains(@class,'modal-content')]//*[contains(text(),'Sparse Tree')] is true
+2025-10-14 16:55:02.351 [main] INFO  stepdefinitions.CommonStepDef - testStep$accessor$EF0H9tpy : Verify the Visibility of the element By.xpath: //div[contains(@class,'add-to-cart-modal')]//div[contains(@class,'modal-content')]//*[contains(text(),'LED Clear Fairy Lights')] in the page
+2025-10-14 16:55:02.372 [main] INFO  stepdefinitions.CommonStepDef - testStep$accessor$EF0H9tpy : the element By.xpath: //div[contains(@class,'add-to-cart-modal')]//div[contains(@class,'modal-content')]//*[contains(text(),'LED Clear Fairy Lights')] is true
+2025-10-14 16:55:02.388 [main] INFO  stepdefinitions.CommonStepDef - testStep$accessor$EF0H9tpy : Verify the Visibility of the element By.xpath: //div[contains(@class,'add-to-cart-modal')]//div[contains(@class,'modal-content')]//*[contains(text(),'$1,399')] in the page
+2025-10-14 16:55:02.406 [main] INFO  stepdefinitions.CommonStepDef - testStep$accessor$EF0H9tpy : the element By.xpath: //div[contains(@class,'add-to-cart-modal')]//div[contains(@class,'modal-content')]//*[contains(text(),'$1,399')] is true
+2025-10-14 16:55:02.419 [main] INFO  stepdefinitions.CommonStepDef - testStep$accessor$EF0H9tpy : Click the View Cart Button
+2025-10-14 16:55:02.422 [main] INFO  stepdefinitions.CommonStepDef - testStep$accessor$EF0H9tpy : Click for Element 'By.xpath: //div[contains(@class,'add-to-cart-modal')]//div[contains(@class,'modal-content')]//button[contains(@class, 'productAddToCartModal_btn-viewcart')]'
+2025-10-14 16:55:02.423 [main] INFO  stepdefinitions.CommonStepDef - testStep$accessor$EF0H9tpy : Verify the Visibility of the element By.xpath: //div[contains(@class,'add-to-cart-modal')]//div[contains(@class,'modal-content')]//button[contains(@class, 'productAddToCartModal_btn-viewcart')] in the page
+2025-10-14 16:55:02.443 [main] INFO  stepdefinitions.CommonStepDef - testStep$accessor$EF0H9tpy : the element By.xpath: //div[contains(@class,'add-to-cart-modal')]//div[contains(@class,'modal-content')]//button[contains(@class, 'productAddToCartModal_btn-viewcart')] is true
+2025-10-14 16:55:04.579 [main] INFO  stepdefinitions.CommonStepDef - testStep$accessor$EF0H9tpy : Wait For Page In Second(s) 2000
+2025-10-14 16:55:06.595 [main] INFO  stepdefinitions.CommonStepDef - testStep$accessor$EF0H9tpy : Validate And Verify the added item from Cart Page
+2025-10-14 16:55:06.595 [main] INFO  stepdefinitions.CommonStepDef - testStep$accessor$EF0H9tpy : Click for Element if Exist 'No Thanks'
+2025-10-14 16:55:06.596 [main] INFO  stepdefinitions.CommonStepDef - testStep$accessor$EF0H9tpy : Click for Element if Exist 'By.xpath: //*[contains(text(),'No Thanks') and not(@type='application/json')]'
+2025-10-14 16:55:08.610 [main] INFO  stepdefinitions.CommonStepDef - testStep$accessor$EF0H9tpy : Verify the Visibility of the element By.xpath: //*[contains(text(),'No Thanks') and not(@type='application/json')] in the page
+2025-10-14 16:55:08.616 [main] INFO  stepdefinitions.CommonStepDef - testStep$accessor$EF0H9tpy : the element By.xpath: //*[contains(text(),'No Thanks') and not(@type='application/json')] is true
+2025-10-14 16:55:10.739 [main] INFO  stepdefinitions.CommonStepDef - testStep$accessor$EF0H9tpy : Get Text Attribute of Element : 'By.xpath: //div[contains(@class,'product-detail-list')]//*[contains(@class,'cartProductDetailItem_product_details_container')]' | Value : 'Alpine Balsam Fir® Tree
+10′ • Sparse Tree • LED Clear Fairy Lights'
+2025-10-14 16:55:10.740 [main] INFO  stepdefinitions.CommonStepDef - testStep$accessor$EF0H9tpy : Verify the Visibility of the element By.xpath: //div[contains(@class,'product-detail-list')]//*[contains(@class,'cartProductDetailItem_product_details_container')] in the page
+2025-10-14 16:55:10.750 [main] INFO  stepdefinitions.CommonStepDef - testStep$accessor$EF0H9tpy : the element By.xpath: //div[contains(@class,'product-detail-list')]//*[contains(@class,'cartProductDetailItem_product_details_container')] is true
+2025-10-14 16:55:10.818 [main] INFO  stepdefinitions.CommonStepDef - testStep$accessor$EF0H9tpy : Get Text Attribute of Element : 'By.xpath: //div[contains(@class,'product-detail-list')]//*[contains(@class,'cartProductDetailItem_new_price')]' | Value : '$1,399'
+2025-10-14 16:55:10.818 [main] INFO  stepdefinitions.CommonStepDef - testStep$accessor$EF0H9tpy : Verify the Visibility of the element By.xpath: //div[contains(@class,'product-detail-list')]//*[contains(@class,'cartProductDetailItem_new_price')] in the page
+2025-10-14 16:55:10.827 [main] INFO  stepdefinitions.CommonStepDef - testStep$accessor$EF0H9tpy : the element By.xpath: //div[contains(@class,'product-detail-list')]//*[contains(@class,'cartProductDetailItem_new_price')] is true
+2025-10-14 16:55:10.848 [main] INFO  stepdefinitions.CommonStepDef - testStep$accessor$EF0H9tpy : expectedCartDetails : Alpine Balsam Fir® Trees |  actualProductDetails.ToString: Alpine Balsam Fir Tree10 Sparse Tree LED Clear Fairy Lights $1,399
+2025-10-14 16:55:10.850 [main] INFO  stepdefinitions.CommonStepDef - testStep$accessor$EF0H9tpy : expectedCartDetails : 10′ |  actualProductDetails.ToString: Alpine Balsam Fir Tree10 Sparse Tree LED Clear Fairy Lights $1,399
+2025-10-14 16:55:10.851 [main] INFO  stepdefinitions.CommonStepDef - testStep$accessor$EF0H9tpy : expectedCartDetails : Sparse Tree |  actualProductDetails.ToString: Alpine Balsam Fir Tree10 Sparse Tree LED Clear Fairy Lights $1,399
+2025-10-14 16:55:10.851 [main] INFO  stepdefinitions.CommonStepDef - testStep$accessor$EF0H9tpy : expectedCartDetails : LED Clear Fairy Lights |  actualProductDetails.ToString: Alpine Balsam Fir Tree10 Sparse Tree LED Clear Fairy Lights $1,399
+2025-10-14 16:55:10.851 [main] INFO  stepdefinitions.CommonStepDef - testStep$accessor$EF0H9tpy : expectedCartDetails : $1,399 |  actualProductDetails.ToString: Alpine Balsam Fir Tree10 Sparse Tree LED Clear Fairy Lights $1,399
+2025-10-14 16:55:10.983 [main] INFO  stepdefinitions.CommonStepDef - testStep$accessor$EF0H9tpy : Validate the Cart Icon should have 1 value
+2025-10-14 16:55:10.985 [main] INFO  stepdefinitions.CommonStepDef - testStep$accessor$EF0H9tpy : Verify the Visibility of the element By.xpath: //li[contains(@class,'headerIcons_cart-icon')]//span in the page
+2025-10-14 16:55:11.006 [main] INFO  stepdefinitions.CommonStepDef - testStep$accessor$EF0H9tpy : the element By.xpath: //li[contains(@class,'headerIcons_cart-icon')]//span is true
+2025-10-14 16:55:11.027 [main] INFO  stepdefinitions.CommonStepDef - testStep$accessor$EF0H9tpy : Click Remove Button
+2025-10-14 16:55:11.029 [main] INFO  stepdefinitions.CommonStepDef - testStep$accessor$EF0H9tpy : Click for Element 'By.xpath: //div[contains(@class,'product-detail-list')]//button[contains(@class,'cartProductDetailItem_delete')]'
+2025-10-14 16:55:11.029 [main] INFO  stepdefinitions.CommonStepDef - testStep$accessor$EF0H9tpy : Verify the Visibility of the element By.xpath: //div[contains(@class,'product-detail-list')]//button[contains(@class,'cartProductDetailItem_delete')] in the page
+2025-10-14 16:55:11.051 [main] INFO  stepdefinitions.CommonStepDef - testStep$accessor$EF0H9tpy : the element By.xpath: //div[contains(@class,'product-detail-list')]//button[contains(@class,'cartProductDetailItem_delete')] is true
+2025-10-14 16:55:13.172 [main] INFO  stepdefinitions.CommonStepDef - testStep$accessor$EF0H9tpy : Validate and Verify that removed item from the Cart Page
+2025-10-14 16:55:13.174 [main] INFO  stepdefinitions.CommonStepDef - testStep$accessor$EF0H9tpy : Verify the Visibility of the element By.xpath: //div[contains(@class,'product-detail-list')]//div[contains(@class,'cartProductDetailItem_product-name-wrapper')] in the page
+2025-10-14 16:55:14.458 [main] INFO  stepdefinitions.CommonStepDef - testStep$accessor$EF0H9tpy : the element By.xpath: //div[contains(@class,'product-detail-list')]//div[contains(@class,'cartProductDetailItem_product-name-wrapper')] is true
+2025-10-14 16:55:14.522 [main] INFO  stepdefinitions.CommonStepDef - testStep$accessor$EF0H9tpy : Verify the Visibility of the element By.xpath: //div[contains(@class,'product-detail-list')]//a[contains(@class, 'cartProductDetailItem_undo')] in the page
+2025-10-14 16:55:14.547 [main] INFO  stepdefinitions.CommonStepDef - testStep$accessor$EF0H9tpy : the element By.xpath: //div[contains(@class,'product-detail-list')]//a[contains(@class, 'cartProductDetailItem_undo')] is true
+2025-10-14 16:55:14.708 [main] INFO  stepdefinitions.CommonStepDef - testStep$accessor$EF0H9tpy : NavigateToPage : Page 'balsamhill' | Role 'ProDinnerAdmin'
+2025-10-14 16:55:14.709 [main] INFO  stepdefinitions.CommonStepDef - testStep$accessor$EF0H9tpy : Navigate Page to balsamhill
+2025-10-14 16:55:16.672 [main] INFO  stepdefinitions.CommonStepDef - testStep$accessor$EF0H9tpy : Wait For Page In Second(s) 2000
+2025-10-14 16:55:18.682 [main] INFO  stepdefinitions.CommonStepDef - testStep$accessor$EF0H9tpy : Click for Element if Exist 'By.xpath: //*[@id='bannerCloseButton' or @aria-label='Close drawer']'
+2025-10-14 16:55:20.799 [main] INFO  stepdefinitions.CommonStepDef - testStep$accessor$EF0H9tpy : Wait For Page In Second(s) 1000
+2025-10-14 16:55:21.801 [main] INFO  stepdefinitions.CommonStepDef - testStep$accessor$EF0H9tpy : Search Products in Page
+2025-10-14 16:55:21.802 [main] INFO  stepdefinitions.CommonStepDef - testStep$accessor$EF0H9tpy : Enter Text 'By.xpath: //header[contains(@class,'fixed-marquee-header')]//input[@id='constructor-search-input']' with Value Christmas Tree
+2025-10-14 16:55:21.803 [main] INFO  stepdefinitions.CommonStepDef - testStep$accessor$EF0H9tpy : Verify the Visibility of the element By.xpath: //header[contains(@class,'fixed-marquee-header')]//input[@id='constructor-search-input'] in the page
+2025-10-14 16:55:21.839 [main] INFO  stepdefinitions.CommonStepDef - testStep$accessor$EF0H9tpy : the element By.xpath: //header[contains(@class,'fixed-marquee-header')]//input[@id='constructor-search-input'] is true
+2025-10-14 16:55:24.006 [main] INFO  stepdefinitions.CommonStepDef - testStep$accessor$EF0H9tpy : Wait For Page In Second(s) 2000
+2025-10-14 16:55:26.013 [main] INFO  stepdefinitions.CommonStepDef - testStep$accessor$EF0H9tpy : verify the text in the page :[Ljava.lang.String;@58a7ca42
+2025-10-14 16:55:26.014 [main] INFO  stepdefinitions.CommonStepDef - testStep$accessor$EF0H9tpy : Verify the Visibility of the element By.xpath: //*[contains(text(),'Search result for:') and not(@type='application/json')] in the page
+2025-10-14 16:55:26.033 [main] INFO  stepdefinitions.CommonStepDef - testStep$accessor$EF0H9tpy : the element By.xpath: //*[contains(text(),'Search result for:') and not(@type='application/json')] is true
+2025-10-14 16:55:26.043 [main] INFO  stepdefinitions.CommonStepDef - testStep$accessor$EF0H9tpy : Wait For Page In Second(s) 2000
+2025-10-14 16:55:28.056 [main] INFO  stepdefinitions.CommonStepDef - testStep$accessor$EF0H9tpy : select Product Items From Search Results
+2025-10-14 16:55:28.058 [main] INFO  stepdefinitions.CommonStepDef - testStep$accessor$EF0H9tpy : Click for Element 'By.xpath: (//div[@data-testid='results-grid']//div[contains(@class,'listingContainer_product-listing-item-wrapper')])[1]'
+2025-10-14 16:55:28.058 [main] INFO  stepdefinitions.CommonStepDef - testStep$accessor$EF0H9tpy : Verify the Visibility of the element By.xpath: (//div[@data-testid='results-grid']//div[contains(@class,'listingContainer_product-listing-item-wrapper')])[1] in the page
+2025-10-14 16:55:28.072 [main] INFO  stepdefinitions.CommonStepDef - testStep$accessor$EF0H9tpy : the element By.xpath: (//div[@data-testid='results-grid']//div[contains(@class,'listingContainer_product-listing-item-wrapper')])[1] is true
+2025-10-14 16:55:30.199 [main] INFO  stepdefinitions.CommonStepDef - testStep$accessor$EF0H9tpy : Wait For Page In Second(s) 2000
+2025-10-14 16:55:32.278 [main] INFO  stepdefinitions.CommonStepDef - testStep$accessor$EF0H9tpy : Customize and Add to Cart
+2025-10-14 16:55:32.279 [main] INFO  stepdefinitions.CommonStepDef - testStep$accessor$EF0H9tpy : Click for Element if Exist 'By.xpath: //*[@id='bannerCloseButton' or @aria-label='Close drawer']'
+2025-10-14 16:55:34.364 [main] INFO  stepdefinitions.CommonStepDef - testStep$accessor$EF0H9tpy : Click for Element if Exist 'By.xpath: //div[contains(@class,'productDetailContainer_matrix')]//div[contains(@class,'renderSelectBoxFilterItem_product-filter-item')]/following::span[text()='10']/ancestor::span[last()]'
+2025-10-14 16:55:34.407 [main] INFO  stepdefinitions.CommonStepDef - testStep$accessor$EF0H9tpy : Verify the Visibility of the element By.xpath: //div[contains(@class,'productDetailContainer_matrix')]//div[contains(@class,'renderSelectBoxFilterItem_product-filter-item')]/following::span[text()='10']/ancestor::span[last()] in the page
+2025-10-14 16:55:34.415 [main] INFO  stepdefinitions.CommonStepDef - testStep$accessor$EF0H9tpy : the element By.xpath: //div[contains(@class,'productDetailContainer_matrix')]//div[contains(@class,'renderSelectBoxFilterItem_product-filter-item')]/following::span[text()='10']/ancestor::span[last()] is true
+2025-10-14 16:55:36.662 [main] INFO  stepdefinitions.CommonStepDef - testStep$accessor$EF0H9tpy : Click for Element if Exist 'By.xpath: //div[contains(@class,'productDetailContainer_matrix')]//div[contains(@class,'renderSelectBoxFilterItem_product-filter-item')]/following::span[text()='Sparse Tree']/ancestor::span[last()]'
+2025-10-14 16:55:38.747 [main] INFO  stepdefinitions.CommonStepDef - testStep$accessor$EF0H9tpy : Click for Element if Exist 'By.xpath: //div[contains(@class,'productDetailContainer_matrix')]//div[contains(@class,'renderSelectBoxFilterItem_product-filter-item')]/following::span[text()='LED Color + Clear Lights']/ancestor::span[last()]'
+2025-10-14 16:55:40.769 [main] INFO  stepdefinitions.CommonStepDef - testStep$accessor$EF0H9tpy : Click for Element if Exist 'By.xpath: //div[contains(@class,'productDetailContainer_matrix')]//div[contains(@class,'product-detail-buybox')]//span[@class='product-price']'
+2025-10-14 16:55:40.800 [main] INFO  stepdefinitions.CommonStepDef - testStep$accessor$EF0H9tpy : Verify the Visibility of the element By.xpath: //div[contains(@class,'productDetailContainer_matrix')]//div[contains(@class,'product-detail-buybox')]//span[@class='product-price'] in the page
+2025-10-14 16:55:40.806 [main] INFO  stepdefinitions.CommonStepDef - testStep$accessor$EF0H9tpy : the element By.xpath: //div[contains(@class,'productDetailContainer_matrix')]//div[contains(@class,'product-detail-buybox')]//span[@class='product-price'] is true
+2025-10-14 16:55:42.888 [main] INFO  stepdefinitions.CommonStepDef - testStep$accessor$EF0H9tpy : Click for Element if Exist 'By.xpath: //div[contains(@class,'productDetailContainer_matrix')]//div[contains(@class,'renderSelectBoxFilterItem_product-filter-item')]/following::span[text()='Standard']/ancestor::span[last()]'
+2025-10-14 16:55:44.996 [main] INFO  stepdefinitions.CommonStepDef - testStep$accessor$EF0H9tpy : Get Text Attribute of Element : 'By.xpath: //div[contains(@class,'productDetailContainer_matrix')]//div[contains(@class,'productDetailNameRating_product')]/h1' | Value : 'Classic Blue Spruce® Trees'
+2025-10-14 16:55:44.997 [main] INFO  stepdefinitions.CommonStepDef - testStep$accessor$EF0H9tpy : Verify the visibility of 1 elements
+2025-10-14 16:55:44.998 [main] INFO  stepdefinitions.CommonStepDef - testStep$accessor$EF0H9tpy : Verify the Visibility of the element By.xpath: //div[contains(@class,'productDetailContainer_matrix')]//div[contains(@class,'productDetailNameRating_product')]/h1 in the page
+2025-10-14 16:55:45.004 [main] INFO  stepdefinitions.CommonStepDef - testStep$accessor$EF0H9tpy : the element By.xpath: //div[contains(@class,'productDetailContainer_matrix')]//div[contains(@class,'productDetailNameRating_product')]/h1 is true
+2025-10-14 16:55:45.062 [main] INFO  stepdefinitions.CommonStepDef - testStep$accessor$EF0H9tpy : Get Text Attribute of Element : 'By.xpath: //div[contains(@class,'productDetailContainer_matrix')]//div[@id='product_filter_height']/following-sibling::div[contains(@class,'productDetailFilter_selected-value')]' | Value : '10′'
+2025-10-14 16:55:45.063 [main] INFO  stepdefinitions.CommonStepDef - testStep$accessor$EF0H9tpy : Verify the visibility of 1 elements
+2025-10-14 16:55:45.064 [main] INFO  stepdefinitions.CommonStepDef - testStep$accessor$EF0H9tpy : Verify the Visibility of the element By.xpath: //div[contains(@class,'productDetailContainer_matrix')]//div[@id='product_filter_height']/following-sibling::div[contains(@class,'productDetailFilter_selected-value')] in the page
+2025-10-14 16:55:45.071 [main] INFO  stepdefinitions.CommonStepDef - testStep$accessor$EF0H9tpy : the element By.xpath: //div[contains(@class,'productDetailContainer_matrix')]//div[@id='product_filter_height']/following-sibling::div[contains(@class,'productDetailFilter_selected-value')] is true
+2025-10-14 16:55:45.134 [main] INFO  stepdefinitions.CommonStepDef - testStep$accessor$EF0H9tpy : Get Text Attribute of Element : 'By.xpath: //div[contains(@class,'productDetailContainer_matrix')]//div[@id='product_filter_shape']/following-sibling::div[contains(@class,'productDetailFilter_selected-value')]' | Value : 'Full Tree'
+2025-10-14 16:55:45.135 [main] INFO  stepdefinitions.CommonStepDef - testStep$accessor$EF0H9tpy : Verify the visibility of 1 elements
+2025-10-14 16:55:45.135 [main] INFO  stepdefinitions.CommonStepDef - testStep$accessor$EF0H9tpy : Verify the Visibility of the element By.xpath: //div[contains(@class,'productDetailContainer_matrix')]//div[@id='product_filter_shape']/following-sibling::div[contains(@class,'productDetailFilter_selected-value')] in the page
+2025-10-14 16:55:45.141 [main] INFO  stepdefinitions.CommonStepDef - testStep$accessor$EF0H9tpy : the element By.xpath: //div[contains(@class,'productDetailContainer_matrix')]//div[@id='product_filter_shape']/following-sibling::div[contains(@class,'productDetailFilter_selected-value')] is true
+2025-10-14 16:55:45.194 [main] INFO  stepdefinitions.CommonStepDef - testStep$accessor$EF0H9tpy : Get Text Attribute of Element : 'By.xpath: //div[contains(@class,'productDetailContainer_matrix')]//div[@id='product_filter_lights']/following-sibling::div[contains(@class,'productDetailFilter_selected-value')]' | Value : 'LED Clear Lights'
+2025-10-14 16:55:45.194 [main] INFO  stepdefinitions.CommonStepDef - testStep$accessor$EF0H9tpy : Verify the visibility of 1 elements
+2025-10-14 16:55:45.195 [main] INFO  stepdefinitions.CommonStepDef - testStep$accessor$EF0H9tpy : Verify the Visibility of the element By.xpath: //div[contains(@class,'productDetailContainer_matrix')]//div[@id='product_filter_lights']/following-sibling::div[contains(@class,'productDetailFilter_selected-value')] in the page
+2025-10-14 16:55:45.202 [main] INFO  stepdefinitions.CommonStepDef - testStep$accessor$EF0H9tpy : the element By.xpath: //div[contains(@class,'productDetailContainer_matrix')]//div[@id='product_filter_lights']/following-sibling::div[contains(@class,'productDetailFilter_selected-value')] is true
+2025-10-14 16:55:47.303 [main] INFO  stepdefinitions.CommonStepDef - testStep$accessor$EF0H9tpy : Get Text Attribute of Element : 'By.xpath: //div[contains(@class,'productDetailContainer_matrix')]//div[contains(@class,'product-detail-buybox')]//span[@class='product-price']' | Value : '$1,999'
+2025-10-14 16:55:47.303 [main] INFO  stepdefinitions.CommonStepDef - testStep$accessor$EF0H9tpy : Verify the visibility of 1 elements
+2025-10-14 16:55:47.304 [main] INFO  stepdefinitions.CommonStepDef - testStep$accessor$EF0H9tpy : Verify the Visibility of the element By.xpath: //div[contains(@class,'productDetailContainer_matrix')]//div[contains(@class,'product-detail-buybox')]//span[@class='product-price'] in the page
+2025-10-14 16:55:47.310 [main] INFO  stepdefinitions.CommonStepDef - testStep$accessor$EF0H9tpy : the element By.xpath: //div[contains(@class,'productDetailContainer_matrix')]//div[contains(@class,'product-detail-buybox')]//span[@class='product-price'] is true
+2025-10-14 16:55:47.332 [main] INFO  stepdefinitions.CommonStepDef - testStep$accessor$EF0H9tpy : Click for Element 'By.xpath: //div[contains(@class,'productDetailContainer_matrix')]//button[@type='button' and text()='Add to Cart']'
+2025-10-14 16:55:47.332 [main] INFO  stepdefinitions.CommonStepDef - testStep$accessor$EF0H9tpy : Verify the Visibility of the element By.xpath: //div[contains(@class,'productDetailContainer_matrix')]//button[@type='button' and text()='Add to Cart'] in the page
+2025-10-14 16:55:47.349 [main] INFO  stepdefinitions.CommonStepDef - testStep$accessor$EF0H9tpy : the element By.xpath: //div[contains(@class,'productDetailContainer_matrix')]//button[@type='button' and text()='Add to Cart'] is true
+2025-10-14 16:55:49.662 [main] INFO  stepdefinitions.CommonStepDef - testStep$accessor$EF0H9tpy : Wait For Page In Second(s) 1500
+2025-10-14 16:55:51.164 [main] INFO  stepdefinitions.CommonStepDef - testStep$accessor$EF0H9tpy : Validate and Verify Added Product Details
+2025-10-14 16:55:51.164 [main] INFO  stepdefinitions.CommonStepDef - testStep$accessor$EF0H9tpy : Click for Element if Exist 'No Thanks'
+2025-10-14 16:55:51.165 [main] INFO  stepdefinitions.CommonStepDef - testStep$accessor$EF0H9tpy : Click for Element if Exist 'By.xpath: //*[contains(text(),'No Thanks') and not(@type='application/json')]'
+2025-10-14 16:55:53.204 [main] INFO  stepdefinitions.CommonStepDef - testStep$accessor$EF0H9tpy : Verify the Visibility of the element By.xpath: //div[contains(@class,'add-to-cart-modal')]//div[contains(@class,'modal-content')]//*[contains(text(),'Classic Blue Spruce')] in the page
+2025-10-14 16:55:53.222 [main] INFO  stepdefinitions.CommonStepDef - testStep$accessor$EF0H9tpy : the element By.xpath: //div[contains(@class,'add-to-cart-modal')]//div[contains(@class,'modal-content')]//*[contains(text(),'Classic Blue Spruce')] is true
+2025-10-14 16:55:53.239 [main] INFO  stepdefinitions.CommonStepDef - testStep$accessor$EF0H9tpy : Verify the Visibility of the element By.xpath: //div[contains(@class,'add-to-cart-modal')]//div[contains(@class,'modal-content')]//*[contains(text(),'10')] in the page
+2025-10-14 16:55:53.255 [main] INFO  stepdefinitions.CommonStepDef - testStep$accessor$EF0H9tpy : the element By.xpath: //div[contains(@class,'add-to-cart-modal')]//div[contains(@class,'modal-content')]//*[contains(text(),'10')] is true
+2025-10-14 16:55:53.269 [main] INFO  stepdefinitions.CommonStepDef - testStep$accessor$EF0H9tpy : Verify the Visibility of the element By.xpath: //div[contains(@class,'add-to-cart-modal')]//div[contains(@class,'modal-content')]//*[contains(text(),'Full Tree')] in the page
+2025-10-14 16:55:53.308 [main] INFO  stepdefinitions.CommonStepDef - testStep$accessor$EF0H9tpy : the element By.xpath: //div[contains(@class,'add-to-cart-modal')]//div[contains(@class,'modal-content')]//*[contains(text(),'Full Tree')] is true
+2025-10-14 16:55:53.325 [main] INFO  stepdefinitions.CommonStepDef - testStep$accessor$EF0H9tpy : Verify the Visibility of the element By.xpath: //div[contains(@class,'add-to-cart-modal')]//div[contains(@class,'modal-content')]//*[contains(text(),'LED Clear Lights')] in the page
+2025-10-14 16:55:53.343 [main] INFO  stepdefinitions.CommonStepDef - testStep$accessor$EF0H9tpy : the element By.xpath: //div[contains(@class,'add-to-cart-modal')]//div[contains(@class,'modal-content')]//*[contains(text(),'LED Clear Lights')] is true
+2025-10-14 16:55:53.356 [main] INFO  stepdefinitions.CommonStepDef - testStep$accessor$EF0H9tpy : Verify the Visibility of the element By.xpath: //div[contains(@class,'add-to-cart-modal')]//div[contains(@class,'modal-content')]//*[contains(text(),'$1,999')] in the page
+2025-10-14 16:55:53.371 [main] INFO  stepdefinitions.CommonStepDef - testStep$accessor$EF0H9tpy : the element By.xpath: //div[contains(@class,'add-to-cart-modal')]//div[contains(@class,'modal-content')]//*[contains(text(),'$1,999')] is true
+2025-10-14 16:55:53.383 [main] INFO  stepdefinitions.CommonStepDef - testStep$accessor$EF0H9tpy : Click the View Cart Button
+2025-10-14 16:55:53.384 [main] INFO  stepdefinitions.CommonStepDef - testStep$accessor$EF0H9tpy : Click for Element 'By.xpath: //div[contains(@class,'add-to-cart-modal')]//div[contains(@class,'modal-content')]//button[contains(@class, 'productAddToCartModal_btn-viewcart')]'
+2025-10-14 16:55:53.386 [main] INFO  stepdefinitions.CommonStepDef - testStep$accessor$EF0H9tpy : Verify the Visibility of the element By.xpath: //div[contains(@class,'add-to-cart-modal')]//div[contains(@class,'modal-content')]//button[contains(@class, 'productAddToCartModal_btn-viewcart')] in the page
+2025-10-14 16:55:53.404 [main] INFO  stepdefinitions.CommonStepDef - testStep$accessor$EF0H9tpy : the element By.xpath: //div[contains(@class,'add-to-cart-modal')]//div[contains(@class,'modal-content')]//button[contains(@class, 'productAddToCartModal_btn-viewcart')] is true
+2025-10-14 16:56:10.273 [ForkJoinPool-2-worker-1] INFO  n.thucydides.core.steps.StepEventBus - Loading JUnit Platform configuration parameters from classpath resource [junit-platform.properties].
+2025-10-14 16:56:10.295 [ForkJoinPool-2-worker-1] INFO   - [96m
+
+-------------------------------------------------------------------------------------
+     _______. _______ .______       _______ .__   __.  __  .___________.____    ____ 
+    /       ||   ____||   _  \     |   ____||  \ |  | |  | |           |\   \  /   / 
+   |   (----`|  |__   |  |_)  |    |  |__   |   \|  | |  | `---|  |----` \   \/   /  
+    \   \    |   __|  |      /     |   __|  |  . `  | |  |     |  |       \_    _/   
+.----)   |   |  |____ |  |\  \----.|  |____ |  |\   | |  |     |  |         |  |     
+|_______/    |_______|| _| `._____||_______||__| \__| |__|     |__|         |__|    
+                                                                                     
+ News and tutorials at https://serenity-bdd.info                                     
+ Documentation at https://serenity-bdd.github.io                                     
+ Test Automation Training and Coaching: https://www.serenity-dojo.com                
+ Commercial Support: https://www.serenity-dojo.com/serenity-bdd-enterprise-support   
+ Join the Serenity Community on Gitter: https://gitter.im/serenity-bdd/serenity-core 
+-------------------------------------------------------------------------------------
+[0m
+2025-10-14 16:56:10.300 [ForkJoinPool-2-worker-1] INFO   - Test Suite Started: Validate and Verify Cart Balsam Page
+2025-10-14 16:56:11.159 [ForkJoinPool-2-worker-3] INFO  java.lang.StackTraceElement - testStep$accessor$EL4559wc : NavigateToPage : Page 'balsamhill' | Role 'ProDinnerAdmin'
+2025-10-14 16:56:11.160 [ForkJoinPool-2-worker-2] INFO  java.lang.StackTraceElement - testStep$accessor$ZFtkg0pV : NavigateToPage : Page 'balsamhill' | Role 'ProDinnerAdmin'
+2025-10-14 16:56:11.165 [ForkJoinPool-2-worker-2] INFO  java.lang.StackTraceElement - testStep$accessor$ZFtkg0pV : Navigate Page to balsamhill
+2025-10-14 16:56:11.166 [ForkJoinPool-2-worker-3] INFO  java.lang.StackTraceElement - testStep$accessor$EL4559wc : Navigate Page to balsamhill
+2025-10-14 16:56:16.465 [ForkJoinPool-2-worker-2] INFO  java.lang.StackTraceElement - testStep$accessor$ZFtkg0pV : Wait For Page In Second(s) 2000
+2025-10-14 16:56:18.146 [ForkJoinPool-2-worker-3] INFO  java.lang.StackTraceElement - testStep$accessor$EL4559wc : Wait For Page In Second(s) 2000
+2025-10-14 16:56:18.492 [ForkJoinPool-2-worker-2] INFO  java.lang.StackTraceElement - testStep$accessor$ZFtkg0pV : Click for Element if Exist 'By.xpath: //*[@id='bannerCloseButton' or @aria-label='Close drawer']'
+2025-10-14 16:56:18.538 [ForkJoinPool-2-worker-2] INFO  java.lang.StackTraceElement - testStep$accessor$ZFtkg0pV : Verify the Visibility of the element By.xpath: //*[@id='bannerCloseButton' or @aria-label='Close drawer'] in the page
+2025-10-14 16:56:18.550 [ForkJoinPool-2-worker-2] INFO  java.lang.StackTraceElement - testStep$accessor$ZFtkg0pV : the element By.xpath: //*[@id='bannerCloseButton' or @aria-label='Close drawer'] is true
+2025-10-14 16:56:20.151 [ForkJoinPool-2-worker-3] INFO  java.lang.StackTraceElement - testStep$accessor$EL4559wc : Click for Element if Exist 'By.xpath: //*[@id='bannerCloseButton' or @aria-label='Close drawer']'
+2025-10-14 16:56:20.224 [ForkJoinPool-2-worker-3] INFO  java.lang.StackTraceElement - testStep$accessor$EL4559wc : Verify the Visibility of the element By.xpath: //*[@id='bannerCloseButton' or @aria-label='Close drawer'] in the page
+2025-10-14 16:56:20.242 [ForkJoinPool-2-worker-3] INFO  java.lang.StackTraceElement - testStep$accessor$EL4559wc : the element By.xpath: //*[@id='bannerCloseButton' or @aria-label='Close drawer'] is true
+2025-10-14 16:56:20.772 [ForkJoinPool-2-worker-2] INFO  java.lang.StackTraceElement - testStep$accessor$ZFtkg0pV : Wait For Page In Second(s) 1000
+2025-10-14 16:56:22.043 [ForkJoinPool-2-worker-2] INFO  java.lang.StackTraceElement - testStep$accessor$ZFtkg0pV : Search Products in Page
+2025-10-14 16:56:22.046 [ForkJoinPool-2-worker-2] INFO  java.lang.StackTraceElement - testStep$accessor$ZFtkg0pV : Enter Text 'By.xpath: //header[contains(@class,'fixed-marquee-header')]//input[@id='constructor-search-input']' with Value Christmas Tree
+2025-10-14 16:56:22.047 [ForkJoinPool-2-worker-2] INFO  java.lang.StackTraceElement - testStep$accessor$ZFtkg0pV : Verify the Visibility of the element By.xpath: //header[contains(@class,'fixed-marquee-header')]//input[@id='constructor-search-input'] in the page
+2025-10-14 16:56:22.067 [ForkJoinPool-2-worker-2] INFO  java.lang.StackTraceElement - testStep$accessor$ZFtkg0pV : the element By.xpath: //header[contains(@class,'fixed-marquee-header')]//input[@id='constructor-search-input'] is true
+2025-10-14 16:56:22.469 [ForkJoinPool-2-worker-3] INFO  java.lang.StackTraceElement - testStep$accessor$EL4559wc : Wait For Page In Second(s) 1000
+2025-10-14 16:56:23.674 [ForkJoinPool-2-worker-3] INFO  java.lang.StackTraceElement - testStep$accessor$EL4559wc : Search Products in Page
+2025-10-14 16:56:23.678 [ForkJoinPool-2-worker-3] INFO  java.lang.StackTraceElement - testStep$accessor$EL4559wc : Enter Text 'By.xpath: //header[contains(@class,'fixed-marquee-header')]//input[@id='constructor-search-input']' with Value Christmas Tree
+2025-10-14 16:56:23.680 [ForkJoinPool-2-worker-3] INFO  java.lang.StackTraceElement - testStep$accessor$EL4559wc : Verify the Visibility of the element By.xpath: //header[contains(@class,'fixed-marquee-header')]//input[@id='constructor-search-input'] in the page
+2025-10-14 16:56:23.712 [ForkJoinPool-2-worker-3] INFO  java.lang.StackTraceElement - testStep$accessor$EL4559wc : the element By.xpath: //header[contains(@class,'fixed-marquee-header')]//input[@id='constructor-search-input'] is true
+2025-10-14 16:56:24.185 [ForkJoinPool-2-worker-2] INFO  java.lang.StackTraceElement - testStep$accessor$ZFtkg0pV : Wait For Page In Second(s) 2000
+2025-10-14 16:56:25.883 [ForkJoinPool-2-worker-3] INFO  java.lang.StackTraceElement - testStep$accessor$EL4559wc : Wait For Page In Second(s) 2000
+2025-10-14 16:56:26.188 [ForkJoinPool-2-worker-2] INFO  java.lang.StackTraceElement - testStep$accessor$ZFtkg0pV : verify the text in the page :[Ljava.lang.String;@7fc056a0
+2025-10-14 16:56:26.190 [ForkJoinPool-2-worker-2] INFO  java.lang.StackTraceElement - testStep$accessor$ZFtkg0pV : Verify the Visibility of the element By.xpath: //*[contains(text(),'Search result for:') and not(@type='application/json')] in the page
+2025-10-14 16:56:26.205 [ForkJoinPool-2-worker-2] INFO  java.lang.StackTraceElement - testStep$accessor$ZFtkg0pV : the element By.xpath: //*[contains(text(),'Search result for:') and not(@type='application/json')] is true
+2025-10-14 16:56:26.230 [ForkJoinPool-2-worker-2] INFO  java.lang.StackTraceElement - testStep$accessor$ZFtkg0pV : Wait For Page In Second(s) 2000
+2025-10-14 16:56:27.886 [ForkJoinPool-2-worker-3] INFO  java.lang.StackTraceElement - testStep$accessor$EL4559wc : verify the text in the page :[Ljava.lang.String;@4462a627
+2025-10-14 16:56:27.887 [ForkJoinPool-2-worker-3] INFO  java.lang.StackTraceElement - testStep$accessor$EL4559wc : Verify the Visibility of the element By.xpath: //*[contains(text(),'Search result for:') and not(@type='application/json')] in the page
+2025-10-14 16:56:27.994 [ForkJoinPool-2-worker-3] INFO  java.lang.StackTraceElement - testStep$accessor$EL4559wc : the element By.xpath: //*[contains(text(),'Search result for:') and not(@type='application/json')] is true
+2025-10-14 16:56:28.060 [ForkJoinPool-2-worker-3] INFO  java.lang.StackTraceElement - testStep$accessor$EL4559wc : Wait For Page In Second(s) 2000
+2025-10-14 16:56:28.403 [ForkJoinPool-2-worker-2] INFO  java.lang.StackTraceElement - testStep$accessor$ZFtkg0pV : select Product Items From Search Results
+2025-10-14 16:56:28.405 [ForkJoinPool-2-worker-2] INFO  java.lang.StackTraceElement - testStep$accessor$ZFtkg0pV : Click for Element 'By.xpath: (//div[@data-testid='results-grid']//div[contains(@class,'listingContainer_product-listing-item-wrapper')])[1]'
+2025-10-14 16:56:28.406 [ForkJoinPool-2-worker-2] INFO  java.lang.StackTraceElement - testStep$accessor$ZFtkg0pV : Verify the Visibility of the element By.xpath: (//div[@data-testid='results-grid']//div[contains(@class,'listingContainer_product-listing-item-wrapper')])[1] in the page
+2025-10-14 16:56:28.418 [ForkJoinPool-2-worker-2] INFO  java.lang.StackTraceElement - testStep$accessor$ZFtkg0pV : the element By.xpath: (//div[@data-testid='results-grid']//div[contains(@class,'listingContainer_product-listing-item-wrapper')])[1] is true
+2025-10-14 16:56:30.212 [ForkJoinPool-2-worker-3] INFO  java.lang.StackTraceElement - testStep$accessor$EL4559wc : select Product Items From Search Results
+2025-10-14 16:56:30.213 [ForkJoinPool-2-worker-3] INFO  java.lang.StackTraceElement - testStep$accessor$EL4559wc : Click for Element 'By.xpath: (//div[@data-testid='results-grid']//div[contains(@class,'listingContainer_product-listing-item-wrapper')])[3]'
+2025-10-14 16:56:30.214 [ForkJoinPool-2-worker-3] INFO  java.lang.StackTraceElement - testStep$accessor$EL4559wc : Verify the Visibility of the element By.xpath: (//div[@data-testid='results-grid']//div[contains(@class,'listingContainer_product-listing-item-wrapper')])[3] in the page
+2025-10-14 16:56:30.224 [ForkJoinPool-2-worker-3] INFO  java.lang.StackTraceElement - testStep$accessor$EL4559wc : the element By.xpath: (//div[@data-testid='results-grid']//div[contains(@class,'listingContainer_product-listing-item-wrapper')])[3] is true
+2025-10-14 16:56:30.599 [ForkJoinPool-2-worker-2] INFO  java.lang.StackTraceElement - testStep$accessor$ZFtkg0pV : Wait For Page In Second(s) 2000
+2025-10-14 16:56:32.417 [ForkJoinPool-2-worker-3] INFO  java.lang.StackTraceElement - testStep$accessor$EL4559wc : Wait For Page In Second(s) 2000
+2025-10-14 16:56:33.075 [ForkJoinPool-2-worker-2] INFO  java.lang.StackTraceElement - testStep$accessor$ZFtkg0pV : Customize and Add to Cart
+2025-10-14 16:56:33.077 [ForkJoinPool-2-worker-2] INFO  java.lang.StackTraceElement - testStep$accessor$ZFtkg0pV : Click for Element if Exist 'By.xpath: //*[@id='bannerCloseButton' or @aria-label='Close drawer']'
+2025-10-14 16:56:34.966 [ForkJoinPool-2-worker-3] INFO  java.lang.StackTraceElement - testStep$accessor$EL4559wc : Customize and Add to Cart
+2025-10-14 16:56:34.967 [ForkJoinPool-2-worker-3] INFO  java.lang.StackTraceElement - testStep$accessor$EL4559wc : Click for Element if Exist 'By.xpath: //*[@id='bannerCloseButton' or @aria-label='Close drawer']'
+2025-10-14 16:56:35.130 [ForkJoinPool-2-worker-2] INFO  java.lang.StackTraceElement - testStep$accessor$ZFtkg0pV : Click for Element if Exist 'By.xpath: //div[contains(@class,'productDetailContainer_matrix')]//div[contains(@class,'renderSelectBoxFilterItem_product-filter-item')]/following::span[text()='10']/ancestor::span[last()]'
+2025-10-14 16:56:35.188 [ForkJoinPool-2-worker-2] INFO  java.lang.StackTraceElement - testStep$accessor$ZFtkg0pV : Verify the Visibility of the element By.xpath: //div[contains(@class,'productDetailContainer_matrix')]//div[contains(@class,'renderSelectBoxFilterItem_product-filter-item')]/following::span[text()='10']/ancestor::span[last()] in the page
+2025-10-14 16:56:35.202 [ForkJoinPool-2-worker-2] INFO  java.lang.StackTraceElement - testStep$accessor$ZFtkg0pV : the element By.xpath: //div[contains(@class,'productDetailContainer_matrix')]//div[contains(@class,'renderSelectBoxFilterItem_product-filter-item')]/following::span[text()='10']/ancestor::span[last()] is true
+2025-10-14 16:56:37.167 [ForkJoinPool-2-worker-3] INFO  java.lang.StackTraceElement - testStep$accessor$EL4559wc : Click for Element if Exist 'By.xpath: //div[contains(@class,'productDetailContainer_matrix')]//div[contains(@class,'renderSelectBoxFilterItem_product-filter-item')]/following::span[text()='10']/ancestor::span[last()]'
+2025-10-14 16:56:37.194 [ForkJoinPool-2-worker-3] INFO  java.lang.StackTraceElement - testStep$accessor$EL4559wc : Verify the Visibility of the element By.xpath: //div[contains(@class,'productDetailContainer_matrix')]//div[contains(@class,'renderSelectBoxFilterItem_product-filter-item')]/following::span[text()='10']/ancestor::span[last()] in the page
+2025-10-14 16:56:37.201 [ForkJoinPool-2-worker-3] INFO  java.lang.StackTraceElement - testStep$accessor$EL4559wc : the element By.xpath: //div[contains(@class,'productDetailContainer_matrix')]//div[contains(@class,'renderSelectBoxFilterItem_product-filter-item')]/following::span[text()='10']/ancestor::span[last()] is true
+2025-10-14 16:56:37.474 [ForkJoinPool-2-worker-2] INFO  java.lang.StackTraceElement - testStep$accessor$ZFtkg0pV : Click for Element if Exist 'By.xpath: //div[contains(@class,'productDetailContainer_matrix')]//div[contains(@class,'renderSelectBoxFilterItem_product-filter-item')]/following::span[text()='Sparse Tree']/ancestor::span[last()]'
+2025-10-14 16:56:39.390 [ForkJoinPool-2-worker-3] INFO  java.lang.StackTraceElement - testStep$accessor$EL4559wc : Click for Element if Exist 'By.xpath: //div[contains(@class,'productDetailContainer_matrix')]//div[contains(@class,'renderSelectBoxFilterItem_product-filter-item')]/following::span[text()='Sparse Tree']/ancestor::span[last()]'
+2025-10-14 16:56:39.496 [ForkJoinPool-2-worker-2] INFO  java.lang.StackTraceElement - testStep$accessor$ZFtkg0pV : Click for Element if Exist 'By.xpath: //div[contains(@class,'productDetailContainer_matrix')]//div[contains(@class,'renderSelectBoxFilterItem_product-filter-item')]/following::span[text()='LED Color + Clear Lights']/ancestor::span[last()]'
+2025-10-14 16:56:41.408 [ForkJoinPool-2-worker-3] INFO  java.lang.StackTraceElement - testStep$accessor$EL4559wc : Click for Element if Exist 'By.xpath: //div[contains(@class,'productDetailContainer_matrix')]//div[contains(@class,'renderSelectBoxFilterItem_product-filter-item')]/following::span[text()='LED Color + Clear Lights']/ancestor::span[last()]'
+2025-10-14 16:56:41.504 [ForkJoinPool-2-worker-2] INFO  java.lang.StackTraceElement - testStep$accessor$ZFtkg0pV : Click for Element if Exist 'By.xpath: //div[contains(@class,'productDetailContainer_matrix')]//div[contains(@class,'product-detail-buybox')]//span[@class='product-price']'
+2025-10-14 16:56:41.533 [ForkJoinPool-2-worker-2] INFO  java.lang.StackTraceElement - testStep$accessor$ZFtkg0pV : Verify the Visibility of the element By.xpath: //div[contains(@class,'productDetailContainer_matrix')]//div[contains(@class,'product-detail-buybox')]//span[@class='product-price'] in the page
+2025-10-14 16:56:41.542 [ForkJoinPool-2-worker-2] INFO  java.lang.StackTraceElement - testStep$accessor$ZFtkg0pV : the element By.xpath: //div[contains(@class,'productDetailContainer_matrix')]//div[contains(@class,'product-detail-buybox')]//span[@class='product-price'] is true
+2025-10-14 16:56:43.423 [ForkJoinPool-2-worker-3] INFO  java.lang.StackTraceElement - testStep$accessor$EL4559wc : Click for Element if Exist 'By.xpath: //div[contains(@class,'productDetailContainer_matrix')]//div[contains(@class,'product-detail-buybox')]//span[@class='product-price']'
+2025-10-14 16:56:43.455 [ForkJoinPool-2-worker-3] INFO  java.lang.StackTraceElement - testStep$accessor$EL4559wc : Verify the Visibility of the element By.xpath: //div[contains(@class,'productDetailContainer_matrix')]//div[contains(@class,'product-detail-buybox')]//span[@class='product-price'] in the page
+2025-10-14 16:56:43.463 [ForkJoinPool-2-worker-3] INFO  java.lang.StackTraceElement - testStep$accessor$EL4559wc : the element By.xpath: //div[contains(@class,'productDetailContainer_matrix')]//div[contains(@class,'product-detail-buybox')]//span[@class='product-price'] is true
+2025-10-14 16:56:43.636 [ForkJoinPool-2-worker-2] INFO  java.lang.StackTraceElement - testStep$accessor$ZFtkg0pV : Click for Element if Exist 'By.xpath: //div[contains(@class,'productDetailContainer_matrix')]//div[contains(@class,'renderSelectBoxFilterItem_product-filter-item')]/following::span[text()='Standard']/ancestor::span[last()]'
+2025-10-14 16:56:45.564 [ForkJoinPool-2-worker-3] INFO  java.lang.StackTraceElement - testStep$accessor$EL4559wc : Click for Element if Exist 'By.xpath: //div[contains(@class,'productDetailContainer_matrix')]//div[contains(@class,'renderSelectBoxFilterItem_product-filter-item')]/following::span[text()='Standard']/ancestor::span[last()]'
+2025-10-14 16:56:45.686 [ForkJoinPool-2-worker-2] INFO  java.lang.StackTraceElement - testStep$accessor$ZFtkg0pV : Get Text Attribute of Element : 'By.xpath: //div[contains(@class,'productDetailContainer_matrix')]//div[contains(@class,'productDetailNameRating_product')]/h1' | Value : 'Classic Blue Spruce® Trees'
+2025-10-14 16:56:45.687 [ForkJoinPool-2-worker-2] INFO  java.lang.StackTraceElement - testStep$accessor$ZFtkg0pV : Verify the visibility of 1 elements
+2025-10-14 16:56:45.688 [ForkJoinPool-2-worker-2] INFO  java.lang.StackTraceElement - testStep$accessor$ZFtkg0pV : Verify the Visibility of the element By.xpath: //div[contains(@class,'productDetailContainer_matrix')]//div[contains(@class,'productDetailNameRating_product')]/h1 in the page
+2025-10-14 16:56:45.695 [ForkJoinPool-2-worker-2] INFO  java.lang.StackTraceElement - testStep$accessor$ZFtkg0pV : the element By.xpath: //div[contains(@class,'productDetailContainer_matrix')]//div[contains(@class,'productDetailNameRating_product')]/h1 is true
+2025-10-14 16:56:45.748 [ForkJoinPool-2-worker-2] INFO  java.lang.StackTraceElement - testStep$accessor$ZFtkg0pV : Get Text Attribute of Element : 'By.xpath: //div[contains(@class,'productDetailContainer_matrix')]//div[@id='product_filter_height']/following-sibling::div[contains(@class,'productDetailFilter_selected-value')]' | Value : '10′'
+2025-10-14 16:56:45.748 [ForkJoinPool-2-worker-2] INFO  java.lang.StackTraceElement - testStep$accessor$ZFtkg0pV : Verify the visibility of 1 elements
+2025-10-14 16:56:45.749 [ForkJoinPool-2-worker-2] INFO  java.lang.StackTraceElement - testStep$accessor$ZFtkg0pV : Verify the Visibility of the element By.xpath: //div[contains(@class,'productDetailContainer_matrix')]//div[@id='product_filter_height']/following-sibling::div[contains(@class,'productDetailFilter_selected-value')] in the page
+2025-10-14 16:56:45.758 [ForkJoinPool-2-worker-2] INFO  java.lang.StackTraceElement - testStep$accessor$ZFtkg0pV : the element By.xpath: //div[contains(@class,'productDetailContainer_matrix')]//div[@id='product_filter_height']/following-sibling::div[contains(@class,'productDetailFilter_selected-value')] is true
+2025-10-14 16:56:45.816 [ForkJoinPool-2-worker-2] INFO  java.lang.StackTraceElement - testStep$accessor$ZFtkg0pV : Get Text Attribute of Element : 'By.xpath: //div[contains(@class,'productDetailContainer_matrix')]//div[@id='product_filter_shape']/following-sibling::div[contains(@class,'productDetailFilter_selected-value')]' | Value : 'Full Tree'
+2025-10-14 16:56:45.817 [ForkJoinPool-2-worker-2] INFO  java.lang.StackTraceElement - testStep$accessor$ZFtkg0pV : Verify the visibility of 1 elements
+2025-10-14 16:56:45.818 [ForkJoinPool-2-worker-2] INFO  java.lang.StackTraceElement - testStep$accessor$ZFtkg0pV : Verify the Visibility of the element By.xpath: //div[contains(@class,'productDetailContainer_matrix')]//div[@id='product_filter_shape']/following-sibling::div[contains(@class,'productDetailFilter_selected-value')] in the page
+2025-10-14 16:56:45.826 [ForkJoinPool-2-worker-2] INFO  java.lang.StackTraceElement - testStep$accessor$ZFtkg0pV : the element By.xpath: //div[contains(@class,'productDetailContainer_matrix')]//div[@id='product_filter_shape']/following-sibling::div[contains(@class,'productDetailFilter_selected-value')] is true
+2025-10-14 16:56:45.882 [ForkJoinPool-2-worker-2] INFO  java.lang.StackTraceElement - testStep$accessor$ZFtkg0pV : Get Text Attribute of Element : 'By.xpath: //div[contains(@class,'productDetailContainer_matrix')]//div[@id='product_filter_lights']/following-sibling::div[contains(@class,'productDetailFilter_selected-value')]' | Value : 'LED Clear Lights'
+2025-10-14 16:56:45.882 [ForkJoinPool-2-worker-2] INFO  java.lang.StackTraceElement - testStep$accessor$ZFtkg0pV : Verify the visibility of 1 elements
+2025-10-14 16:56:45.883 [ForkJoinPool-2-worker-2] INFO  java.lang.StackTraceElement - testStep$accessor$ZFtkg0pV : Verify the Visibility of the element By.xpath: //div[contains(@class,'productDetailContainer_matrix')]//div[@id='product_filter_lights']/following-sibling::div[contains(@class,'productDetailFilter_selected-value')] in the page
+2025-10-14 16:56:45.891 [ForkJoinPool-2-worker-2] INFO  java.lang.StackTraceElement - testStep$accessor$ZFtkg0pV : the element By.xpath: //div[contains(@class,'productDetailContainer_matrix')]//div[@id='product_filter_lights']/following-sibling::div[contains(@class,'productDetailFilter_selected-value')] is true
+2025-10-14 16:56:47.618 [ForkJoinPool-2-worker-3] INFO  java.lang.StackTraceElement - testStep$accessor$EL4559wc : Get Text Attribute of Element : 'By.xpath: //div[contains(@class,'productDetailContainer_matrix')]//div[contains(@class,'productDetailNameRating_product')]/h1' | Value : 'Alpine Balsam Fir® Trees'
+2025-10-14 16:56:47.619 [ForkJoinPool-2-worker-3] INFO  java.lang.StackTraceElement - testStep$accessor$EL4559wc : Verify the visibility of 1 elements
+2025-10-14 16:56:47.620 [ForkJoinPool-2-worker-3] INFO  java.lang.StackTraceElement - testStep$accessor$EL4559wc : Verify the Visibility of the element By.xpath: //div[contains(@class,'productDetailContainer_matrix')]//div[contains(@class,'productDetailNameRating_product')]/h1 in the page
+2025-10-14 16:56:47.627 [ForkJoinPool-2-worker-3] INFO  java.lang.StackTraceElement - testStep$accessor$EL4559wc : the element By.xpath: //div[contains(@class,'productDetailContainer_matrix')]//div[contains(@class,'productDetailNameRating_product')]/h1 is true
+2025-10-14 16:56:47.681 [ForkJoinPool-2-worker-3] INFO  java.lang.StackTraceElement - testStep$accessor$EL4559wc : Get Text Attribute of Element : 'By.xpath: //div[contains(@class,'productDetailContainer_matrix')]//div[@id='product_filter_height']/following-sibling::div[contains(@class,'productDetailFilter_selected-value')]' | Value : '10′'
+2025-10-14 16:56:47.682 [ForkJoinPool-2-worker-3] INFO  java.lang.StackTraceElement - testStep$accessor$EL4559wc : Verify the visibility of 1 elements
+2025-10-14 16:56:47.683 [ForkJoinPool-2-worker-3] INFO  java.lang.StackTraceElement - testStep$accessor$EL4559wc : Verify the Visibility of the element By.xpath: //div[contains(@class,'productDetailContainer_matrix')]//div[@id='product_filter_height']/following-sibling::div[contains(@class,'productDetailFilter_selected-value')] in the page
+2025-10-14 16:56:47.694 [ForkJoinPool-2-worker-3] INFO  java.lang.StackTraceElement - testStep$accessor$EL4559wc : the element By.xpath: //div[contains(@class,'productDetailContainer_matrix')]//div[@id='product_filter_height']/following-sibling::div[contains(@class,'productDetailFilter_selected-value')] is true
+2025-10-14 16:56:47.740 [ForkJoinPool-2-worker-3] INFO  java.lang.StackTraceElement - testStep$accessor$EL4559wc : Get Text Attribute of Element : 'By.xpath: //div[contains(@class,'productDetailContainer_matrix')]//div[@id='product_filter_shape']/following-sibling::div[contains(@class,'productDetailFilter_selected-value')]' | Value : 'Sparse Tree'
+2025-10-14 16:56:47.740 [ForkJoinPool-2-worker-3] INFO  java.lang.StackTraceElement - testStep$accessor$EL4559wc : Verify the visibility of 1 elements
+2025-10-14 16:56:47.741 [ForkJoinPool-2-worker-3] INFO  java.lang.StackTraceElement - testStep$accessor$EL4559wc : Verify the Visibility of the element By.xpath: //div[contains(@class,'productDetailContainer_matrix')]//div[@id='product_filter_shape']/following-sibling::div[contains(@class,'productDetailFilter_selected-value')] in the page
+2025-10-14 16:56:47.746 [ForkJoinPool-2-worker-3] INFO  java.lang.StackTraceElement - testStep$accessor$EL4559wc : the element By.xpath: //div[contains(@class,'productDetailContainer_matrix')]//div[@id='product_filter_shape']/following-sibling::div[contains(@class,'productDetailFilter_selected-value')] is true
+2025-10-14 16:56:47.789 [ForkJoinPool-2-worker-3] INFO  java.lang.StackTraceElement - testStep$accessor$EL4559wc : Get Text Attribute of Element : 'By.xpath: //div[contains(@class,'productDetailContainer_matrix')]//div[@id='product_filter_lights']/following-sibling::div[contains(@class,'productDetailFilter_selected-value')]' | Value : 'LED Clear Fairy Lights'
+2025-10-14 16:56:47.789 [ForkJoinPool-2-worker-3] INFO  java.lang.StackTraceElement - testStep$accessor$EL4559wc : Verify the visibility of 1 elements
+2025-10-14 16:56:47.790 [ForkJoinPool-2-worker-3] INFO  java.lang.StackTraceElement - testStep$accessor$EL4559wc : Verify the Visibility of the element By.xpath: //div[contains(@class,'productDetailContainer_matrix')]//div[@id='product_filter_lights']/following-sibling::div[contains(@class,'productDetailFilter_selected-value')] in the page
+2025-10-14 16:56:47.798 [ForkJoinPool-2-worker-3] INFO  java.lang.StackTraceElement - testStep$accessor$EL4559wc : the element By.xpath: //div[contains(@class,'productDetailContainer_matrix')]//div[@id='product_filter_lights']/following-sibling::div[contains(@class,'productDetailFilter_selected-value')] is true
+2025-10-14 16:56:47.947 [ForkJoinPool-2-worker-2] INFO  java.lang.StackTraceElement - testStep$accessor$ZFtkg0pV : Get Text Attribute of Element : 'By.xpath: //div[contains(@class,'productDetailContainer_matrix')]//div[contains(@class,'product-detail-buybox')]//span[@class='product-price']' | Value : '$1,999'
+2025-10-14 16:56:47.948 [ForkJoinPool-2-worker-2] INFO  java.lang.StackTraceElement - testStep$accessor$ZFtkg0pV : Verify the visibility of 1 elements
+2025-10-14 16:56:47.949 [ForkJoinPool-2-worker-2] INFO  java.lang.StackTraceElement - testStep$accessor$ZFtkg0pV : Verify the Visibility of the element By.xpath: //div[contains(@class,'productDetailContainer_matrix')]//div[contains(@class,'product-detail-buybox')]//span[@class='product-price'] in the page
+2025-10-14 16:56:47.956 [ForkJoinPool-2-worker-2] INFO  java.lang.StackTraceElement - testStep$accessor$ZFtkg0pV : the element By.xpath: //div[contains(@class,'productDetailContainer_matrix')]//div[contains(@class,'product-detail-buybox')]//span[@class='product-price'] is true
+2025-10-14 16:56:47.976 [ForkJoinPool-2-worker-2] INFO  java.lang.StackTraceElement - testStep$accessor$ZFtkg0pV : Click for Element 'By.xpath: //div[contains(@class,'productDetailContainer_matrix')]//button[@type='button' and text()='Add to Cart']'
+2025-10-14 16:56:47.977 [ForkJoinPool-2-worker-2] INFO  java.lang.StackTraceElement - testStep$accessor$ZFtkg0pV : Verify the Visibility of the element By.xpath: //div[contains(@class,'productDetailContainer_matrix')]//button[@type='button' and text()='Add to Cart'] in the page
+2025-10-14 16:56:47.989 [ForkJoinPool-2-worker-2] INFO  java.lang.StackTraceElement - testStep$accessor$ZFtkg0pV : the element By.xpath: //div[contains(@class,'productDetailContainer_matrix')]//button[@type='button' and text()='Add to Cart'] is true
+2025-10-14 16:56:49.858 [ForkJoinPool-2-worker-3] INFO  java.lang.StackTraceElement - testStep$accessor$EL4559wc : Get Text Attribute of Element : 'By.xpath: //div[contains(@class,'productDetailContainer_matrix')]//div[contains(@class,'product-detail-buybox')]//span[@class='product-price']' | Value : '$1,399'
+2025-10-14 16:56:49.858 [ForkJoinPool-2-worker-3] INFO  java.lang.StackTraceElement - testStep$accessor$EL4559wc : Verify the visibility of 1 elements
+2025-10-14 16:56:49.859 [ForkJoinPool-2-worker-3] INFO  java.lang.StackTraceElement - testStep$accessor$EL4559wc : Verify the Visibility of the element By.xpath: //div[contains(@class,'productDetailContainer_matrix')]//div[contains(@class,'product-detail-buybox')]//span[@class='product-price'] in the page
+2025-10-14 16:56:49.866 [ForkJoinPool-2-worker-3] INFO  java.lang.StackTraceElement - testStep$accessor$EL4559wc : the element By.xpath: //div[contains(@class,'productDetailContainer_matrix')]//div[contains(@class,'product-detail-buybox')]//span[@class='product-price'] is true
+2025-10-14 16:56:49.883 [ForkJoinPool-2-worker-3] INFO  java.lang.StackTraceElement - testStep$accessor$EL4559wc : Click for Element 'By.xpath: //div[contains(@class,'productDetailContainer_matrix')]//button[@type='button' and text()='Add to Cart']'
+2025-10-14 16:56:49.883 [ForkJoinPool-2-worker-3] INFO  java.lang.StackTraceElement - testStep$accessor$EL4559wc : Verify the Visibility of the element By.xpath: //div[contains(@class,'productDetailContainer_matrix')]//button[@type='button' and text()='Add to Cart'] in the page
+2025-10-14 16:56:49.892 [ForkJoinPool-2-worker-3] INFO  java.lang.StackTraceElement - testStep$accessor$EL4559wc : the element By.xpath: //div[contains(@class,'productDetailContainer_matrix')]//button[@type='button' and text()='Add to Cart'] is true
+2025-10-14 16:56:50.187 [ForkJoinPool-2-worker-2] INFO  java.lang.StackTraceElement - testStep$accessor$ZFtkg0pV : Wait For Page In Second(s) 1500
+2025-10-14 16:56:51.797 [ForkJoinPool-2-worker-2] INFO  java.lang.StackTraceElement - testStep$accessor$ZFtkg0pV : Validate and Verify Added Product Details
+2025-10-14 16:56:51.798 [ForkJoinPool-2-worker-2] INFO  java.lang.StackTraceElement - testStep$accessor$ZFtkg0pV : Click for Element if Exist 'No Thanks'
+2025-10-14 16:56:51.800 [ForkJoinPool-2-worker-2] INFO  java.lang.StackTraceElement - testStep$accessor$ZFtkg0pV : Click for Element if Exist 'By.xpath: //*[contains(text(),'No Thanks') and not(@type='application/json')]'
+2025-10-14 16:56:52.120 [ForkJoinPool-2-worker-3] INFO  java.lang.StackTraceElement - testStep$accessor$EL4559wc : Wait For Page In Second(s) 1500
+2025-10-14 16:56:53.062 [ForkJoinPool-2-worker-2] INFO  java.lang.StackTraceElement - testStep$accessor$ZFtkg0pV : Verify the Visibility of the element By.xpath: //*[contains(text(),'No Thanks') and not(@type='application/json')] in the page
+2025-10-14 16:56:53.070 [ForkJoinPool-2-worker-2] INFO  java.lang.StackTraceElement - testStep$accessor$ZFtkg0pV : the element By.xpath: //*[contains(text(),'No Thanks') and not(@type='application/json')] is true
+2025-10-14 16:56:53.773 [ForkJoinPool-2-worker-3] INFO  java.lang.StackTraceElement - testStep$accessor$EL4559wc : Validate and Verify Added Product Details
+2025-10-14 16:56:53.774 [ForkJoinPool-2-worker-3] INFO  java.lang.StackTraceElement - testStep$accessor$EL4559wc : Click for Element if Exist 'No Thanks'
+2025-10-14 16:56:53.776 [ForkJoinPool-2-worker-3] INFO  java.lang.StackTraceElement - testStep$accessor$EL4559wc : Click for Element if Exist 'By.xpath: //*[contains(text(),'No Thanks') and not(@type='application/json')]'
+2025-10-14 16:56:54.928 [ForkJoinPool-2-worker-3] INFO  java.lang.StackTraceElement - testStep$accessor$EL4559wc : Verify the Visibility of the element By.xpath: //*[contains(text(),'No Thanks') and not(@type='application/json')] in the page
+2025-10-14 16:56:54.935 [ForkJoinPool-2-worker-3] INFO  java.lang.StackTraceElement - testStep$accessor$EL4559wc : the element By.xpath: //*[contains(text(),'No Thanks') and not(@type='application/json')] is true
+2025-10-14 16:56:55.209 [ForkJoinPool-2-worker-2] INFO  java.lang.StackTraceElement - testStep$accessor$ZFtkg0pV : Verify the Visibility of the element By.xpath: //div[contains(@class,'add-to-cart-modal')]//div[contains(@class,'modal-content')]//*[contains(text(),'Classic Blue Spruce')] in the page
+2025-10-14 16:56:55.218 [ForkJoinPool-2-worker-2] INFO  java.lang.StackTraceElement - testStep$accessor$ZFtkg0pV : the element By.xpath: //div[contains(@class,'add-to-cart-modal')]//div[contains(@class,'modal-content')]//*[contains(text(),'Classic Blue Spruce')] is true
+2025-10-14 16:56:55.237 [ForkJoinPool-2-worker-2] INFO  java.lang.StackTraceElement - testStep$accessor$ZFtkg0pV : Verify the Visibility of the element By.xpath: //div[contains(@class,'add-to-cart-modal')]//div[contains(@class,'modal-content')]//*[contains(text(),'10')] in the page
+2025-10-14 16:56:55.247 [ForkJoinPool-2-worker-2] INFO  java.lang.StackTraceElement - testStep$accessor$ZFtkg0pV : the element By.xpath: //div[contains(@class,'add-to-cart-modal')]//div[contains(@class,'modal-content')]//*[contains(text(),'10')] is true
+2025-10-14 16:56:55.270 [ForkJoinPool-2-worker-2] INFO  java.lang.StackTraceElement - testStep$accessor$ZFtkg0pV : Verify the Visibility of the element By.xpath: //div[contains(@class,'add-to-cart-modal')]//div[contains(@class,'modal-content')]//*[contains(text(),'Full Tree')] in the page
+2025-10-14 16:56:55.283 [ForkJoinPool-2-worker-2] INFO  java.lang.StackTraceElement - testStep$accessor$ZFtkg0pV : the element By.xpath: //div[contains(@class,'add-to-cart-modal')]//div[contains(@class,'modal-content')]//*[contains(text(),'Full Tree')] is true
+2025-10-14 16:56:55.301 [ForkJoinPool-2-worker-2] INFO  java.lang.StackTraceElement - testStep$accessor$ZFtkg0pV : Verify the Visibility of the element By.xpath: //div[contains(@class,'add-to-cart-modal')]//div[contains(@class,'modal-content')]//*[contains(text(),'LED Clear Lights')] in the page
+2025-10-14 16:56:55.312 [ForkJoinPool-2-worker-2] INFO  java.lang.StackTraceElement - testStep$accessor$ZFtkg0pV : the element By.xpath: //div[contains(@class,'add-to-cart-modal')]//div[contains(@class,'modal-content')]//*[contains(text(),'LED Clear Lights')] is true
+2025-10-14 16:56:55.329 [ForkJoinPool-2-worker-2] INFO  java.lang.StackTraceElement - testStep$accessor$ZFtkg0pV : Verify the Visibility of the element By.xpath: //div[contains(@class,'add-to-cart-modal')]//div[contains(@class,'modal-content')]//*[contains(text(),'$1,999')] in the page
+2025-10-14 16:56:55.339 [ForkJoinPool-2-worker-2] INFO  java.lang.StackTraceElement - testStep$accessor$ZFtkg0pV : the element By.xpath: //div[contains(@class,'add-to-cart-modal')]//div[contains(@class,'modal-content')]//*[contains(text(),'$1,999')] is true
+2025-10-14 16:56:55.464 [ForkJoinPool-2-worker-2] INFO  java.lang.StackTraceElement - testStep$accessor$ZFtkg0pV : Click the View Cart Button
+2025-10-14 16:56:55.467 [ForkJoinPool-2-worker-2] INFO  java.lang.StackTraceElement - testStep$accessor$ZFtkg0pV : Click for Element 'By.xpath: //div[contains(@class,'add-to-cart-modal')]//div[contains(@class,'modal-content')]//button[contains(@class, 'productAddToCartModal_btn-viewcart')]'
+2025-10-14 16:56:55.468 [ForkJoinPool-2-worker-2] INFO  java.lang.StackTraceElement - testStep$accessor$ZFtkg0pV : Verify the Visibility of the element By.xpath: //div[contains(@class,'add-to-cart-modal')]//div[contains(@class,'modal-content')]//button[contains(@class, 'productAddToCartModal_btn-viewcart')] in the page
+2025-10-14 16:57:08.393 [main] INFO  n.thucydides.core.steps.StepEventBus - Loading JUnit Platform configuration parameters from classpath resource [junit-platform.properties].
+2025-10-14 16:57:08.432 [main] INFO  java.lang.StackTraceElement - testStep$accessor$IsUgrrmD : NavigateToPage : Page 'balsamhill' | Role 'ProDinnerAdmin'
+2025-10-14 16:57:08.435 [main] INFO  java.lang.StackTraceElement - testStep$accessor$IsUgrrmD : Navigate Page to balsamhill
+2025-10-14 16:57:08.495 [main] INFO  n.s.c.w.d.ChromeDriverProvider - Starting Chrome driver instance with capabilities:
+2025-10-14 16:57:08.497 [main] INFO  n.s.c.w.d.ChromeDriverProvider - Capabilities {acceptInsecureCerts: false, browserName: chrome, goog:chromeOptions: {args: [--remote-allow-origins=*], extensions: []}}
+2025-10-14 16:57:11.246 [main] INFO  java.lang.StackTraceElement - testStep$accessor$IsUgrrmD : Wait For Page In Second(s) 2000
+2025-10-14 16:57:13.266 [main] INFO  java.lang.StackTraceElement - testStep$accessor$IsUgrrmD : Click for Element if Exist 'By.xpath: //*[@id='bannerCloseButton' or @aria-label='Close drawer']'
+2025-10-14 16:57:13.377 [main] INFO  java.lang.StackTraceElement - testStep$accessor$IsUgrrmD : Verify the Visibility of the element By.xpath: //*[@id='bannerCloseButton' or @aria-label='Close drawer'] in the page
+2025-10-14 16:57:13.385 [main] INFO  java.lang.StackTraceElement - testStep$accessor$IsUgrrmD : the element By.xpath: //*[@id='bannerCloseButton' or @aria-label='Close drawer'] is true
+2025-10-14 16:57:15.539 [main] INFO  java.lang.StackTraceElement - testStep$accessor$IsUgrrmD : Wait For Page In Second(s) 1000
+2025-10-14 16:57:46.115 [main] INFO  n.thucydides.core.steps.StepEventBus - Loading JUnit Platform configuration parameters from classpath resource [junit-platform.properties].
+2025-10-14 16:57:46.155 [main] INFO  n.serenitybdd.core.pages.PageObjects - testStep$accessor$NJjbWlpa : NavigateToPage : Page 'balsamhill' | Role 'ProDinnerAdmin'
+2025-10-14 16:57:46.161 [main] INFO  n.serenitybdd.core.pages.PageObjects - testStep$accessor$NJjbWlpa : Navigate Page to balsamhill
+2025-10-14 16:57:46.226 [main] INFO  n.s.c.w.d.ChromeDriverProvider - Starting Chrome driver instance with capabilities:
+2025-10-14 16:57:46.228 [main] INFO  n.s.c.w.d.ChromeDriverProvider - Capabilities {acceptInsecureCerts: false, browserName: chrome, goog:chromeOptions: {args: [--remote-allow-origins=*], extensions: []}}
+2025-10-14 16:57:48.556 [main] INFO  n.serenitybdd.core.pages.PageObjects - testStep$accessor$NJjbWlpa : Wait For Page In Second(s) 2000
+2025-10-14 16:57:50.610 [main] INFO  n.serenitybdd.core.pages.PageObjects - testStep$accessor$NJjbWlpa : Click for Element if Exist 'By.xpath: //*[@id='bannerCloseButton' or @aria-label='Close drawer']'
+2025-10-14 16:57:50.816 [main] INFO  n.serenitybdd.core.pages.PageObjects - testStep$accessor$NJjbWlpa : Verify the Visibility of the element By.xpath: //*[@id='bannerCloseButton' or @aria-label='Close drawer'] in the page
+2025-10-14 16:57:50.826 [main] INFO  n.serenitybdd.core.pages.PageObjects - testStep$accessor$NJjbWlpa : the element By.xpath: //*[@id='bannerCloseButton' or @aria-label='Close drawer'] is true
+2025-10-14 16:57:53.159 [main] INFO  n.serenitybdd.core.pages.PageObjects - testStep$accessor$NJjbWlpa : Wait For Page In Second(s) 1000
+2025-10-14 16:58:03.596 [main] INFO  n.thucydides.core.steps.StepEventBus - Loading JUnit Platform configuration parameters from classpath resource [junit-platform.properties].
+2025-10-14 16:58:03.635 [main] INFO  n.serenitybdd.core.pages.PageObjects - testStep$accessor$MHUfA9Eo : NavigateToPage : Page 'balsamhill' | Role 'ProDinnerAdmin'
+2025-10-14 16:58:03.640 [main] INFO  n.serenitybdd.core.pages.PageObjects - testStep$accessor$MHUfA9Eo : Navigate Page to balsamhill
+2025-10-14 16:58:03.704 [main] INFO  n.s.c.w.d.ChromeDriverProvider - Starting Chrome driver instance with capabilities:
+2025-10-14 16:58:03.706 [main] INFO  n.s.c.w.d.ChromeDriverProvider - Capabilities {acceptInsecureCerts: false, browserName: chrome, goog:chromeOptions: {args: [--remote-allow-origins=*], extensions: []}}
+2025-10-14 16:58:06.723 [main] INFO  n.serenitybdd.core.pages.PageObjects - testStep$accessor$MHUfA9Eo : Wait For Page In Second(s) 2000
+2025-10-14 16:58:08.759 [main] INFO  n.serenitybdd.core.pages.PageObjects - testStep$accessor$MHUfA9Eo : Click for Element if Exist 'By.xpath: //*[@id='bannerCloseButton' or @aria-label='Close drawer']'
+2025-10-14 16:58:08.938 [main] INFO  n.serenitybdd.core.pages.PageObjects - testStep$accessor$MHUfA9Eo : Verify the Visibility of the element By.xpath: //*[@id='bannerCloseButton' or @aria-label='Close drawer'] in the page
+2025-10-14 16:58:08.946 [main] INFO  n.serenitybdd.core.pages.PageObjects - testStep$accessor$MHUfA9Eo : the element By.xpath: //*[@id='bannerCloseButton' or @aria-label='Close drawer'] is true
+2025-10-14 16:58:11.295 [main] INFO  n.serenitybdd.core.pages.PageObjects - testStep$accessor$MHUfA9Eo : Wait For Page In Second(s) 1000
+2025-10-14 16:58:12.309 [main] INFO  n.serenitybdd.core.pages.PageObjects - testStep$accessor$MHUfA9Eo : Search Products in Page
+2025-10-14 16:58:12.311 [main] INFO  n.serenitybdd.core.pages.PageObjects - testStep$accessor$MHUfA9Eo : Enter Text 'By.xpath: //header[contains(@class,'fixed-marquee-header')]//input[@id='constructor-search-input']' with Value Christmas Tree
+2025-10-14 16:58:12.312 [main] INFO  n.serenitybdd.core.pages.PageObjects - testStep$accessor$MHUfA9Eo : Verify the Visibility of the element By.xpath: //header[contains(@class,'fixed-marquee-header')]//input[@id='constructor-search-input'] in the page
+2025-10-14 16:58:12.331 [main] INFO  n.serenitybdd.core.pages.PageObjects - testStep$accessor$MHUfA9Eo : the element By.xpath: //header[contains(@class,'fixed-marquee-header')]//input[@id='constructor-search-input'] is true
+2025-10-14 16:58:14.477 [main] INFO  n.serenitybdd.core.pages.PageObjects - testStep$accessor$MHUfA9Eo : Wait For Page In Second(s) 2000
+2025-10-14 16:58:16.488 [main] INFO  n.serenitybdd.core.pages.PageObjects - testStep$accessor$MHUfA9Eo : verify the text in the page :[Ljava.lang.String;@53a301f3
+2025-10-14 16:58:16.490 [main] INFO  n.serenitybdd.core.pages.PageObjects - testStep$accessor$MHUfA9Eo : Verify the Visibility of the element By.xpath: //*[contains(text(),'Search result for:') and not(@type='application/json')] in the page
+2025-10-14 16:58:18.713 [main] INFO  n.serenitybdd.core.pages.PageObjects - testStep$accessor$MHUfA9Eo : NavigateToPage : Page 'balsamhill' | Role 'ProDinnerAdmin'
+2025-10-14 16:58:18.714 [main] INFO  n.serenitybdd.core.pages.PageObjects - testStep$accessor$MHUfA9Eo : Navigate Page to balsamhill
+2025-10-14 16:58:18.715 [main] INFO  n.serenitybdd.core.pages.PageObjects - testStep$accessor$MHUfA9Eo : Wait For Page In Second(s) 2000
+2025-10-14 16:58:20.718 [main] INFO  n.serenitybdd.core.pages.PageObjects - testStep$accessor$MHUfA9Eo : Click for Element if Exist 'By.xpath: //*[@id='bannerCloseButton' or @aria-label='Close drawer']'
+2025-10-14 16:58:20.720 [main] INFO  n.serenitybdd.core.pages.PageObjects - testStep$accessor$MHUfA9Eo : Wait For Page In Second(s) 1000
+2025-10-14 16:58:21.722 [main] INFO  n.serenitybdd.core.pages.PageObjects - testStep$accessor$MHUfA9Eo : Search Products in Page
+2025-10-14 16:58:21.723 [main] INFO  n.serenitybdd.core.pages.PageObjects - testStep$accessor$MHUfA9Eo : Enter Text 'By.xpath: //header[contains(@class,'fixed-marquee-header')]//input[@id='constructor-search-input']' with Value Christmas Tree
+2025-10-14 16:58:21.724 [main] INFO  n.serenitybdd.core.pages.PageObjects - testStep$accessor$MHUfA9Eo : Verify the Visibility of the element By.xpath: //header[contains(@class,'fixed-marquee-header')]//input[@id='constructor-search-input'] in the page
+2025-10-14 16:58:21.725 [main] INFO  n.serenitybdd.core.pages.PageObjects - testStep$accessor$MHUfA9Eo : the element By.xpath: //header[contains(@class,'fixed-marquee-header')]//input[@id='constructor-search-input'] is false
+2025-10-14 16:58:23.729 [main] INFO  n.serenitybdd.core.pages.PageObjects - testStep$accessor$MHUfA9Eo : Wait For Page In Second(s) 2000
+2025-10-14 16:58:25.746 [main] INFO  n.serenitybdd.core.pages.PageObjects - testStep$accessor$MHUfA9Eo : verify the text in the page :[Ljava.lang.String;@29c59b6e
+2025-10-14 16:58:25.747 [main] INFO  n.serenitybdd.core.pages.PageObjects - testStep$accessor$MHUfA9Eo : Verify the Visibility of the element By.xpath: //*[contains(text(),'Search result for:') and not(@type='application/json')] in the page
+2025-10-14 16:58:25.748 [main] INFO  n.serenitybdd.core.pages.PageObjects - testStep$accessor$MHUfA9Eo : the element By.xpath: //*[contains(text(),'Search result for:') and not(@type='application/json')] is false
+2025-10-14 16:58:25.750 [main] INFO  n.serenitybdd.core.pages.PageObjects - testStep$accessor$MHUfA9Eo : Wait For Page In Second(s) 2000
+2025-10-14 16:58:27.755 [main] INFO  n.serenitybdd.core.pages.PageObjects - testStep$accessor$MHUfA9Eo : select Product Items From Search Results
+2025-10-14 16:58:27.757 [main] INFO  n.serenitybdd.core.pages.PageObjects - testStep$accessor$MHUfA9Eo : Click for Element 'By.xpath: (//div[@data-testid='results-grid']//div[contains(@class,'listingContainer_product-listing-item-wrapper')])[1]'
+2025-10-14 16:58:27.757 [main] INFO  n.serenitybdd.core.pages.PageObjects - testStep$accessor$MHUfA9Eo : Verify the Visibility of the element By.xpath: (//div[@data-testid='results-grid']//div[contains(@class,'listingContainer_product-listing-item-wrapper')])[1] in the page
+2025-10-14 16:58:27.758 [main] INFO  n.serenitybdd.core.pages.PageObjects - testStep$accessor$MHUfA9Eo : the element By.xpath: (//div[@data-testid='results-grid']//div[contains(@class,'listingContainer_product-listing-item-wrapper')])[1] is false
+2025-10-14 16:59:14.633 [main] INFO  n.thucydides.core.steps.StepEventBus - Loading JUnit Platform configuration parameters from classpath resource [junit-platform.properties].
+2025-10-14 16:59:14.674 [main] INFO  stepdefinitions.CommonStepDef - : NavigateToPage : Page 'balsamhill' | Role 'ProDinnerAdmin'
+2025-10-14 16:59:14.678 [main] INFO  stepdefinitions.CommonStepDef - : Navigate Page to balsamhill
+2025-10-14 16:59:14.737 [main] INFO  n.s.c.w.d.ChromeDriverProvider - Starting Chrome driver instance with capabilities:
+2025-10-14 16:59:14.739 [main] INFO  n.s.c.w.d.ChromeDriverProvider - Capabilities {acceptInsecureCerts: false, browserName: chrome, goog:chromeOptions: {args: [--remote-allow-origins=*], extensions: []}}
+2025-10-14 16:59:16.880 [main] INFO  stepdefinitions.CommonStepDef - : Wait For Page In Second(s) 2000
+2025-10-14 16:59:18.901 [main] INFO  stepdefinitions.CommonStepDef - : Click for Element if Exist 'By.xpath: //*[@id='bannerCloseButton' or @aria-label='Close drawer']'
+2025-10-14 16:59:19.019 [main] INFO  stepdefinitions.CommonStepDef - : Verify the Visibility of the element By.xpath: //*[@id='bannerCloseButton' or @aria-label='Close drawer'] in the page
+2025-10-14 16:59:19.025 [main] INFO  stepdefinitions.CommonStepDef - : the element By.xpath: //*[@id='bannerCloseButton' or @aria-label='Close drawer'] is true
+2025-10-14 16:59:21.184 [main] INFO  stepdefinitions.CommonStepDef - : Wait For Page In Second(s) 1000
+2025-10-14 16:59:22.200 [main] INFO  stepdefinitions.CommonStepDef - : Search Products in Page
+2025-10-14 16:59:22.203 [main] INFO  stepdefinitions.CommonStepDef - : Enter Text 'By.xpath: //header[contains(@class,'fixed-marquee-header')]//input[@id='constructor-search-input']' with Value Christmas Tree
+2025-10-14 16:59:22.204 [main] INFO  stepdefinitions.CommonStepDef - : Verify the Visibility of the element By.xpath: //header[contains(@class,'fixed-marquee-header')]//input[@id='constructor-search-input'] in the page
+2025-10-14 16:59:22.222 [main] INFO  stepdefinitions.CommonStepDef - : the element By.xpath: //header[contains(@class,'fixed-marquee-header')]//input[@id='constructor-search-input'] is true
+2025-10-14 16:59:24.372 [main] INFO  stepdefinitions.CommonStepDef - : Wait For Page In Second(s) 2000
+2025-10-14 16:59:26.381 [main] INFO  stepdefinitions.CommonStepDef - : verify the text in the page :[Ljava.lang.String;@6dae70f9
+2025-10-14 16:59:26.384 [main] INFO  stepdefinitions.CommonStepDef - : Verify the Visibility of the element By.xpath: //*[contains(text(),'Search result for:') and not(@type='application/json')] in the page
+2025-10-14 16:59:26.429 [main] INFO  stepdefinitions.CommonStepDef - : the element By.xpath: //*[contains(text(),'Search result for:') and not(@type='application/json')] is true
+2025-10-14 16:59:26.442 [main] INFO  stepdefinitions.CommonStepDef - : Wait For Page In Second(s) 2000
+2025-10-14 16:59:28.459 [main] INFO  stepdefinitions.CommonStepDef - : select Product Items From Search Results
+2025-10-14 16:59:28.461 [main] INFO  stepdefinitions.CommonStepDef - : Click for Element 'By.xpath: (//div[@data-testid='results-grid']//div[contains(@class,'listingContainer_product-listing-item-wrapper')])[3]'
+2025-10-14 16:59:28.462 [main] INFO  stepdefinitions.CommonStepDef - : Verify the Visibility of the element By.xpath: (//div[@data-testid='results-grid']//div[contains(@class,'listingContainer_product-listing-item-wrapper')])[3] in the page
+2025-10-14 16:59:28.479 [main] INFO  stepdefinitions.CommonStepDef - : the element By.xpath: (//div[@data-testid='results-grid']//div[contains(@class,'listingContainer_product-listing-item-wrapper')])[3] is true
+2025-10-14 16:59:30.622 [main] INFO  stepdefinitions.CommonStepDef - : Wait For Page In Second(s) 2000
+2025-10-14 16:59:32.729 [main] INFO  stepdefinitions.CommonStepDef - : Customize and Add to Cart
+2025-10-14 16:59:32.731 [main] INFO  stepdefinitions.CommonStepDef - : Click for Element if Exist 'By.xpath: //*[@id='bannerCloseButton' or @aria-label='Close drawer']'
+2025-10-14 16:59:34.757 [main] INFO  stepdefinitions.CommonStepDef - : Click for Element if Exist 'By.xpath: //div[contains(@class,'productDetailContainer_matrix')]//div[contains(@class,'renderSelectBoxFilterItem_product-filter-item')]/following::span[text()='10']/ancestor::span[last()]'
+2025-10-14 16:59:34.792 [main] INFO  stepdefinitions.CommonStepDef - : Verify the Visibility of the element By.xpath: //div[contains(@class,'productDetailContainer_matrix')]//div[contains(@class,'renderSelectBoxFilterItem_product-filter-item')]/following::span[text()='10']/ancestor::span[last()] in the page
+2025-10-14 16:59:34.798 [main] INFO  stepdefinitions.CommonStepDef - : the element By.xpath: //div[contains(@class,'productDetailContainer_matrix')]//div[contains(@class,'renderSelectBoxFilterItem_product-filter-item')]/following::span[text()='10']/ancestor::span[last()] is true
+2025-10-14 16:59:37.017 [main] INFO  stepdefinitions.CommonStepDef - : Click for Element if Exist 'By.xpath: //div[contains(@class,'productDetailContainer_matrix')]//div[contains(@class,'renderSelectBoxFilterItem_product-filter-item')]/following::span[text()='Sparse Tree']/ancestor::span[last()]'
+2025-10-14 16:59:39.092 [main] INFO  stepdefinitions.CommonStepDef - : Click for Element if Exist 'By.xpath: //div[contains(@class,'productDetailContainer_matrix')]//div[contains(@class,'renderSelectBoxFilterItem_product-filter-item')]/following::span[text()='LED Color + Clear Lights']/ancestor::span[last()]'
+2025-10-14 16:59:41.118 [main] INFO  stepdefinitions.CommonStepDef - : Click for Element if Exist 'By.xpath: //div[contains(@class,'productDetailContainer_matrix')]//div[contains(@class,'product-detail-buybox')]//span[@class='product-price']'
+2025-10-14 16:59:41.146 [main] INFO  stepdefinitions.CommonStepDef - : Verify the Visibility of the element By.xpath: //div[contains(@class,'productDetailContainer_matrix')]//div[contains(@class,'product-detail-buybox')]//span[@class='product-price'] in the page
+2025-10-14 16:59:41.153 [main] INFO  stepdefinitions.CommonStepDef - : the element By.xpath: //div[contains(@class,'productDetailContainer_matrix')]//div[contains(@class,'product-detail-buybox')]//span[@class='product-price'] is true
+2025-10-14 16:59:43.242 [main] INFO  stepdefinitions.CommonStepDef - : Click for Element if Exist 'By.xpath: //div[contains(@class,'productDetailContainer_matrix')]//div[contains(@class,'renderSelectBoxFilterItem_product-filter-item')]/following::span[text()='Standard']/ancestor::span[last()]'
+2025-10-14 16:59:45.328 [main] INFO  stepdefinitions.CommonStepDef - : Get Text Attribute of Element : 'By.xpath: //div[contains(@class,'productDetailContainer_matrix')]//div[contains(@class,'productDetailNameRating_product')]/h1' | Value : 'Alpine Balsam Fir® Trees'
+2025-10-14 16:59:45.329 [main] INFO  stepdefinitions.CommonStepDef - : Verify the visibility of 1 elements
+2025-10-14 16:59:45.329 [main] INFO  stepdefinitions.CommonStepDef - : Verify the Visibility of the element By.xpath: //div[contains(@class,'productDetailContainer_matrix')]//div[contains(@class,'productDetailNameRating_product')]/h1 in the page
+2025-10-14 16:59:45.336 [main] INFO  stepdefinitions.CommonStepDef - : the element By.xpath: //div[contains(@class,'productDetailContainer_matrix')]//div[contains(@class,'productDetailNameRating_product')]/h1 is true
+2025-10-14 16:59:45.401 [main] INFO  stepdefinitions.CommonStepDef - : Get Text Attribute of Element : 'By.xpath: //div[contains(@class,'productDetailContainer_matrix')]//div[@id='product_filter_height']/following-sibling::div[contains(@class,'productDetailFilter_selected-value')]' | Value : '10′'
+2025-10-14 16:59:45.402 [main] INFO  stepdefinitions.CommonStepDef - : Verify the visibility of 1 elements
+2025-10-14 16:59:45.402 [main] INFO  stepdefinitions.CommonStepDef - : Verify the Visibility of the element By.xpath: //div[contains(@class,'productDetailContainer_matrix')]//div[@id='product_filter_height']/following-sibling::div[contains(@class,'productDetailFilter_selected-value')] in the page
+2025-10-14 16:59:45.410 [main] INFO  stepdefinitions.CommonStepDef - : the element By.xpath: //div[contains(@class,'productDetailContainer_matrix')]//div[@id='product_filter_height']/following-sibling::div[contains(@class,'productDetailFilter_selected-value')] is true
+2025-10-14 16:59:45.478 [main] INFO  stepdefinitions.CommonStepDef - : Get Text Attribute of Element : 'By.xpath: //div[contains(@class,'productDetailContainer_matrix')]//div[@id='product_filter_shape']/following-sibling::div[contains(@class,'productDetailFilter_selected-value')]' | Value : 'Sparse Tree'
+2025-10-14 16:59:45.478 [main] INFO  stepdefinitions.CommonStepDef - : Verify the visibility of 1 elements
+2025-10-14 16:59:45.479 [main] INFO  stepdefinitions.CommonStepDef - : Verify the Visibility of the element By.xpath: //div[contains(@class,'productDetailContainer_matrix')]//div[@id='product_filter_shape']/following-sibling::div[contains(@class,'productDetailFilter_selected-value')] in the page
+2025-10-14 16:59:45.487 [main] INFO  stepdefinitions.CommonStepDef - : the element By.xpath: //div[contains(@class,'productDetailContainer_matrix')]//div[@id='product_filter_shape']/following-sibling::div[contains(@class,'productDetailFilter_selected-value')] is true
+2025-10-14 16:59:45.553 [main] INFO  stepdefinitions.CommonStepDef - : Get Text Attribute of Element : 'By.xpath: //div[contains(@class,'productDetailContainer_matrix')]//div[@id='product_filter_lights']/following-sibling::div[contains(@class,'productDetailFilter_selected-value')]' | Value : 'LED Clear Fairy Lights'
+2025-10-14 16:59:45.554 [main] INFO  stepdefinitions.CommonStepDef - : Verify the visibility of 1 elements
+2025-10-14 16:59:45.554 [main] INFO  stepdefinitions.CommonStepDef - : Verify the Visibility of the element By.xpath: //div[contains(@class,'productDetailContainer_matrix')]//div[@id='product_filter_lights']/following-sibling::div[contains(@class,'productDetailFilter_selected-value')] in the page
+2025-10-14 16:59:45.560 [main] INFO  stepdefinitions.CommonStepDef - : the element By.xpath: //div[contains(@class,'productDetailContainer_matrix')]//div[@id='product_filter_lights']/following-sibling::div[contains(@class,'productDetailFilter_selected-value')] is true
+2025-10-14 16:59:47.663 [main] INFO  stepdefinitions.CommonStepDef - : Get Text Attribute of Element : 'By.xpath: //div[contains(@class,'productDetailContainer_matrix')]//div[contains(@class,'product-detail-buybox')]//span[@class='product-price']' | Value : '$1,399'
+2025-10-14 16:59:47.664 [main] INFO  stepdefinitions.CommonStepDef - : Verify the visibility of 1 elements
+2025-10-14 16:59:47.664 [main] INFO  stepdefinitions.CommonStepDef - : Verify the Visibility of the element By.xpath: //div[contains(@class,'productDetailContainer_matrix')]//div[contains(@class,'product-detail-buybox')]//span[@class='product-price'] in the page
+2025-10-14 16:59:47.670 [main] INFO  stepdefinitions.CommonStepDef - : the element By.xpath: //div[contains(@class,'productDetailContainer_matrix')]//div[contains(@class,'product-detail-buybox')]//span[@class='product-price'] is true
+2025-10-14 16:59:47.689 [main] INFO  stepdefinitions.CommonStepDef - : Click for Element 'By.xpath: //div[contains(@class,'productDetailContainer_matrix')]//button[@type='button' and text()='Add to Cart']'
+2025-10-14 16:59:47.690 [main] INFO  stepdefinitions.CommonStepDef - : Verify the Visibility of the element By.xpath: //div[contains(@class,'productDetailContainer_matrix')]//button[@type='button' and text()='Add to Cart'] in the page
+2025-10-14 16:59:47.705 [main] INFO  stepdefinitions.CommonStepDef - : the element By.xpath: //div[contains(@class,'productDetailContainer_matrix')]//button[@type='button' and text()='Add to Cart'] is true
+2025-10-14 16:59:49.916 [main] INFO  stepdefinitions.CommonStepDef - : Wait For Page In Second(s) 1500
+2025-10-14 16:59:51.428 [main] INFO  stepdefinitions.CommonStepDef - : Validate and Verify Added Product Details
+2025-10-14 16:59:51.428 [main] INFO  stepdefinitions.CommonStepDef - : Click for Element if Exist 'No Thanks'
+2025-10-14 16:59:51.429 [main] INFO  stepdefinitions.CommonStepDef - : Click for Element if Exist 'By.xpath: //*[contains(text(),'No Thanks') and not(@type='application/json')]'
+2025-10-14 16:59:52.695 [main] INFO  stepdefinitions.CommonStepDef - : Verify the Visibility of the element By.xpath: //*[contains(text(),'No Thanks') and not(@type='application/json')] in the page
+2025-10-14 16:59:52.704 [main] INFO  stepdefinitions.CommonStepDef - : the element By.xpath: //*[contains(text(),'No Thanks') and not(@type='application/json')] is true
+2025-10-14 16:59:54.827 [main] INFO  stepdefinitions.CommonStepDef - : Verify the Visibility of the element By.xpath: //div[contains(@class,'add-to-cart-modal')]//div[contains(@class,'modal-content')]//*[contains(text(),'Alpine Balsam Fir')] in the page
+2025-10-14 16:59:54.866 [main] INFO  stepdefinitions.CommonStepDef - : the element By.xpath: //div[contains(@class,'add-to-cart-modal')]//div[contains(@class,'modal-content')]//*[contains(text(),'Alpine Balsam Fir')] is true
+2025-10-14 16:59:54.880 [main] INFO  stepdefinitions.CommonStepDef - : Verify the Visibility of the element By.xpath: //div[contains(@class,'add-to-cart-modal')]//div[contains(@class,'modal-content')]//*[contains(text(),'10')] in the page
+2025-10-14 16:59:54.898 [main] INFO  stepdefinitions.CommonStepDef - : the element By.xpath: //div[contains(@class,'add-to-cart-modal')]//div[contains(@class,'modal-content')]//*[contains(text(),'10')] is true
+2025-10-14 16:59:54.913 [main] INFO  stepdefinitions.CommonStepDef - : Verify the Visibility of the element By.xpath: //div[contains(@class,'add-to-cart-modal')]//div[contains(@class,'modal-content')]//*[contains(text(),'Sparse Tree')] in the page
+2025-10-14 16:59:54.933 [main] INFO  stepdefinitions.CommonStepDef - : the element By.xpath: //div[contains(@class,'add-to-cart-modal')]//div[contains(@class,'modal-content')]//*[contains(text(),'Sparse Tree')] is true
+2025-10-14 16:59:54.949 [main] INFO  stepdefinitions.CommonStepDef - : Verify the Visibility of the element By.xpath: //div[contains(@class,'add-to-cart-modal')]//div[contains(@class,'modal-content')]//*[contains(text(),'LED Clear Fairy Lights')] in the page
+2025-10-14 16:59:54.969 [main] INFO  stepdefinitions.CommonStepDef - : the element By.xpath: //div[contains(@class,'add-to-cart-modal')]//div[contains(@class,'modal-content')]//*[contains(text(),'LED Clear Fairy Lights')] is true
+2025-10-14 16:59:54.986 [main] INFO  stepdefinitions.CommonStepDef - : Verify the Visibility of the element By.xpath: //div[contains(@class,'add-to-cart-modal')]//div[contains(@class,'modal-content')]//*[contains(text(),'$1,399')] in the page
+2025-10-14 16:59:55.010 [main] INFO  stepdefinitions.CommonStepDef - : the element By.xpath: //div[contains(@class,'add-to-cart-modal')]//div[contains(@class,'modal-content')]//*[contains(text(),'$1,399')] is true
+2025-10-14 16:59:55.027 [main] INFO  stepdefinitions.CommonStepDef - : Click the View Cart Button
+2025-10-14 16:59:55.029 [main] INFO  stepdefinitions.CommonStepDef - : Click for Element 'By.xpath: //div[contains(@class,'add-to-cart-modal')]//div[contains(@class,'modal-content')]//button[contains(@class, 'productAddToCartModal_btn-viewcart')]'
+2025-10-14 16:59:55.029 [main] INFO  stepdefinitions.CommonStepDef - : Verify the Visibility of the element By.xpath: //div[contains(@class,'add-to-cart-modal')]//div[contains(@class,'modal-content')]//button[contains(@class, 'productAddToCartModal_btn-viewcart')] in the page
+2025-10-14 16:59:55.052 [main] INFO  stepdefinitions.CommonStepDef - : the element By.xpath: //div[contains(@class,'add-to-cart-modal')]//div[contains(@class,'modal-content')]//button[contains(@class, 'productAddToCartModal_btn-viewcart')] is true
+2025-10-14 16:59:57.289 [main] INFO  stepdefinitions.CommonStepDef - : Wait For Page In Second(s) 2000
+2025-10-14 16:59:59.293 [main] INFO  stepdefinitions.CommonStepDef - : Validate And Verify the added item from Cart Page
+2025-10-14 16:59:59.293 [main] INFO  stepdefinitions.CommonStepDef - : Click for Element if Exist 'No Thanks'
+2025-10-14 16:59:59.294 [main] INFO  stepdefinitions.CommonStepDef - : Click for Element if Exist 'By.xpath: //*[contains(text(),'No Thanks') and not(@type='application/json')]'
+2025-10-14 17:00:01.205 [main] INFO  stepdefinitions.CommonStepDef - : Verify the Visibility of the element By.xpath: //*[contains(text(),'No Thanks') and not(@type='application/json')] in the page
+2025-10-14 17:00:01.213 [main] INFO  stepdefinitions.CommonStepDef - : the element By.xpath: //*[contains(text(),'No Thanks') and not(@type='application/json')] is true
+2025-10-14 17:00:03.344 [main] INFO  stepdefinitions.CommonStepDef - : Get Text Attribute of Element : 'By.xpath: //div[contains(@class,'product-detail-list')]//*[contains(@class,'cartProductDetailItem_product_details_container')]' | Value : 'Alpine Balsam Fir® Tree
+10′ • Sparse Tree • LED Clear Fairy Lights'
+2025-10-14 17:00:03.345 [main] INFO  stepdefinitions.CommonStepDef - : Verify the Visibility of the element By.xpath: //div[contains(@class,'product-detail-list')]//*[contains(@class,'cartProductDetailItem_product_details_container')] in the page
+2025-10-14 17:00:03.352 [main] INFO  stepdefinitions.CommonStepDef - : the element By.xpath: //div[contains(@class,'product-detail-list')]//*[contains(@class,'cartProductDetailItem_product_details_container')] is true
+2025-10-14 17:00:03.403 [main] INFO  stepdefinitions.CommonStepDef - : Get Text Attribute of Element : 'By.xpath: //div[contains(@class,'product-detail-list')]//*[contains(@class,'cartProductDetailItem_new_price')]' | Value : '$1,399'
+2025-10-14 17:00:03.404 [main] INFO  stepdefinitions.CommonStepDef - : Verify the Visibility of the element By.xpath: //div[contains(@class,'product-detail-list')]//*[contains(@class,'cartProductDetailItem_new_price')] in the page
+2025-10-14 17:00:03.413 [main] INFO  stepdefinitions.CommonStepDef - : the element By.xpath: //div[contains(@class,'product-detail-list')]//*[contains(@class,'cartProductDetailItem_new_price')] is true
+2025-10-14 17:00:03.434 [main] INFO  stepdefinitions.CommonStepDef - : expectedCartDetails : Alpine Balsam Fir® Trees |  actualProductDetails.ToString: Alpine Balsam Fir Tree10 Sparse Tree LED Clear Fairy Lights $1,399
+2025-10-14 17:00:03.437 [main] INFO  stepdefinitions.CommonStepDef - : expectedCartDetails : 10′ |  actualProductDetails.ToString: Alpine Balsam Fir Tree10 Sparse Tree LED Clear Fairy Lights $1,399
+2025-10-14 17:00:03.437 [main] INFO  stepdefinitions.CommonStepDef - : expectedCartDetails : Sparse Tree |  actualProductDetails.ToString: Alpine Balsam Fir Tree10 Sparse Tree LED Clear Fairy Lights $1,399
+2025-10-14 17:00:03.437 [main] INFO  stepdefinitions.CommonStepDef - : expectedCartDetails : LED Clear Fairy Lights |  actualProductDetails.ToString: Alpine Balsam Fir Tree10 Sparse Tree LED Clear Fairy Lights $1,399
+2025-10-14 17:00:03.438 [main] INFO  stepdefinitions.CommonStepDef - : expectedCartDetails : $1,399 |  actualProductDetails.ToString: Alpine Balsam Fir Tree10 Sparse Tree LED Clear Fairy Lights $1,399
+2025-10-14 17:00:03.599 [main] INFO  stepdefinitions.CommonStepDef - : Validate the Cart Icon should have 1 value
+2025-10-14 17:00:03.601 [main] INFO  stepdefinitions.CommonStepDef - : Verify the Visibility of the element By.xpath: //li[contains(@class,'headerIcons_cart-icon')]//span in the page
+2025-10-14 17:00:03.622 [main] INFO  stepdefinitions.CommonStepDef - : the element By.xpath: //li[contains(@class,'headerIcons_cart-icon')]//span is true
+2025-10-14 17:00:03.643 [main] INFO  stepdefinitions.CommonStepDef - : Click Remove Button
+2025-10-14 17:00:03.644 [main] INFO  stepdefinitions.CommonStepDef - : Click for Element 'By.xpath: //div[contains(@class,'product-detail-list')]//button[contains(@class,'cartProductDetailItem_delete')]'
+2025-10-14 17:00:03.645 [main] INFO  stepdefinitions.CommonStepDef - : Verify the Visibility of the element By.xpath: //div[contains(@class,'product-detail-list')]//button[contains(@class,'cartProductDetailItem_delete')] in the page
+2025-10-14 17:00:03.670 [main] INFO  stepdefinitions.CommonStepDef - : the element By.xpath: //div[contains(@class,'product-detail-list')]//button[contains(@class,'cartProductDetailItem_delete')] is true
+2025-10-14 17:00:05.793 [main] INFO  stepdefinitions.CommonStepDef - : Validate and Verify that removed item from the Cart Page
+2025-10-14 17:00:05.795 [main] INFO  stepdefinitions.CommonStepDef - : Verify the Visibility of the element By.xpath: //div[contains(@class,'product-detail-list')]//div[contains(@class,'cartProductDetailItem_product-name-wrapper')] in the page
+2025-10-14 17:00:07.267 [main] INFO  stepdefinitions.CommonStepDef - : the element By.xpath: //div[contains(@class,'product-detail-list')]//div[contains(@class,'cartProductDetailItem_product-name-wrapper')] is true
+2025-10-14 17:00:07.309 [main] INFO  stepdefinitions.CommonStepDef - : Verify the Visibility of the element By.xpath: //div[contains(@class,'product-detail-list')]//a[contains(@class, 'cartProductDetailItem_undo')] in the page
+2025-10-14 17:00:07.337 [main] INFO  stepdefinitions.CommonStepDef - : the element By.xpath: //div[contains(@class,'product-detail-list')]//a[contains(@class, 'cartProductDetailItem_undo')] is true
+2025-10-14 17:00:07.518 [main] INFO  stepdefinitions.CommonStepDef - : NavigateToPage : Page 'balsamhill' | Role 'ProDinnerAdmin'
+2025-10-14 17:00:07.520 [main] INFO  stepdefinitions.CommonStepDef - : Navigate Page to balsamhill
+2025-10-14 17:00:09.475 [main] INFO  stepdefinitions.CommonStepDef - : Wait For Page In Second(s) 2000
+2025-10-14 17:00:11.477 [main] INFO  stepdefinitions.CommonStepDef - : Click for Element if Exist 'By.xpath: //*[@id='bannerCloseButton' or @aria-label='Close drawer']'
+2025-10-14 17:00:13.568 [main] INFO  stepdefinitions.CommonStepDef - : Wait For Page In Second(s) 1000
+2025-10-14 17:00:14.580 [main] INFO  stepdefinitions.CommonStepDef - : Search Products in Page
+2025-10-14 17:00:14.581 [main] INFO  stepdefinitions.CommonStepDef - : Enter Text 'By.xpath: //header[contains(@class,'fixed-marquee-header')]//input[@id='constructor-search-input']' with Value Christmas Tree
+2025-10-14 17:00:14.582 [main] INFO  stepdefinitions.CommonStepDef - : Verify the Visibility of the element By.xpath: //header[contains(@class,'fixed-marquee-header')]//input[@id='constructor-search-input'] in the page
+2025-10-14 17:00:14.601 [main] INFO  stepdefinitions.CommonStepDef - : the element By.xpath: //header[contains(@class,'fixed-marquee-header')]//input[@id='constructor-search-input'] is true
+2025-10-14 17:00:16.807 [main] INFO  stepdefinitions.CommonStepDef - : Wait For Page In Second(s) 2000
+2025-10-14 17:00:18.820 [main] INFO  stepdefinitions.CommonStepDef - : verify the text in the page :[Ljava.lang.String;@73d7d676
+2025-10-14 17:00:18.821 [main] INFO  stepdefinitions.CommonStepDef - : Verify the Visibility of the element By.xpath: //*[contains(text(),'Search result for:') and not(@type='application/json')] in the page
+2025-10-14 17:00:18.843 [main] INFO  stepdefinitions.CommonStepDef - : the element By.xpath: //*[contains(text(),'Search result for:') and not(@type='application/json')] is true
+2025-10-14 17:00:18.876 [main] INFO  stepdefinitions.CommonStepDef - : Wait For Page In Second(s) 2000
+2025-10-14 17:00:20.892 [main] INFO  stepdefinitions.CommonStepDef - : select Product Items From Search Results
+2025-10-14 17:00:20.893 [main] INFO  stepdefinitions.CommonStepDef - : Click for Element 'By.xpath: (//div[@data-testid='results-grid']//div[contains(@class,'listingContainer_product-listing-item-wrapper')])[1]'
+2025-10-14 17:00:20.894 [main] INFO  stepdefinitions.CommonStepDef - : Verify the Visibility of the element By.xpath: (//div[@data-testid='results-grid']//div[contains(@class,'listingContainer_product-listing-item-wrapper')])[1] in the page
+2025-10-14 17:00:20.911 [main] INFO  stepdefinitions.CommonStepDef - : the element By.xpath: (//div[@data-testid='results-grid']//div[contains(@class,'listingContainer_product-listing-item-wrapper')])[1] is true
+2025-10-14 17:00:23.076 [main] INFO  stepdefinitions.CommonStepDef - : Wait For Page In Second(s) 2000
+2025-10-14 17:00:25.151 [main] INFO  stepdefinitions.CommonStepDef - : Customize and Add to Cart
+2025-10-14 17:00:25.153 [main] INFO  stepdefinitions.CommonStepDef - : Click for Element if Exist 'By.xpath: //*[@id='bannerCloseButton' or @aria-label='Close drawer']'
+2025-10-14 17:00:27.625 [main] INFO  stepdefinitions.CommonStepDef - : Click for Element if Exist 'By.xpath: //div[contains(@class,'productDetailContainer_matrix')]//div[contains(@class,'renderSelectBoxFilterItem_product-filter-item')]/following::span[text()='10']/ancestor::span[last()]'
+2025-10-14 17:00:27.688 [main] INFO  stepdefinitions.CommonStepDef - : Verify the Visibility of the element By.xpath: //div[contains(@class,'productDetailContainer_matrix')]//div[contains(@class,'renderSelectBoxFilterItem_product-filter-item')]/following::span[text()='10']/ancestor::span[last()] in the page
+2025-10-14 17:00:27.696 [main] INFO  stepdefinitions.CommonStepDef - : the element By.xpath: //div[contains(@class,'productDetailContainer_matrix')]//div[contains(@class,'renderSelectBoxFilterItem_product-filter-item')]/following::span[text()='10']/ancestor::span[last()] is true
+2025-10-14 17:00:29.963 [main] INFO  stepdefinitions.CommonStepDef - : Click for Element if Exist 'By.xpath: //div[contains(@class,'productDetailContainer_matrix')]//div[contains(@class,'renderSelectBoxFilterItem_product-filter-item')]/following::span[text()='Sparse Tree']/ancestor::span[last()]'
+2025-10-14 17:00:32.027 [main] INFO  stepdefinitions.CommonStepDef - : Click for Element if Exist 'By.xpath: //div[contains(@class,'productDetailContainer_matrix')]//div[contains(@class,'renderSelectBoxFilterItem_product-filter-item')]/following::span[text()='LED Color + Clear Lights']/ancestor::span[last()]'
+2025-10-14 17:00:34.064 [main] INFO  stepdefinitions.CommonStepDef - : Click for Element if Exist 'By.xpath: //div[contains(@class,'productDetailContainer_matrix')]//div[contains(@class,'product-detail-buybox')]//span[@class='product-price']'
+2025-10-14 17:00:34.095 [main] INFO  stepdefinitions.CommonStepDef - : Verify the Visibility of the element By.xpath: //div[contains(@class,'productDetailContainer_matrix')]//div[contains(@class,'product-detail-buybox')]//span[@class='product-price'] in the page
+2025-10-14 17:00:34.104 [main] INFO  stepdefinitions.CommonStepDef - : the element By.xpath: //div[contains(@class,'productDetailContainer_matrix')]//div[contains(@class,'product-detail-buybox')]//span[@class='product-price'] is true
+2025-10-14 17:00:36.206 [main] INFO  stepdefinitions.CommonStepDef - : Click for Element if Exist 'By.xpath: //div[contains(@class,'productDetailContainer_matrix')]//div[contains(@class,'renderSelectBoxFilterItem_product-filter-item')]/following::span[text()='Standard']/ancestor::span[last()]'
+2025-10-14 17:00:38.298 [main] INFO  stepdefinitions.CommonStepDef - : Get Text Attribute of Element : 'By.xpath: //div[contains(@class,'productDetailContainer_matrix')]//div[contains(@class,'productDetailNameRating_product')]/h1' | Value : 'Classic Blue Spruce® Trees'
+2025-10-14 17:00:38.299 [main] INFO  stepdefinitions.CommonStepDef - : Verify the visibility of 1 elements
+2025-10-14 17:00:38.299 [main] INFO  stepdefinitions.CommonStepDef - : Verify the Visibility of the element By.xpath: //div[contains(@class,'productDetailContainer_matrix')]//div[contains(@class,'productDetailNameRating_product')]/h1 in the page
+2025-10-14 17:00:38.308 [main] INFO  stepdefinitions.CommonStepDef - : the element By.xpath: //div[contains(@class,'productDetailContainer_matrix')]//div[contains(@class,'productDetailNameRating_product')]/h1 is true
+2025-10-14 17:00:38.361 [main] INFO  stepdefinitions.CommonStepDef - : Get Text Attribute of Element : 'By.xpath: //div[contains(@class,'productDetailContainer_matrix')]//div[@id='product_filter_height']/following-sibling::div[contains(@class,'productDetailFilter_selected-value')]' | Value : '10′'
+2025-10-14 17:00:38.362 [main] INFO  stepdefinitions.CommonStepDef - : Verify the visibility of 1 elements
+2025-10-14 17:00:38.362 [main] INFO  stepdefinitions.CommonStepDef - : Verify the Visibility of the element By.xpath: //div[contains(@class,'productDetailContainer_matrix')]//div[@id='product_filter_height']/following-sibling::div[contains(@class,'productDetailFilter_selected-value')] in the page
+2025-10-14 17:00:38.370 [main] INFO  stepdefinitions.CommonStepDef - : the element By.xpath: //div[contains(@class,'productDetailContainer_matrix')]//div[@id='product_filter_height']/following-sibling::div[contains(@class,'productDetailFilter_selected-value')] is true
+2025-10-14 17:00:38.429 [main] INFO  stepdefinitions.CommonStepDef - : Get Text Attribute of Element : 'By.xpath: //div[contains(@class,'productDetailContainer_matrix')]//div[@id='product_filter_shape']/following-sibling::div[contains(@class,'productDetailFilter_selected-value')]' | Value : 'Full Tree'
+2025-10-14 17:00:38.429 [main] INFO  stepdefinitions.CommonStepDef - : Verify the visibility of 1 elements
+2025-10-14 17:00:38.430 [main] INFO  stepdefinitions.CommonStepDef - : Verify the Visibility of the element By.xpath: //div[contains(@class,'productDetailContainer_matrix')]//div[@id='product_filter_shape']/following-sibling::div[contains(@class,'productDetailFilter_selected-value')] in the page
+2025-10-14 17:00:38.439 [main] INFO  stepdefinitions.CommonStepDef - : the element By.xpath: //div[contains(@class,'productDetailContainer_matrix')]//div[@id='product_filter_shape']/following-sibling::div[contains(@class,'productDetailFilter_selected-value')] is true
+2025-10-14 17:00:38.497 [main] INFO  stepdefinitions.CommonStepDef - : Get Text Attribute of Element : 'By.xpath: //div[contains(@class,'productDetailContainer_matrix')]//div[@id='product_filter_lights']/following-sibling::div[contains(@class,'productDetailFilter_selected-value')]' | Value : 'LED Clear Lights'
+2025-10-14 17:00:38.498 [main] INFO  stepdefinitions.CommonStepDef - : Verify the visibility of 1 elements
+2025-10-14 17:00:38.498 [main] INFO  stepdefinitions.CommonStepDef - : Verify the Visibility of the element By.xpath: //div[contains(@class,'productDetailContainer_matrix')]//div[@id='product_filter_lights']/following-sibling::div[contains(@class,'productDetailFilter_selected-value')] in the page
+2025-10-14 17:00:38.507 [main] INFO  stepdefinitions.CommonStepDef - : the element By.xpath: //div[contains(@class,'productDetailContainer_matrix')]//div[@id='product_filter_lights']/following-sibling::div[contains(@class,'productDetailFilter_selected-value')] is true
+2025-10-14 17:00:40.593 [main] INFO  stepdefinitions.CommonStepDef - : Get Text Attribute of Element : 'By.xpath: //div[contains(@class,'productDetailContainer_matrix')]//div[contains(@class,'product-detail-buybox')]//span[@class='product-price']' | Value : '$1,999'
+2025-10-14 17:00:40.595 [main] INFO  stepdefinitions.CommonStepDef - : Verify the visibility of 1 elements
+2025-10-14 17:00:40.596 [main] INFO  stepdefinitions.CommonStepDef - : Verify the Visibility of the element By.xpath: //div[contains(@class,'productDetailContainer_matrix')]//div[contains(@class,'product-detail-buybox')]//span[@class='product-price'] in the page
+2025-10-14 17:00:40.603 [main] INFO  stepdefinitions.CommonStepDef - : the element By.xpath: //div[contains(@class,'productDetailContainer_matrix')]//div[contains(@class,'product-detail-buybox')]//span[@class='product-price'] is true
+2025-10-14 17:00:40.627 [main] INFO  stepdefinitions.CommonStepDef - : Click for Element 'By.xpath: //div[contains(@class,'productDetailContainer_matrix')]//button[@type='button' and text()='Add to Cart']'
+2025-10-14 17:00:40.628 [main] INFO  stepdefinitions.CommonStepDef - : Verify the Visibility of the element By.xpath: //div[contains(@class,'productDetailContainer_matrix')]//button[@type='button' and text()='Add to Cart'] in the page
+2025-10-14 17:00:40.644 [main] INFO  stepdefinitions.CommonStepDef - : the element By.xpath: //div[contains(@class,'productDetailContainer_matrix')]//button[@type='button' and text()='Add to Cart'] is true
+2025-10-14 17:00:42.917 [main] INFO  stepdefinitions.CommonStepDef - : Wait For Page In Second(s) 1500
+2025-10-14 17:00:44.429 [main] INFO  stepdefinitions.CommonStepDef - : Validate and Verify Added Product Details
+2025-10-14 17:00:44.430 [main] INFO  stepdefinitions.CommonStepDef - : Click for Element if Exist 'No Thanks'
+2025-10-14 17:00:44.430 [main] INFO  stepdefinitions.CommonStepDef - : Click for Element if Exist 'By.xpath: //*[contains(text(),'No Thanks') and not(@type='application/json')]'
+2025-10-14 17:00:46.471 [main] INFO  stepdefinitions.CommonStepDef - : Verify the Visibility of the element By.xpath: //div[contains(@class,'add-to-cart-modal')]//div[contains(@class,'modal-content')]//*[contains(text(),'Classic Blue Spruce')] in the page
+2025-10-14 17:00:46.490 [main] INFO  stepdefinitions.CommonStepDef - : the element By.xpath: //div[contains(@class,'add-to-cart-modal')]//div[contains(@class,'modal-content')]//*[contains(text(),'Classic Blue Spruce')] is true
+2025-10-14 17:00:46.504 [main] INFO  stepdefinitions.CommonStepDef - : Verify the Visibility of the element By.xpath: //div[contains(@class,'add-to-cart-modal')]//div[contains(@class,'modal-content')]//*[contains(text(),'10')] in the page
+2025-10-14 17:00:46.523 [main] INFO  stepdefinitions.CommonStepDef - : the element By.xpath: //div[contains(@class,'add-to-cart-modal')]//div[contains(@class,'modal-content')]//*[contains(text(),'10')] is true
+2025-10-14 17:00:46.538 [main] INFO  stepdefinitions.CommonStepDef - : Verify the Visibility of the element By.xpath: //div[contains(@class,'add-to-cart-modal')]//div[contains(@class,'modal-content')]//*[contains(text(),'Full Tree')] in the page
+2025-10-14 17:00:46.556 [main] INFO  stepdefinitions.CommonStepDef - : the element By.xpath: //div[contains(@class,'add-to-cart-modal')]//div[contains(@class,'modal-content')]//*[contains(text(),'Full Tree')] is true
+2025-10-14 17:00:46.571 [main] INFO  stepdefinitions.CommonStepDef - : Verify the Visibility of the element By.xpath: //div[contains(@class,'add-to-cart-modal')]//div[contains(@class,'modal-content')]//*[contains(text(),'LED Clear Lights')] in the page
+2025-10-14 17:00:46.589 [main] INFO  stepdefinitions.CommonStepDef - : the element By.xpath: //div[contains(@class,'add-to-cart-modal')]//div[contains(@class,'modal-content')]//*[contains(text(),'LED Clear Lights')] is true
+2025-10-14 17:00:46.603 [main] INFO  stepdefinitions.CommonStepDef - : Verify the Visibility of the element By.xpath: //div[contains(@class,'add-to-cart-modal')]//div[contains(@class,'modal-content')]//*[contains(text(),'$1,999')] in the page
+2025-10-14 17:00:46.622 [main] INFO  stepdefinitions.CommonStepDef - : the element By.xpath: //div[contains(@class,'add-to-cart-modal')]//div[contains(@class,'modal-content')]//*[contains(text(),'$1,999')] is true
+2025-10-14 17:00:46.636 [main] INFO  stepdefinitions.CommonStepDef - : Click the View Cart Button
+2025-10-14 17:00:46.639 [main] INFO  stepdefinitions.CommonStepDef - : Click for Element 'By.xpath: //div[contains(@class,'add-to-cart-modal')]//div[contains(@class,'modal-content')]//button[contains(@class, 'productAddToCartModal_btn-viewcart')]'
+2025-10-14 17:00:46.639 [main] INFO  stepdefinitions.CommonStepDef - : Verify the Visibility of the element By.xpath: //div[contains(@class,'add-to-cart-modal')]//div[contains(@class,'modal-content')]//button[contains(@class, 'productAddToCartModal_btn-viewcart')] in the page
+2025-10-14 17:00:46.658 [main] INFO  stepdefinitions.CommonStepDef - : the element By.xpath: //div[contains(@class,'add-to-cart-modal')]//div[contains(@class,'modal-content')]//button[contains(@class, 'productAddToCartModal_btn-viewcart')] is true
+2025-10-14 17:00:48.939 [main] INFO  stepdefinitions.CommonStepDef - : Wait For Page In Second(s) 2000
+2025-10-14 17:00:50.941 [main] INFO  stepdefinitions.CommonStepDef - : Validate And Verify the added item from Cart Page
+2025-10-14 17:00:50.942 [main] INFO  stepdefinitions.CommonStepDef - : Click for Element if Exist 'No Thanks'
+2025-10-14 17:00:50.943 [main] INFO  stepdefinitions.CommonStepDef - : Click for Element if Exist 'By.xpath: //*[contains(text(),'No Thanks') and not(@type='application/json')]'
+2025-10-14 17:00:52.990 [main] INFO  stepdefinitions.CommonStepDef - : Get Text Attribute of Element : 'By.xpath: //div[contains(@class,'product-detail-list')]//*[contains(@class,'cartProductDetailItem_product_details_container')]' | Value : 'Classic Blue Spruce®
+10′ • Full Tree • LED Clear Lights'
+2025-10-14 17:00:52.990 [main] INFO  stepdefinitions.CommonStepDef - : Verify the Visibility of the element By.xpath: //div[contains(@class,'product-detail-list')]//*[contains(@class,'cartProductDetailItem_product_details_container')] in the page
+2025-10-14 17:00:52.996 [main] INFO  stepdefinitions.CommonStepDef - : the element By.xpath: //div[contains(@class,'product-detail-list')]//*[contains(@class,'cartProductDetailItem_product_details_container')] is true
+2025-10-14 17:00:53.036 [main] INFO  stepdefinitions.CommonStepDef - : Get Text Attribute of Element : 'By.xpath: //div[contains(@class,'product-detail-list')]//*[contains(@class,'cartProductDetailItem_new_price')]' | Value : '$1,999'
+2025-10-14 17:00:53.036 [main] INFO  stepdefinitions.CommonStepDef - : Verify the Visibility of the element By.xpath: //div[contains(@class,'product-detail-list')]//*[contains(@class,'cartProductDetailItem_new_price')] in the page
+2025-10-14 17:00:53.043 [main] INFO  stepdefinitions.CommonStepDef - : the element By.xpath: //div[contains(@class,'product-detail-list')]//*[contains(@class,'cartProductDetailItem_new_price')] is true
+2025-10-14 17:00:53.060 [main] INFO  stepdefinitions.CommonStepDef - : expectedCartDetails : Classic Blue Spruce® Trees |  actualProductDetails.ToString: Classic Blue Spruce10 Full Tree LED Clear Lights $1,999
+2025-10-14 17:00:53.060 [main] INFO  stepdefinitions.CommonStepDef - : expectedCartDetails : 10′ |  actualProductDetails.ToString: Classic Blue Spruce10 Full Tree LED Clear Lights $1,999
+2025-10-14 17:00:53.060 [main] INFO  stepdefinitions.CommonStepDef - : expectedCartDetails : Full Tree |  actualProductDetails.ToString: Classic Blue Spruce10 Full Tree LED Clear Lights $1,999
+2025-10-14 17:00:53.061 [main] INFO  stepdefinitions.CommonStepDef - : expectedCartDetails : LED Clear Lights |  actualProductDetails.ToString: Classic Blue Spruce10 Full Tree LED Clear Lights $1,999
+2025-10-14 17:00:53.061 [main] INFO  stepdefinitions.CommonStepDef - : expectedCartDetails : $1,999 |  actualProductDetails.ToString: Classic Blue Spruce10 Full Tree LED Clear Lights $1,999
+2025-10-14 17:00:53.146 [main] INFO  stepdefinitions.CommonStepDef - : Validate the Cart Icon should have 1 value
+2025-10-14 17:00:53.147 [main] INFO  stepdefinitions.CommonStepDef - : Verify the Visibility of the element By.xpath: //li[contains(@class,'headerIcons_cart-icon')]//span in the page
+2025-10-14 17:00:53.164 [main] INFO  stepdefinitions.CommonStepDef - : the element By.xpath: //li[contains(@class,'headerIcons_cart-icon')]//span is true
+2025-10-14 17:00:53.180 [main] INFO  stepdefinitions.CommonStepDef - : Click Remove Button
+2025-10-14 17:00:53.181 [main] INFO  stepdefinitions.CommonStepDef - : Click for Element 'By.xpath: //div[contains(@class,'product-detail-list')]//button[contains(@class,'cartProductDetailItem_delete')]'
+2025-10-14 17:00:53.182 [main] INFO  stepdefinitions.CommonStepDef - : Verify the Visibility of the element By.xpath: //div[contains(@class,'product-detail-list')]//button[contains(@class,'cartProductDetailItem_delete')] in the page
+2025-10-14 17:00:53.199 [main] INFO  stepdefinitions.CommonStepDef - : the element By.xpath: //div[contains(@class,'product-detail-list')]//button[contains(@class,'cartProductDetailItem_delete')] is true
+2025-10-14 17:00:55.355 [main] INFO  stepdefinitions.CommonStepDef - : Validate and Verify that removed item from the Cart Page
+2025-10-14 17:00:55.357 [main] INFO  stepdefinitions.CommonStepDef - : Verify the Visibility of the element By.xpath: //div[contains(@class,'product-detail-list')]//div[contains(@class,'cartProductDetailItem_product-name-wrapper')] in the page
+2025-10-14 17:00:56.985 [main] INFO  stepdefinitions.CommonStepDef - : the element By.xpath: //div[contains(@class,'product-detail-list')]//div[contains(@class,'cartProductDetailItem_product-name-wrapper')] is true
+2025-10-14 17:00:57.233 [main] INFO  stepdefinitions.CommonStepDef - : Verify the Visibility of the element By.xpath: //div[contains(@class,'product-detail-list')]//a[contains(@class, 'cartProductDetailItem_undo')] in the page
+2025-10-14 17:00:57.258 [main] INFO  stepdefinitions.CommonStepDef - : the element By.xpath: //div[contains(@class,'product-detail-list')]//a[contains(@class, 'cartProductDetailItem_undo')] is true
+2025-10-14 17:01:30.769 [main] INFO  n.thucydides.core.steps.StepEventBus - Loading JUnit Platform configuration parameters from classpath resource [junit-platform.properties].
+2025-10-14 17:01:30.811 [main] INFO  stepdefinitions.CommonStepDef - : main
+2025-10-14 17:01:30.815 [main] INFO  stepdefinitions.CommonStepDef - : main
+2025-10-14 17:01:30.878 [main] INFO  n.s.c.w.d.ChromeDriverProvider - Starting Chrome driver instance with capabilities:
+2025-10-14 17:01:30.880 [main] INFO  n.s.c.w.d.ChromeDriverProvider - Capabilities {acceptInsecureCerts: false, browserName: chrome, goog:chromeOptions: {args: [--remote-allow-origins=*], extensions: []}}
+2025-10-14 17:01:33.437 [main] INFO  stepdefinitions.CommonStepDef - : main
+2025-10-14 17:01:35.462 [main] INFO  stepdefinitions.CommonStepDef - : main
+2025-10-14 17:01:35.578 [main] INFO  stepdefinitions.CommonStepDef - : main
+2025-10-14 17:01:35.595 [main] INFO  stepdefinitions.CommonStepDef - : main
+2025-10-14 17:01:37.773 [main] INFO  stepdefinitions.CommonStepDef - : main
+2025-10-14 17:01:38.780 [main] INFO  stepdefinitions.CommonStepDef - : main
+2025-10-14 17:01:38.782 [main] INFO  stepdefinitions.CommonStepDef - : main
+2025-10-14 17:01:38.783 [main] INFO  stepdefinitions.CommonStepDef - : main
+2025-10-14 17:01:38.800 [main] INFO  stepdefinitions.CommonStepDef - : main
+2025-10-14 17:01:40.958 [main] INFO  stepdefinitions.CommonStepDef - : main
+2025-10-14 17:01:42.961 [main] INFO  stepdefinitions.CommonStepDef - : main
+2025-10-14 17:01:42.962 [main] INFO  stepdefinitions.CommonStepDef - : main
+2025-10-14 17:01:43.005 [main] INFO  stepdefinitions.CommonStepDef - : main
+2025-10-14 17:01:43.019 [main] INFO  stepdefinitions.CommonStepDef - : main
+2025-10-14 17:01:45.029 [main] INFO  stepdefinitions.CommonStepDef - : main
+2025-10-14 17:01:45.030 [main] INFO  stepdefinitions.CommonStepDef - : main
+2025-10-14 17:01:45.031 [main] INFO  stepdefinitions.CommonStepDef - : main
+2025-10-14 17:01:45.049 [main] INFO  stepdefinitions.CommonStepDef - : main
+2025-10-14 17:01:47.197 [main] INFO  stepdefinitions.CommonStepDef - : main
+2025-10-14 17:02:12.640 [main] INFO  n.thucydides.core.steps.StepEventBus - Loading JUnit Platform configuration parameters from classpath resource [junit-platform.properties].
+2025-10-14 17:02:12.679 [main] INFO  stepdefinitions.CommonStepDef - : main
+2025-10-14 17:02:12.685 [main] INFO  stepdefinitions.CommonStepDef - : main
+2025-10-14 17:02:12.752 [main] INFO  n.s.c.w.d.ChromeDriverProvider - Starting Chrome driver instance with capabilities:
+2025-10-14 17:02:12.754 [main] INFO  n.s.c.w.d.ChromeDriverProvider - Capabilities {acceptInsecureCerts: false, browserName: chrome, goog:chromeOptions: {args: [--remote-allow-origins=*], extensions: []}}
+2025-10-14 17:02:15.396 [main] INFO  stepdefinitions.CommonStepDef - : main
+2025-10-14 17:02:17.442 [main] INFO  stepdefinitions.CommonStepDef - : main
+2025-10-14 17:02:17.728 [main] INFO  stepdefinitions.CommonStepDef - : main
+2025-10-14 17:02:17.738 [main] INFO  stepdefinitions.CommonStepDef - : main
+2025-10-14 17:02:20.058 [main] INFO  stepdefinitions.CommonStepDef - : main
+2025-10-14 17:02:21.062 [main] INFO  stepdefinitions.CommonStepDef - : main
+2025-10-14 17:02:21.065 [main] INFO  stepdefinitions.CommonStepDef - : main
+2025-10-14 17:02:21.066 [main] INFO  stepdefinitions.CommonStepDef - : main
+2025-10-14 17:02:21.082 [main] INFO  stepdefinitions.CommonStepDef - : main
+2025-10-14 17:02:23.241 [main] INFO  stepdefinitions.CommonStepDef - : main
+2025-10-14 17:02:50.429 [main] INFO  n.thucydides.core.steps.StepEventBus - Loading JUnit Platform configuration parameters from classpath resource [junit-platform.properties].
+2025-10-14 17:02:50.473 [main] INFO  stepdefinitions.CommonStepDef -  : NavigateToPage : Page 'balsamhill' | Role 'ProDinnerAdmin'
+2025-10-14 17:02:50.477 [main] INFO  stepdefinitions.CommonStepDef -  : Navigate Page to balsamhill
+2025-10-14 17:02:50.548 [main] INFO  n.s.c.w.d.ChromeDriverProvider - Starting Chrome driver instance with capabilities:
+2025-10-14 17:02:50.550 [main] INFO  n.s.c.w.d.ChromeDriverProvider - Capabilities {acceptInsecureCerts: false, browserName: chrome, goog:chromeOptions: {args: [--remote-allow-origins=*], extensions: []}}
+2025-10-14 17:02:55.058 [main] INFO  stepdefinitions.CommonStepDef -  : Wait For Page In Second(s) 2000
+2025-10-14 17:02:57.078 [main] INFO  stepdefinitions.CommonStepDef -  : Click for Element if Exist 'By.xpath: //*[@id='bannerCloseButton' or @aria-label='Close drawer']'
+2025-10-14 17:02:57.124 [main] INFO  stepdefinitions.CommonStepDef -  : Verify the Visibility of the element By.xpath: //*[@id='bannerCloseButton' or @aria-label='Close drawer'] in the page
+2025-10-14 17:02:57.130 [main] INFO  stepdefinitions.CommonStepDef -  : the element By.xpath: //*[@id='bannerCloseButton' or @aria-label='Close drawer'] is true
+2025-10-14 17:02:59.272 [main] INFO  stepdefinitions.CommonStepDef -  : Wait For Page In Second(s) 1000
+2025-10-14 17:03:00.281 [main] INFO  stepdefinitions.CommonStepDef -  : Search Products in Page
+2025-10-14 17:03:00.284 [main] INFO  stepdefinitions.CommonStepDef -  : Enter Text 'By.xpath: //header[contains(@class,'fixed-marquee-header')]//input[@id='constructor-search-input']' with Value Christmas Tree
+2025-10-14 17:03:00.285 [main] INFO  stepdefinitions.CommonStepDef -  : Verify the Visibility of the element By.xpath: //header[contains(@class,'fixed-marquee-header')]//input[@id='constructor-search-input'] in the page
+2025-10-14 17:03:00.303 [main] INFO  stepdefinitions.CommonStepDef -  : the element By.xpath: //header[contains(@class,'fixed-marquee-header')]//input[@id='constructor-search-input'] is true
+2025-10-14 17:03:02.465 [main] INFO  stepdefinitions.CommonStepDef -  : Wait For Page In Second(s) 2000
+2025-10-14 17:03:04.476 [main] INFO  stepdefinitions.CommonStepDef -  : verify the text in the page :[Ljava.lang.String;@6dae70f9
+2025-10-14 17:03:04.478 [main] INFO  stepdefinitions.CommonStepDef -  : Verify the Visibility of the element By.xpath: //*[contains(text(),'Search result for:') and not(@type='application/json')] in the page
+2025-10-14 17:03:04.501 [main] INFO  stepdefinitions.CommonStepDef -  : the element By.xpath: //*[contains(text(),'Search result for:') and not(@type='application/json')] is true
+2025-10-14 17:03:04.519 [main] INFO  stepdefinitions.CommonStepDef -  : Wait For Page In Second(s) 2000
+2025-10-14 17:03:06.529 [main] INFO  stepdefinitions.CommonStepDef -  : select Product Items From Search Results
+2025-10-14 17:03:06.530 [main] INFO  stepdefinitions.CommonStepDef -  : Click for Element 'By.xpath: (//div[@data-testid='results-grid']//div[contains(@class,'listingContainer_product-listing-item-wrapper')])[3]'
+2025-10-14 17:03:06.531 [main] INFO  stepdefinitions.CommonStepDef -  : Verify the Visibility of the element By.xpath: (//div[@data-testid='results-grid']//div[contains(@class,'listingContainer_product-listing-item-wrapper')])[3] in the page
+2025-10-14 17:03:06.554 [main] INFO  stepdefinitions.CommonStepDef -  : the element By.xpath: (//div[@data-testid='results-grid']//div[contains(@class,'listingContainer_product-listing-item-wrapper')])[3] is true
+2025-10-14 17:03:08.688 [main] INFO  stepdefinitions.CommonStepDef -  : Wait For Page In Second(s) 2000
+2025-10-14 17:03:10.790 [main] INFO  stepdefinitions.CommonStepDef -  : Customize and Add to Cart
+2025-10-14 17:03:10.792 [main] INFO  stepdefinitions.CommonStepDef -  : Click for Element if Exist 'By.xpath: //*[@id='bannerCloseButton' or @aria-label='Close drawer']'
+2025-10-14 17:03:12.850 [main] INFO  stepdefinitions.CommonStepDef -  : Click for Element if Exist 'By.xpath: //div[contains(@class,'productDetailContainer_matrix')]//div[contains(@class,'renderSelectBoxFilterItem_product-filter-item')]/following::span[text()='10']/ancestor::span[last()]'
+2025-10-14 17:03:12.885 [main] INFO  stepdefinitions.CommonStepDef -  : Verify the Visibility of the element By.xpath: //div[contains(@class,'productDetailContainer_matrix')]//div[contains(@class,'renderSelectBoxFilterItem_product-filter-item')]/following::span[text()='10']/ancestor::span[last()] in the page
+2025-10-14 17:03:12.892 [main] INFO  stepdefinitions.CommonStepDef -  : the element By.xpath: //div[contains(@class,'productDetailContainer_matrix')]//div[contains(@class,'renderSelectBoxFilterItem_product-filter-item')]/following::span[text()='10']/ancestor::span[last()] is true
+2025-10-14 17:03:15.086 [main] INFO  stepdefinitions.CommonStepDef -  : Click for Element if Exist 'By.xpath: //div[contains(@class,'productDetailContainer_matrix')]//div[contains(@class,'renderSelectBoxFilterItem_product-filter-item')]/following::span[text()='Sparse Tree']/ancestor::span[last()]'
+2025-10-14 17:03:17.194 [main] INFO  stepdefinitions.CommonStepDef -  : Click for Element if Exist 'By.xpath: //div[contains(@class,'productDetailContainer_matrix')]//div[contains(@class,'renderSelectBoxFilterItem_product-filter-item')]/following::span[text()='LED Color + Clear Lights']/ancestor::span[last()]'
+2025-10-14 17:03:19.248 [main] INFO  stepdefinitions.CommonStepDef -  : Click for Element if Exist 'By.xpath: //div[contains(@class,'productDetailContainer_matrix')]//div[contains(@class,'product-detail-buybox')]//span[@class='product-price']'
+2025-10-14 17:03:19.276 [main] INFO  stepdefinitions.CommonStepDef -  : Verify the Visibility of the element By.xpath: //div[contains(@class,'productDetailContainer_matrix')]//div[contains(@class,'product-detail-buybox')]//span[@class='product-price'] in the page
+2025-10-14 17:03:19.283 [main] INFO  stepdefinitions.CommonStepDef -  : the element By.xpath: //div[contains(@class,'productDetailContainer_matrix')]//div[contains(@class,'product-detail-buybox')]//span[@class='product-price'] is true
+2025-10-14 17:03:21.372 [main] INFO  stepdefinitions.CommonStepDef -  : Click for Element if Exist 'By.xpath: //div[contains(@class,'productDetailContainer_matrix')]//div[contains(@class,'renderSelectBoxFilterItem_product-filter-item')]/following::span[text()='Standard']/ancestor::span[last()]'
+2025-10-14 17:03:23.456 [main] INFO  stepdefinitions.CommonStepDef -  : Get Text Attribute of Element : 'By.xpath: //div[contains(@class,'productDetailContainer_matrix')]//div[contains(@class,'productDetailNameRating_product')]/h1' | Value : 'Alpine Balsam Fir® Trees'
+2025-10-14 17:03:23.457 [main] INFO  stepdefinitions.CommonStepDef -  : Verify the visibility of 1 elements
+2025-10-14 17:03:23.457 [main] INFO  stepdefinitions.CommonStepDef -  : Verify the Visibility of the element By.xpath: //div[contains(@class,'productDetailContainer_matrix')]//div[contains(@class,'productDetailNameRating_product')]/h1 in the page
+2025-10-14 17:03:23.463 [main] INFO  stepdefinitions.CommonStepDef -  : the element By.xpath: //div[contains(@class,'productDetailContainer_matrix')]//div[contains(@class,'productDetailNameRating_product')]/h1 is true
+2025-10-14 17:03:23.516 [main] INFO  stepdefinitions.CommonStepDef -  : Get Text Attribute of Element : 'By.xpath: //div[contains(@class,'productDetailContainer_matrix')]//div[@id='product_filter_height']/following-sibling::div[contains(@class,'productDetailFilter_selected-value')]' | Value : '10′'
+2025-10-14 17:03:23.517 [main] INFO  stepdefinitions.CommonStepDef -  : Verify the visibility of 1 elements
+2025-10-14 17:03:23.518 [main] INFO  stepdefinitions.CommonStepDef -  : Verify the Visibility of the element By.xpath: //div[contains(@class,'productDetailContainer_matrix')]//div[@id='product_filter_height']/following-sibling::div[contains(@class,'productDetailFilter_selected-value')] in the page
+2025-10-14 17:03:23.525 [main] INFO  stepdefinitions.CommonStepDef -  : the element By.xpath: //div[contains(@class,'productDetailContainer_matrix')]//div[@id='product_filter_height']/following-sibling::div[contains(@class,'productDetailFilter_selected-value')] is true
+2025-10-14 17:03:23.582 [main] INFO  stepdefinitions.CommonStepDef -  : Get Text Attribute of Element : 'By.xpath: //div[contains(@class,'productDetailContainer_matrix')]//div[@id='product_filter_shape']/following-sibling::div[contains(@class,'productDetailFilter_selected-value')]' | Value : 'Sparse Tree'
+2025-10-14 17:03:23.583 [main] INFO  stepdefinitions.CommonStepDef -  : Verify the visibility of 1 elements
+2025-10-14 17:03:23.583 [main] INFO  stepdefinitions.CommonStepDef -  : Verify the Visibility of the element By.xpath: //div[contains(@class,'productDetailContainer_matrix')]//div[@id='product_filter_shape']/following-sibling::div[contains(@class,'productDetailFilter_selected-value')] in the page
+2025-10-14 17:03:23.594 [main] INFO  stepdefinitions.CommonStepDef -  : the element By.xpath: //div[contains(@class,'productDetailContainer_matrix')]//div[@id='product_filter_shape']/following-sibling::div[contains(@class,'productDetailFilter_selected-value')] is true
+2025-10-14 17:03:23.665 [main] INFO  stepdefinitions.CommonStepDef -  : Get Text Attribute of Element : 'By.xpath: //div[contains(@class,'productDetailContainer_matrix')]//div[@id='product_filter_lights']/following-sibling::div[contains(@class,'productDetailFilter_selected-value')]' | Value : 'LED Clear Fairy Lights'
+2025-10-14 17:03:23.666 [main] INFO  stepdefinitions.CommonStepDef -  : Verify the visibility of 1 elements
+2025-10-14 17:03:23.666 [main] INFO  stepdefinitions.CommonStepDef -  : Verify the Visibility of the element By.xpath: //div[contains(@class,'productDetailContainer_matrix')]//div[@id='product_filter_lights']/following-sibling::div[contains(@class,'productDetailFilter_selected-value')] in the page
+2025-10-14 17:03:23.673 [main] INFO  stepdefinitions.CommonStepDef -  : the element By.xpath: //div[contains(@class,'productDetailContainer_matrix')]//div[@id='product_filter_lights']/following-sibling::div[contains(@class,'productDetailFilter_selected-value')] is true
+2025-10-14 17:03:25.792 [main] INFO  stepdefinitions.CommonStepDef -  : Get Text Attribute of Element : 'By.xpath: //div[contains(@class,'productDetailContainer_matrix')]//div[contains(@class,'product-detail-buybox')]//span[@class='product-price']' | Value : '$1,399'
+2025-10-14 17:03:25.793 [main] INFO  stepdefinitions.CommonStepDef -  : Verify the visibility of 1 elements
+2025-10-14 17:03:25.794 [main] INFO  stepdefinitions.CommonStepDef -  : Verify the Visibility of the element By.xpath: //div[contains(@class,'productDetailContainer_matrix')]//div[contains(@class,'product-detail-buybox')]//span[@class='product-price'] in the page
+2025-10-14 17:03:25.800 [main] INFO  stepdefinitions.CommonStepDef -  : the element By.xpath: //div[contains(@class,'productDetailContainer_matrix')]//div[contains(@class,'product-detail-buybox')]//span[@class='product-price'] is true
+2025-10-14 17:03:25.821 [main] INFO  stepdefinitions.CommonStepDef -  : Click for Element 'By.xpath: //div[contains(@class,'productDetailContainer_matrix')]//button[@type='button' and text()='Add to Cart']'
+2025-10-14 17:03:25.822 [main] INFO  stepdefinitions.CommonStepDef -  : Verify the Visibility of the element By.xpath: //div[contains(@class,'productDetailContainer_matrix')]//button[@type='button' and text()='Add to Cart'] in the page
+2025-10-14 17:03:25.839 [main] INFO  stepdefinitions.CommonStepDef -  : the element By.xpath: //div[contains(@class,'productDetailContainer_matrix')]//button[@type='button' and text()='Add to Cart'] is true
+2025-10-14 17:03:28.040 [main] INFO  stepdefinitions.CommonStepDef -  : Wait For Page In Second(s) 1500
+2025-10-14 17:03:29.543 [main] INFO  stepdefinitions.CommonStepDef -  : Validate and Verify Added Product Details
+2025-10-14 17:03:29.543 [main] INFO  stepdefinitions.CommonStepDef -  : Click for Element if Exist 'No Thanks'
+2025-10-14 17:03:29.545 [main] INFO  stepdefinitions.CommonStepDef -  : Click for Element if Exist 'By.xpath: //*[contains(text(),'No Thanks') and not(@type='application/json')]'
+2025-10-14 17:03:30.985 [main] INFO  stepdefinitions.CommonStepDef -  : Verify the Visibility of the element By.xpath: //*[contains(text(),'No Thanks') and not(@type='application/json')] in the page
+2025-10-14 17:03:30.992 [main] INFO  stepdefinitions.CommonStepDef -  : the element By.xpath: //*[contains(text(),'No Thanks') and not(@type='application/json')] is true
+2025-10-14 17:03:33.126 [main] INFO  stepdefinitions.CommonStepDef -  : Verify the Visibility of the element By.xpath: //div[contains(@class,'add-to-cart-modal')]//div[contains(@class,'modal-content')]//*[contains(text(),'Alpine Balsam Fir')] in the page
+2025-10-14 17:03:33.155 [main] INFO  stepdefinitions.CommonStepDef -  : the element By.xpath: //div[contains(@class,'add-to-cart-modal')]//div[contains(@class,'modal-content')]//*[contains(text(),'Alpine Balsam Fir')] is true
+2025-10-14 17:03:33.171 [main] INFO  stepdefinitions.CommonStepDef -  : Verify the Visibility of the element By.xpath: //div[contains(@class,'add-to-cart-modal')]//div[contains(@class,'modal-content')]//*[contains(text(),'10')] in the page
+2025-10-14 17:03:33.187 [main] INFO  stepdefinitions.CommonStepDef -  : the element By.xpath: //div[contains(@class,'add-to-cart-modal')]//div[contains(@class,'modal-content')]//*[contains(text(),'10')] is true
+2025-10-14 17:03:33.204 [main] INFO  stepdefinitions.CommonStepDef -  : Verify the Visibility of the element By.xpath: //div[contains(@class,'add-to-cart-modal')]//div[contains(@class,'modal-content')]//*[contains(text(),'Sparse Tree')] in the page
+2025-10-14 17:03:33.222 [main] INFO  stepdefinitions.CommonStepDef -  : the element By.xpath: //div[contains(@class,'add-to-cart-modal')]//div[contains(@class,'modal-content')]//*[contains(text(),'Sparse Tree')] is true
+2025-10-14 17:03:33.238 [main] INFO  stepdefinitions.CommonStepDef -  : Verify the Visibility of the element By.xpath: //div[contains(@class,'add-to-cart-modal')]//div[contains(@class,'modal-content')]//*[contains(text(),'LED Clear Fairy Lights')] in the page
+2025-10-14 17:03:33.254 [main] INFO  stepdefinitions.CommonStepDef -  : the element By.xpath: //div[contains(@class,'add-to-cart-modal')]//div[contains(@class,'modal-content')]//*[contains(text(),'LED Clear Fairy Lights')] is true
+2025-10-14 17:03:33.268 [main] INFO  stepdefinitions.CommonStepDef -  : Verify the Visibility of the element By.xpath: //div[contains(@class,'add-to-cart-modal')]//div[contains(@class,'modal-content')]//*[contains(text(),'$1,399')] in the page
+2025-10-14 17:03:33.290 [main] INFO  stepdefinitions.CommonStepDef -  : the element By.xpath: //div[contains(@class,'add-to-cart-modal')]//div[contains(@class,'modal-content')]//*[contains(text(),'$1,399')] is true
+2025-10-14 17:03:33.302 [main] INFO  stepdefinitions.CommonStepDef -  : Click the View Cart Button
+2025-10-14 17:03:33.304 [main] INFO  stepdefinitions.CommonStepDef -  : Click for Element 'By.xpath: //div[contains(@class,'add-to-cart-modal')]//div[contains(@class,'modal-content')]//button[contains(@class, 'productAddToCartModal_btn-viewcart')]'
+2025-10-14 17:03:33.305 [main] INFO  stepdefinitions.CommonStepDef -  : Verify the Visibility of the element By.xpath: //div[contains(@class,'add-to-cart-modal')]//div[contains(@class,'modal-content')]//button[contains(@class, 'productAddToCartModal_btn-viewcart')] in the page
+2025-10-14 17:03:33.322 [main] INFO  stepdefinitions.CommonStepDef -  : the element By.xpath: //div[contains(@class,'add-to-cart-modal')]//div[contains(@class,'modal-content')]//button[contains(@class, 'productAddToCartModal_btn-viewcart')] is true
+2025-10-14 17:03:35.442 [main] INFO  stepdefinitions.CommonStepDef -  : Wait For Page In Second(s) 2000
+2025-10-14 17:03:37.456 [main] INFO  stepdefinitions.CommonStepDef -  : Validate And Verify the added item from Cart Page
+2025-10-14 17:03:37.457 [main] INFO  stepdefinitions.CommonStepDef -  : Click for Element if Exist 'No Thanks'
+2025-10-14 17:03:37.459 [main] INFO  stepdefinitions.CommonStepDef -  : Click for Element if Exist 'By.xpath: //*[contains(text(),'No Thanks') and not(@type='application/json')]'
+2025-10-14 17:03:39.223 [main] INFO  stepdefinitions.CommonStepDef -  : Verify the Visibility of the element By.xpath: //*[contains(text(),'No Thanks') and not(@type='application/json')] in the page
+2025-10-14 17:03:39.229 [main] INFO  stepdefinitions.CommonStepDef -  : the element By.xpath: //*[contains(text(),'No Thanks') and not(@type='application/json')] is true
+2025-10-14 17:03:41.330 [main] INFO  stepdefinitions.CommonStepDef -  : Get Text Attribute of Element : 'By.xpath: //div[contains(@class,'product-detail-list')]//*[contains(@class,'cartProductDetailItem_product_details_container')]' | Value : 'Alpine Balsam Fir® Tree
+10′ • Sparse Tree • LED Clear Fairy Lights'
+2025-10-14 17:03:41.331 [main] INFO  stepdefinitions.CommonStepDef -  : Verify the Visibility of the element By.xpath: //div[contains(@class,'product-detail-list')]//*[contains(@class,'cartProductDetailItem_product_details_container')] in the page
+2025-10-14 17:03:41.338 [main] INFO  stepdefinitions.CommonStepDef -  : the element By.xpath: //div[contains(@class,'product-detail-list')]//*[contains(@class,'cartProductDetailItem_product_details_container')] is true
+2025-10-14 17:03:41.387 [main] INFO  stepdefinitions.CommonStepDef -  : Get Text Attribute of Element : 'By.xpath: //div[contains(@class,'product-detail-list')]//*[contains(@class,'cartProductDetailItem_new_price')]' | Value : '$1,399'
+2025-10-14 17:03:41.388 [main] INFO  stepdefinitions.CommonStepDef -  : Verify the Visibility of the element By.xpath: //div[contains(@class,'product-detail-list')]//*[contains(@class,'cartProductDetailItem_new_price')] in the page
+2025-10-14 17:03:41.398 [main] INFO  stepdefinitions.CommonStepDef -  : the element By.xpath: //div[contains(@class,'product-detail-list')]//*[contains(@class,'cartProductDetailItem_new_price')] is true
+2025-10-14 17:03:41.420 [main] INFO  stepdefinitions.CommonStepDef -  : expectedCartDetails : Alpine Balsam Fir® Trees |  actualProductDetails.ToString: Alpine Balsam Fir Tree10 Sparse Tree LED Clear Fairy Lights $1,399
+2025-10-14 17:03:41.422 [main] INFO  stepdefinitions.CommonStepDef -  : expectedCartDetails : 10′ |  actualProductDetails.ToString: Alpine Balsam Fir Tree10 Sparse Tree LED Clear Fairy Lights $1,399
+2025-10-14 17:03:41.422 [main] INFO  stepdefinitions.CommonStepDef -  : expectedCartDetails : Sparse Tree |  actualProductDetails.ToString: Alpine Balsam Fir Tree10 Sparse Tree LED Clear Fairy Lights $1,399
+2025-10-14 17:03:41.422 [main] INFO  stepdefinitions.CommonStepDef -  : expectedCartDetails : LED Clear Fairy Lights |  actualProductDetails.ToString: Alpine Balsam Fir Tree10 Sparse Tree LED Clear Fairy Lights $1,399
+2025-10-14 17:03:41.422 [main] INFO  stepdefinitions.CommonStepDef -  : expectedCartDetails : $1,399 |  actualProductDetails.ToString: Alpine Balsam Fir Tree10 Sparse Tree LED Clear Fairy Lights $1,399
+2025-10-14 17:03:41.558 [main] INFO  stepdefinitions.CommonStepDef -  : Validate the Cart Icon should have 1 value
+2025-10-14 17:03:41.560 [main] INFO  stepdefinitions.CommonStepDef -  : Verify the Visibility of the element By.xpath: //li[contains(@class,'headerIcons_cart-icon')]//span in the page
+2025-10-14 17:03:41.580 [main] INFO  stepdefinitions.CommonStepDef -  : the element By.xpath: //li[contains(@class,'headerIcons_cart-icon')]//span is true
+2025-10-14 17:03:41.597 [main] INFO  stepdefinitions.CommonStepDef -  : Click Remove Button
+2025-10-14 17:03:41.599 [main] INFO  stepdefinitions.CommonStepDef -  : Click for Element 'By.xpath: //div[contains(@class,'product-detail-list')]//button[contains(@class,'cartProductDetailItem_delete')]'
+2025-10-14 17:03:41.603 [main] INFO  stepdefinitions.CommonStepDef -  : Verify the Visibility of the element By.xpath: //div[contains(@class,'product-detail-list')]//button[contains(@class,'cartProductDetailItem_delete')] in the page
+2025-10-14 17:03:41.627 [main] INFO  stepdefinitions.CommonStepDef -  : the element By.xpath: //div[contains(@class,'product-detail-list')]//button[contains(@class,'cartProductDetailItem_delete')] is true
+2025-10-14 17:03:43.744 [main] INFO  stepdefinitions.CommonStepDef -  : Validate and Verify that removed item from the Cart Page
+2025-10-14 17:03:43.746 [main] INFO  stepdefinitions.CommonStepDef -  : Verify the Visibility of the element By.xpath: //div[contains(@class,'product-detail-list')]//div[contains(@class,'cartProductDetailItem_product-name-wrapper')] in the page
+2025-10-14 17:03:45.137 [main] INFO  stepdefinitions.CommonStepDef -  : the element By.xpath: //div[contains(@class,'product-detail-list')]//div[contains(@class,'cartProductDetailItem_product-name-wrapper')] is true
+2025-10-14 17:03:45.160 [main] INFO  stepdefinitions.CommonStepDef -  : Verify the Visibility of the element By.xpath: //div[contains(@class,'product-detail-list')]//a[contains(@class, 'cartProductDetailItem_undo')] in the page
+2025-10-14 17:03:45.179 [main] INFO  stepdefinitions.CommonStepDef -  : the element By.xpath: //div[contains(@class,'product-detail-list')]//a[contains(@class, 'cartProductDetailItem_undo')] is true
+2025-10-14 17:03:45.337 [main] INFO  stepdefinitions.CommonStepDef -  : NavigateToPage : Page 'balsamhill' | Role 'ProDinnerAdmin'
+2025-10-14 17:03:45.338 [main] INFO  stepdefinitions.CommonStepDef -  : Navigate Page to balsamhill
+2025-10-14 17:03:47.396 [main] INFO  stepdefinitions.CommonStepDef -  : Wait For Page In Second(s) 2000
+2025-10-14 17:03:49.406 [main] INFO  stepdefinitions.CommonStepDef -  : Click for Element if Exist 'By.xpath: //*[@id='bannerCloseButton' or @aria-label='Close drawer']'
+2025-10-14 17:03:51.449 [main] INFO  stepdefinitions.CommonStepDef -  : Wait For Page In Second(s) 1000
+2025-10-14 17:03:52.461 [main] INFO  stepdefinitions.CommonStepDef -  : Search Products in Page
+2025-10-14 17:03:52.462 [main] INFO  stepdefinitions.CommonStepDef -  : Enter Text 'By.xpath: //header[contains(@class,'fixed-marquee-header')]//input[@id='constructor-search-input']' with Value Christmas Tree
+2025-10-14 17:03:52.463 [main] INFO  stepdefinitions.CommonStepDef -  : Verify the Visibility of the element By.xpath: //header[contains(@class,'fixed-marquee-header')]//input[@id='constructor-search-input'] in the page
+2025-10-14 17:03:52.497 [main] INFO  stepdefinitions.CommonStepDef -  : the element By.xpath: //header[contains(@class,'fixed-marquee-header')]//input[@id='constructor-search-input'] is true
+2025-10-14 17:03:54.656 [main] INFO  stepdefinitions.CommonStepDef -  : Wait For Page In Second(s) 2000
+2025-10-14 17:03:56.659 [main] INFO  stepdefinitions.CommonStepDef -  : verify the text in the page :[Ljava.lang.String;@36885319
+2025-10-14 17:03:56.660 [main] INFO  stepdefinitions.CommonStepDef -  : Verify the Visibility of the element By.xpath: //*[contains(text(),'Search result for:') and not(@type='application/json')] in the page
+2025-10-14 17:03:56.678 [main] INFO  stepdefinitions.CommonStepDef -  : the element By.xpath: //*[contains(text(),'Search result for:') and not(@type='application/json')] is true
+2025-10-14 17:03:56.689 [main] INFO  stepdefinitions.CommonStepDef -  : Wait For Page In Second(s) 2000
+2025-10-14 17:04:20.153 [main] INFO  n.thucydides.core.steps.StepEventBus - Loading JUnit Platform configuration parameters from classpath resource [junit-platform.properties].
+2025-10-14 17:04:20.188 [main] INFO  java.lang.StackTraceElement -  : NavigateToPage : Page 'balsamhill' | Role 'ProDinnerAdmin'
+2025-10-14 17:04:20.192 [main] INFO  java.lang.StackTraceElement -  : Navigate Page to balsamhill
+2025-10-14 17:04:20.256 [main] INFO  n.s.c.w.d.ChromeDriverProvider - Starting Chrome driver instance with capabilities:
+2025-10-14 17:04:20.258 [main] INFO  n.s.c.w.d.ChromeDriverProvider - Capabilities {acceptInsecureCerts: false, browserName: chrome, goog:chromeOptions: {args: [--remote-allow-origins=*], extensions: []}}
+2025-10-14 17:04:22.996 [main] INFO  java.lang.StackTraceElement -  : Wait For Page In Second(s) 2000
+2025-10-14 17:04:25.024 [main] INFO  java.lang.StackTraceElement -  : Click for Element if Exist 'By.xpath: //*[@id='bannerCloseButton' or @aria-label='Close drawer']'
+2025-10-14 17:04:25.069 [main] INFO  java.lang.StackTraceElement -  : Verify the Visibility of the element By.xpath: //*[@id='bannerCloseButton' or @aria-label='Close drawer'] in the page
+2025-10-14 17:04:25.076 [main] INFO  java.lang.StackTraceElement -  : the element By.xpath: //*[@id='bannerCloseButton' or @aria-label='Close drawer'] is true
+2025-10-14 17:04:27.245 [main] INFO  java.lang.StackTraceElement -  : Wait For Page In Second(s) 1000
+2025-10-14 17:04:28.254 [main] INFO  java.lang.StackTraceElement -  : Search Products in Page
+2025-10-14 17:04:28.257 [main] INFO  java.lang.StackTraceElement -  : Enter Text 'By.xpath: //header[contains(@class,'fixed-marquee-header')]//input[@id='constructor-search-input']' with Value Christmas Tree
+2025-10-14 17:04:28.258 [main] INFO  java.lang.StackTraceElement -  : Verify the Visibility of the element By.xpath: //header[contains(@class,'fixed-marquee-header')]//input[@id='constructor-search-input'] in the page
+2025-10-14 17:04:28.283 [main] INFO  java.lang.StackTraceElement -  : the element By.xpath: //header[contains(@class,'fixed-marquee-header')]//input[@id='constructor-search-input'] is true
+2025-10-14 17:04:30.439 [main] INFO  java.lang.StackTraceElement -  : Wait For Page In Second(s) 2000
+2025-10-14 17:04:38.961 [main] INFO  n.thucydides.core.steps.StepEventBus - Loading JUnit Platform configuration parameters from classpath resource [junit-platform.properties].
+2025-10-14 17:04:38.996 [main] INFO  java.lang.StackTraceElement -  : NavigateToPage : Page 'balsamhill' | Role 'ProDinnerAdmin'
+2025-10-14 17:04:39.000 [main] INFO  java.lang.StackTraceElement -  : Navigate Page to balsamhill
+2025-10-14 17:04:39.059 [main] INFO  n.s.c.w.d.ChromeDriverProvider - Starting Chrome driver instance with capabilities:
+2025-10-14 17:04:39.061 [main] INFO  n.s.c.w.d.ChromeDriverProvider - Capabilities {acceptInsecureCerts: false, browserName: chrome, goog:chromeOptions: {args: [--remote-allow-origins=*], extensions: []}}
+2025-10-14 17:04:41.768 [main] INFO  java.lang.StackTraceElement -  : Wait For Page In Second(s) 2000
+2025-10-14 17:04:43.790 [main] INFO  java.lang.StackTraceElement -  : Click for Element if Exist 'By.xpath: //*[@id='bannerCloseButton' or @aria-label='Close drawer']'
+2025-10-14 17:04:44.021 [main] INFO  java.lang.StackTraceElement -  : Verify the Visibility of the element By.xpath: //*[@id='bannerCloseButton' or @aria-label='Close drawer'] in the page
+2025-10-14 17:04:44.029 [main] INFO  java.lang.StackTraceElement -  : the element By.xpath: //*[@id='bannerCloseButton' or @aria-label='Close drawer'] is true
+2025-10-14 17:04:46.240 [main] INFO  java.lang.StackTraceElement -  : Wait For Page In Second(s) 1000
+2025-10-14 17:04:47.249 [main] INFO  java.lang.StackTraceElement -  : Search Products in Page
+2025-10-14 17:04:47.251 [main] INFO  java.lang.StackTraceElement -  : Enter Text 'By.xpath: //header[contains(@class,'fixed-marquee-header')]//input[@id='constructor-search-input']' with Value Christmas Tree
+2025-10-14 17:04:47.252 [main] INFO  java.lang.StackTraceElement -  : Verify the Visibility of the element By.xpath: //header[contains(@class,'fixed-marquee-header')]//input[@id='constructor-search-input'] in the page
+2025-10-14 17:04:47.271 [main] INFO  java.lang.StackTraceElement -  : the element By.xpath: //header[contains(@class,'fixed-marquee-header')]//input[@id='constructor-search-input'] is true

@@ -1,0 +1,111 @@
+#!/usr/bin/env groovy
+pipeline {
+  agent {
+    docker {
+      // Use a Maven image with OpenJDK 11; adjust to Java 21 if your tests require it
+      image 'maven:3.8.8-openjdk-11'
+      // mount the Docker socket so the pipeline can run docker commands if needed
+      args  '-v /var/run/docker.sock:/var/run/docker.sock'
+    }
+  }
+
+  options {
+    timeout(time: 60, unit: 'MINUTES')
+    timestamps()
+  }
+
+  stages {
+    stage('Checkout') {
+      steps {
+        checkout scm
+      }
+    }
+
+    stage('Maven - Build & Test') {
+      steps {
+        // Use sh because the agent is Linux-based
+        sh 'mvn -v'
+        // Run the verify goal; keep the cucumber tag the same as your original Jenkinsfile
+        sh 'mvn -B clean verify -Dcucumber.filter.tags="@form_testing"'
+      }
+    }
+
+    stage('Publish reports') {
+      steps {
+        // The HTML Publisher plugin expects the report to be present in the workspace
+        publishHTML([
+          reportDir: 'target/site/serenity',
+          reportFiles: 'index.html',
+          reportName: 'Serenity Test Report',
+          allowMissing: false,
+          alwaysLinkToLastBuild: true,
+          keepAll: true
+        ])
+      }
+    }
+
+    stage('Archive artifacts') {
+      steps {
+        // archive the produced jar(s) if any
+        archiveArtifacts artifacts: 'target/**/*.jar', onlyIfSuccessful: true, allowEmptyArchive: true
+      }
+    }
+  }
+
+  post {
+    always {
+      junit allowEmptyResults: true, testResults: 'target/surefire-reports/*.xml'
+      cleanWs()
+    }
+    success {
+      echo 'Build and tests succeeded.'
+    }
+    failure {
+      echo 'Build or tests failed. Check the console log and reporting artifacts.'
+    }
+  }
+}
+pipeline {
+    agent any
+
+    stages {
+        stage('Checkout') {
+            steps {
+                checkout scm
+            }
+        }
+
+        stage('Build & Test (in Maven Docker)') {
+            // run the build inside a Maven Docker image (requires Docker on the Jenkins host)
+            agent {
+                docker {
+                    image 'maven:3.8.8-openjdk-11'
+                    args '-v $HOME/.m2:/root/.m2'
+                }
+            }
+            steps {
+                sh 'mvn -v'
+                // Run the verification; adjust cucumber tag as needed
+                sh 'mvn clean verify -Dcucumber.filter.tags="@form_testing"'
+            }
+            post {
+                always {
+                    publishHTML(target: [
+                        allowMissing: false,
+                        alwaysLinkToLastBuild: true,
+                        keepAll: true,
+                        reportDir: 'target/site/serenity',
+                        reportFiles: 'index.html',
+                        reportName: 'Serenity Test Report'
+                    ])
+                }
+            }
+        }
+    }
+
+    post {
+        always {
+            cleanWs()
+        }
+    }
+}

@@ -25,6 +25,7 @@ public class CartStepDef {
 
     @When("I Click the Remove Button")
     public void clickRemoveButton() {
+        commonStepDef.clickTextIfExist("No Thanks");
         // Click on the Remove Button for the cart item
         commonStepDef.testStep("Click Remove Button");
         commonStepDef.clickElement(cartPage.BTN_REMOVE_CART_ITEM());
